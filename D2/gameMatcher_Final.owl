@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/gamematcher.owl"
+         xmlns="http://www.semanticweb.org/gamematcher.owl#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/gamematcher.owl">
+  <owl:imports rdf:resource="http://www.ease-crc.org/ont/DUL.owl"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreea Scrob, Edoardo Tommasi</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GameMatcher is an intelligent companion system that assists users in finding video games compatible with their computer.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GameMatcher Ontology</rdfs:label>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#hasComponent">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#Computer"/>
+  <rdfs:range rdf:resource="#Component"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generic relation linking a computer to its parts.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has component</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCPU">
+  <rdfs:subPropertyOf rdf:resource="#hasComponent"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#Computer"/>
+  <rdfs:range rdf:resource="#CPU"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking components to the computer's cpu.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has CPU</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasGPU">
+  <rdfs:subPropertyOf rdf:resource="#hasComponent"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#Computer"/>
+  <rdfs:range rdf:resource="#GPU"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking components to the computer's gpu.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has GPU</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasRAM">
+  <rdfs:subPropertyOf rdf:resource="#hasComponent"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#Computer"/>
+  <rdfs:range rdf:resource="#RAM"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking components to the computer's ram.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has RAM</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasStorage">
+  <rdfs:subPropertyOf rdf:resource="#hasComponent"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#Computer"/>
+  <rdfs:range rdf:resource="#Storage"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking components to the computer's  available storage.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has storage</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasOS">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#Computer"/>
+  <rdfs:range rdf:resource="#OperatingSystem"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking components to the computer's os.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has operating system</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasMinRequirement">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="#MinimumRequirement"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking videogame to its component requirements to make it run.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has minimum requirement</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasComputer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#User"/>
+  <rdfs:range rdf:resource="#Computer"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking user to the computer he owns.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has computer device</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasGenre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="#GameGenre"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking videogame to its genre.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has genre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preferredGenre">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#User"/>
+  <rdfs:range rdf:resource="#GameGenre"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking user to its preferred game's genre.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prefers genre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasPlayerMode">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="#PlayerMode"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking videogame to its player mode.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has player mode</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#preferredPlayerMode">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#User"/>
+  <rdfs:range rdf:resource="#PlayerMode"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking user to its preferred game mode.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prefers player mode</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasPEGI">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="#PEGIRating"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relation linking videogame to its age rating.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has PEGI rating</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isCompatibleWith">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="#Computer"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inferred relation: true if the computer meets all game requirements.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is compatible with</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasBenchmarkScore">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#GPU"/>
+  <rdfs:domain rdf:resource="#CPU"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The performance score of the user's hardware (e.g. PassMark).</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has benchmark score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#requiresBenchmarkScore">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MinimumRequirement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The minimum benchmark score required by the game.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires benchmark score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMemorySizeGB">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#RAM"/>
+  <rdfs:domain rdf:resource="#GPU"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of memory in Gigabytes.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has memory size (GB)</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#requiresMemoryGB">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MinimumRequirement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum RAM or VRAM required in Gigabytes.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires memory (GB)</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasStorageSizeGB">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Storage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Total available disk space in Gigabytes.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has storage size (GB)</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#requiresStorageSpaceGB">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MinimumRequirement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Installation size required in Gigabytes.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires storage space (GB)</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasOSVersionValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#OperatingSystem"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numeric version of the OS (e.g., 10.0, 11.0).</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has OS version value</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#requiresMinOSVersionValue">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MinimumRequirement"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum numeric OS version required.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires min OS version</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPrice">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The monetary cost required to purchase the digital game.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasBudget">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#User"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The maximum monetary limit the user is willing to spend.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has budget</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasAge">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#User"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The chronological age of the user (in years), used for PEGI checks.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPEGIAgeThreshold">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#PEGIRating"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The numeric age threshold (e.g., 18).</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has PEGI threshold</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#User">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Agent who interacts with the system to find compatible video games.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Computer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Physical Object consisting of hardware components capable of executing software.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Component">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Physical Object that forms a constituent part of a computing system.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Component</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#CPU">
+  <rdfs:subClassOf rdf:resource="#Component"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Hardware Component that acts as the primary processing unit.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CPU</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#GPU">
+  <rdfs:subClassOf rdf:resource="#Component"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Hardware Component specialized for rendering graphics.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GPU</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#RAM">
+  <rdfs:subClassOf rdf:resource="#Component"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Hardware Component used for temporary data storage.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAM</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#Storage">
+  <rdfs:subClassOf rdf:resource="#Component"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Hardware Component used for data retention (e.g., HDD or SSD).</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storage</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#OperatingSystem">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Software Component that manages computer hardware and resources.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operating System</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#VideoGame">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Information Object representing a digital game available for play.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Video Game</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#MinimumRequirement">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Requirement specifying the absolute minimum specifications for a game to run.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirement</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#GameAttribute">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Concept representing a characteristic feature of a video game.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game Attribute</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#GameGenre">
+  <rdfs:subClassOf rdf:resource="#GameAttribute"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A classification based on gameplay interaction (e.g., RPG, Strategy).</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game Genre</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PlayerMode">
+  <rdfs:subClassOf rdf:resource="#GameAttribute"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defines the number of players supported (e.g., Single-player).</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Player Mode</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#PEGIRating">
+  <rdfs:subClassOf rdf:resource="#GameAttribute"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates the suitability of content for different age groups.</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PEGI Rating</rdfs:label>
+</owl:Class>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#GameGenre"/>
+    <rdf:Description rdf:about="#PlayerMode"/>
+    <rdf:Description rdf:about="#PEGIRating"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CPU"/>
+    <rdf:Description rdf:about="#GPU"/>
+    <rdf:Description rdf:about="#RAM"/>
+    <rdf:Description rdf:about="#Storage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#User"/>
+    <rdf:Description rdf:about="#Computer"/>
+    <rdf:Description rdf:about="#Component"/>
+    <rdf:Description rdf:about="#OperatingSystem"/>
+    <rdf:Description rdf:about="#VideoGame"/>
+    <rdf:Description rdf:about="#MinimumRequirement"/>
+    <rdf:Description rdf:about="#GameAttribute"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>
