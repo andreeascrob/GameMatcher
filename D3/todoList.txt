@@ -1,0 +1,26 @@
+1. Migliorare ed Estendere l'Ontologia
+ - Correzioni (D2): Devi correggere eventuali errori di modellazione o incertezze presenti nella consegna precedente (D2), basandoti sui feedback ricevuti durante le presentazioni intermedie o la sottomissione passata.
+ - Creazione ABox: Devi popolare il grafo con istanze concrete (individui). Questi dati devono rappresentare entità realistiche del mondo reale. (vedi esercitazione 8 mi sa)
+
+Regole: Devi includere alcune regole esplicitamente modellate sul tuo dominio (fai riferimento alle lezioni 09 e 10 sul Reasoning).
+
+2. Estrazione della Conoscenza (Knowledge Extraction)
+ - Metodo: Puoi estrarre i dati automaticamente (Web Scraping, vedi Esercizio #08) oppure crearli manualmente se l'automazione non è fattibile per il tuo dominio.
+
+Documentazione:
+Se usi script (Python), devi consegnarli insieme a eventuali file intermedi e ai prompt usati se hai impiegato LLM.
+Se crei i dati manualmente, devi scrivere una spiegazione approfondita su cosa hai fatto, perché non era possibile farlo automaticamente e cosa hai provato a fare.
+Devi fornire un documento che descriva come hai raccolto i dati, cosa ha funzionato e statistiche sui risultati (es. numero di istanze).
+
+3. Interrogazioni SPARQL
+Collegamento: Le query devono rispondere alle "Competency Questions" definite nel deliverable precedente.
+Quantità: Ogni membro del gruppo deve creare almeno 3 query SPARQL. -> noi de dobbiamo fare almeno 6
+Piattaforma: Le query saranno testate sulla piattaforma TriplyDB, quindi assicurati che funzionino lì. Se usi un altro tool (es. Protégé), devi specificarlo, ma è consigliato TriplyDB.
+
+Tentativi: Se non riesci a completare una query, invia comunque i tuoi progressi per ottenere punti parziali.
+
+4. Formato e Consegna
+Il Knowledge Graph finale deve essere caricato su TriplyDB.
+File dell'ontologia: formato .owl o .ttl con i nomi dei membri del gruppo nell'header.
+Query: Un singolo file .pdf o .txt.
+Documentazione estrazione: Un singolo archivio .zip.
