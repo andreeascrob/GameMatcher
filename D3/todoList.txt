@@ -24,3 +24,6 @@ Il Knowledge Graph finale deve essere caricato su TriplyDB.
 File dell'ontologia: formato .owl o .ttl con i nomi dei membri del gruppo nell'header.
 Query: Un singolo file .pdf o .txt.
 Documentazione estrazione: Un singolo archivio .zip.
+
+link utili:
+https://triplydb.com/
