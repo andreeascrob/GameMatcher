@@ -27,3 +27,30 @@ Documentazione estrazione: Un singolo archivio .zip.
 
 link utili:
 https://triplydb.com/
+
+Fase 1: Ontologia e Regole
+[ ] Rivedere il feedback ricevuto sul D2.
+[ ] Applicare le correzioni alla struttura dell'ontologia (TBox).
+[ ] Inserire i nomi di tutti i membri del gruppo nell'header del file ontologia.
+[ ] Implementare le regole esplicite (Rules) nel grafo.
+
+Fase 2: Popolamento Dati (ABox)
+[ ] Decidere il metodo di estrazione (Automatico/Scraping o Manuale).
+[ ] Generare/Estrarre le istanze reali.
+[ ] Se Automatico: Salvare gli script Python e i prompt LLM usati.
+[ ] Se Manuale: Scrivere la giustificazione dettagliata del "perché" non è stato possibile automatizzare.
+
+Fase 3: Hosting e Query
+[ ] Caricare il Knowledge Graph finale su TriplyDB.
+[ ] Scrivere le query SPARQL (Minimo 3 per persona) basate sulle Competency Questions.
+[ ] Testare le query direttamente su TriplyDB per assicurarsi che funzionino.
+
+Fase 4: Preparazione Documenti per la Consegna
+[ ] Ontologia: Esportare il file finale in .owl o .ttl.
+[ ] Query: Unire tutte le query in un unico file .pdf o .txt.
+[ ] Report Estrazione: Scrivere il documento con metodologia, statistiche e risultati.
+[ ] Pacchetto ZIP: Creare un archivio .zip contenente il report di estrazione, gli script, i prompt e i file intermedi.
+
+Fase 5: Invio Finale
+[ ] Controllare di avere tutti i file richiesti.
+[ ] Inviare tutto entro l'08.02.2026.

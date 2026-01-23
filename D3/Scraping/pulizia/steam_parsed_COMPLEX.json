@@ -1,0 +1,44 @@
+[
+    {
+        "NAME":"Counter-Strike 2",
+        "CPU":"4 hardware CPU threads - Intel\u00ae Core\u2122 i5 750 or higher",
+        "GPU":"Video card must be 1 GB or more and should be a DirectX 11-compatible with support for Shader Model 5.0",
+        "PRICE":"Free To Play"
+    },
+    {
+        "NAME":"Warframe",
+        "CPU":"Intel Core i7 860, Intel Core i5 750, or AMD FX-4100 (SSE 4.2 support required)",
+        "GPU":"N\/A",
+        "PRICE":"Free To Play"
+    },
+    {
+        "NAME":"War Thunder",
+        "CPU":"Dual-Core 2.2 GHz",
+        "GPU":"DirectX 11 level video card: AMD Radeon 77XX \/ NVIDIA GeForce GTX 660. The minimum supported resolution for the game is 720p.",
+        "PRICE":"Free To Play"
+    },
+    {
+        "NAME":"Lost Ark",
+        "CPU":"Intel Core i3 \u2013 10100 AMD Ryzen3 3100",
+        "GPU":"Nvidia Geforce GTX 1050 Ti \/ AMD Radeon RX 560",
+        "PRICE":"Free To Play"
+    },
+    {
+        "NAME":"N\/A",
+        "CPU":"N\/A",
+        "GPU":"N\/A",
+        "PRICE":"N\/A"
+    },
+    {
+        "NAME":"The Planet Crafter",
+        "CPU":"Intel Core2 Duo 2.4GHz or equivalent",
+        "GPU":"3GB VRAM",
+        "PRICE":"19,97\u20ac"
+    },
+    {
+        "NAME":"Stardew Valley",
+        "CPU":"2 Ghz",
+        "GPU":"256 mb video memory, shader model 3.0+",
+        "PRICE":"13,99\u20ac"
+    }
+]
