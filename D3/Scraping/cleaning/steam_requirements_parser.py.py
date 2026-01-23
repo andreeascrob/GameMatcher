@@ -91,9 +91,6 @@ df_dirty = df[df['Complexity'] == 'Difficult'][['NAME', 'CPU', 'GPU', 'PRICE']].
 import json
 
 def save_clean_json(dataframe, filename):
-    # FIX: Replace NaN with None. Python's None becomes JSON's null.
-    # We use pd.notnull(dataframe) as a mask. Where it is True (not null), keep the value.
-    # Where it is False (NaN), replace with None.
     dataframe = dataframe.astype(object).where(pd.notnull(dataframe), None)
 
     # Convert DataFrame to a list of Python dictionaries
