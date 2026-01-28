@@ -334,109 +334,24 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PEGI Rating</rdfs:label>
 </owl:Class>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_14600">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6600K">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-14600</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6600K</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_300">
+<owl:NamedIndividual rdf:about="#CPU_Core_i7_7700K">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel 300</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i7-7700K</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_14700K">
+<owl:NamedIndividual rdf:about="#CPU_Ryzen_5_1600">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-14700K</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 5 1600</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2600X">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6400">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2600X</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_14600K">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-14600K</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_virt_10_0">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virt-10.0</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Hygon_C86_52xx_series">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hygon C86 52xx series</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_12700K">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-12700K</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_FX_9830P">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-9830P</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_N305">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-N305</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_N50">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel N50</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_14500">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-14500</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_14700">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-14700</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_14100">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-14100</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_3_N350">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core 3 N350</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2600">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2600</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_7_2700">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 7 2700</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1500X">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1500X</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Pentium_Gold_8505">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Pentium Gold 8505</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_13800H">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-13800H</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_13100">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-13100</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6400</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1200">
@@ -444,59 +359,64 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1200</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Z_01">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_8400">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Z-01</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-8400</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_5_120">
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2600">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core 5 120</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2600</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_14790F">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_4770">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-14790F</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-4770</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Athlon_64_3500">
+<owl:NamedIndividual rdf:about="#CPU_AMD_FX_9590">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Athlon 64 3500+</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-9590</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_FX_4330">
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2600X">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-4330</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2600X</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1600X">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_6800K">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1600X</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-6800K</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_C_QuadCore_C4600_2_0GHz">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_7700">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C-QuadCore C4600@2.0GHz</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-7700</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_3300X">
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2500x">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 3300X</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2500x</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_13600">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_4170">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-13600</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-4170</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_3570_3_40GHz">
+<owl:NamedIndividual rdf:about="#CPU_AMD_FX_8120">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-3570 @ 3.40GHz</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-8120</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Phenom_II_X4_945">
+<owl:NamedIndividual rdf:about="#CPU_Snapdragon_X_Elite">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X4 945</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snapdragon X Elite</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_8600K">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-8600K</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1600">
@@ -504,14 +424,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1600</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_12500">
+<owl:NamedIndividual rdf:about="#CPU_Core_i7_3820">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-12500</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i7-3820</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_AMD_Phenom_II_X4_940">
+<owl:NamedIndividual rdf:about="#CPU_AMD_at">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X4 940</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD at</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_3600">
@@ -519,104 +439,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 3600</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_14400F">
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_8700K">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-14400F</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2500X">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2500X</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_FX_7600P">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-7600P</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_3100">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 3100</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_14400">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-14400</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_N300">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-N300</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_13700H">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-13700H</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_1340P">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-1340P</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Athlon_240GE">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Athlon 240GE</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4460_3_20GHz">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4460 @ 3.20GHz</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_2200G">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 2200G</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_FX_4320">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-4320</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_EPYC_3101_4_Core">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD EPYC 3101 4-Core</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_12100T">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-12100T</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Snapdragon_835">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snapdragon 835</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_3570K_3_40GHz">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-3570K @ 3.40GHz</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_12100">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-12100</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_5500">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 5500</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1300X">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1300X</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_1230U">
-  <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-1230U</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-8700K</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1400">
@@ -624,34 +449,254 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1400</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_nVidia_L40">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nVidia L40</rdfs:label>
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6600">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6600</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_R9_390">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R9 390</rdfs:label>
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_5820K">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-5820K</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_780">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 780</rdfs:label>
+<owl:NamedIndividual rdf:about="#CPU_AMD_FX_8370">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-8370</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_560">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 560</rdfs:label>
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_3210">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-3210</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Intel_UHD_Graphics_730">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD Graphics 730</rdfs:label>
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_2300">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-2300</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_NVIDIA_A40">
+<owl:NamedIndividual rdf:about="#CPU_AMD_FX_8350">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-8350</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_7500">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-7500</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4430">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4430</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_FX_6300">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-6300</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6402p_CPU">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6402p CPU</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_2500K">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-2500K</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Core_i5_9600k">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i5-9600k</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Ryzen_5_2600X">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 5 2600X</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_7700HQ">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-7700HQ</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_RYZEN_3_3300X">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD RYZEN 3 3300X</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1600X">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1600X</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_4790K">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-4790K</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1500X">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1500X @</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Core_i7_6700">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i7-6700</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_9400F">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-9400F</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1300X">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1300X</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4670">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4670</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1200_3_1_GHz">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1200 3.1 GHz</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_3100">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 3100</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_i5_2300">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i5-2300</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Ryzen_3_1200">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 3 1200</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_750">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5 750</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4460">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4460</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_2100T">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-2100T</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Pentium_G4560">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Pentium G4560</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_FX4350">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX4350</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Athlon_x4">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Athlon x4</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_8100">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-8100</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_540">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-540</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Phenom_II_X4_940">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X4 940</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_9100">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-9100</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_2200G">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 2200G</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_10600">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-10600</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_RYZEN_5_5500">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD RYZEN 5 5500</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_AMD_Phenom_II_X4_945">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X4 945</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4690">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4690 @</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4590">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4590</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_10400">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-10400</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_12100">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-12100</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_2320">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-2320</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1050_Ti">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA A40</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1050 Ti</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_580">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 580</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A380">
@@ -659,19 +704,79 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A380</rdfs:label>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#GPU_GTX_1060">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1060</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_RX_480">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 480</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_660">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 660</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_460">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 460</rdfs:label>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#GPU_Intel_HD_630">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel HD 630</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A580">
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1060">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A580</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1060</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_RTX_A2000">
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1630">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX A2000</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1630</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_6400">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 6400</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5600_XT">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5600 XT</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_960">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 960</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Qualcomm_Adreno_X1">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualcomm Adreno X1</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_ATI">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_3600">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3600</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7790">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7790</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_950">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 950</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A750">
@@ -679,14 +784,59 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A750</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Intel_Iris_Xe">
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1070">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Iris Xe</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1070</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_RADEON_X550">
+<owl:NamedIndividual rdf:about="#GPU_Nvidia_GeForce_GTX_1050Ti">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RADEON X550</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia GeForce GTX 1050Ti</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A580">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A580</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_GeForce_GeForce_GTX_980">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GeForce GTX 980</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_470">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 470 -</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Arc_A380">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arc A380</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_770">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 770</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Nvidia_GeForce_GTX_780">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia GeForce GTX 780</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5500">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5500</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R7_370">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R7 370</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1660">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1660</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1060">
@@ -694,94 +844,39 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1060</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce3_Ti200">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce3 Ti200</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Intel_UHD_770">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD 770</rdfs:label>
-</owl:NamedIndividual>
-
 <owl:NamedIndividual rdf:about="#GPU_Radeon_RX_580">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 580</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7870">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R9_280">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7870</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R9 280</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_480">
+<owl:NamedIndividual rdf:about="#GPU_RX_6600_XT">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 480</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 6600 XT</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce3">
+<owl:NamedIndividual rdf:about="#GPU_RTX_2060">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce3</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX 2060</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_NVIDIA_A10">
+<owl:NamedIndividual rdf:about="#GPU_RX_590">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA A10</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 590</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_5600_XT">
+<owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A380_VR">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 5600 XT</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A380 (VR</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1070">
+<owl:NamedIndividual rdf:about="#GPU_RT">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1070</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_470">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 470</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_750_Ti">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 750 Ti</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_970">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 970</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_460">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 460</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1650">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1650</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_550">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon 550</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_X1300">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon X1300</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Intel_UHD_Graphics_600">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD Graphics 600</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_5700">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 5700</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT)</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_R9_390X">
@@ -789,14 +884,109 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R9 390X</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_A16_2B">
+<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_970">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A16-2B</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 970</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_R7_260">
+<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_480">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R7 260</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 480</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_GTX_970">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 970</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_645">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 645</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_Vega_8">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon Vega 8</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1650">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1650</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_970">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 970 -</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_480">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 480</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R9_285">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R9 285</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_5700">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 5700</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GT_420">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GT 420</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_ATI_Radeon_HD_6850">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI Radeon HD 6850</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1050">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1050</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_OR_Intel_Arc_A380">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR Intel Arc A380</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_ATI_Radeon_X1300">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI Radeon X1300</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Nvidia_GeForce_GTX_470">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia GeForce GTX 470</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Intel_Iris_Xe_G7">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Iris Xe G7</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_Vega_11">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX Vega 11</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_GTX_1050">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1050</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7850">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7850</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_680">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 680</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_UHD_Graphics_630">
@@ -804,154 +994,49 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD Graphics 630</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_6400">
+<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7870">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6400</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7870</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_5500_XT">
+<owl:NamedIndividual rdf:about="#GPU_Intel_Iris_Xe_Graphics">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 5500 XT</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Iris Xe Graphics</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Intel_HD_500">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5700">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel HD 500</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5700</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_5850">
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1050_Over">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 5850</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1050 Over</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_R9_280">
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_9600_GT">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R9 280</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce 9600 GT</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1660_Ti">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_6570">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1660 Ti</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 6570</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1660">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5500_XT">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1660</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5500 XT</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1050">
+<owl:NamedIndividual rdf:about="#GPU_RX_570">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1050</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 570</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_645">
+<owl:NamedIndividual rdf:about="#GPU_GTX_1050_Ti">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 645</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_Vega_8">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon Vega 8</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_RTX_4070">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce RTX 4070</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_6600_XT">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6600 XT</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1050_Ti">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1050 Ti</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_R9_285">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R9 285</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_V9560XT">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V9560XT</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_RTX_A1000">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX A1000</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_770">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 770</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_RTX_A400">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX A400</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_780_Ti">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 780 Ti</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_NVIDIA_A10G">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA A10G</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_550_Ti">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 550 Ti</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_6150">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce 6150</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_680">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 680</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Intel_Iris_Pro_Graphics_6200">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Iris Pro Graphics 6200</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_880M">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 880M</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_960">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 960</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_660">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 660</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_Vega_11">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX Vega 11</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_570X">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 570X</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Mobility_Radeon_HD_4300_Serisi">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobility Radeon HD 4300 Serisi</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1050 Ti</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_R7_360">
@@ -959,117 +1044,57 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R7 360</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7850">
+<owl:NamedIndividual rdf:about="#GPU_Intel_UHD_Graphics_730">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7850</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD Graphics 730</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_6850">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7450">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 6850</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7450</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_G_105M">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5600XT">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce G 105M</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5600XT</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_RTX_A5500">
+<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1050">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX A5500</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1050</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7970M">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7870">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7970M</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7870</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1630">
+<owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_750_Ti">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1630</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 750 Ti</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_6570">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_460_with">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 6570</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 460 with</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_4200">
+<owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R9_390">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 4200</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R9 390</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_RADEON_HD_6350">
+<owl:NamedIndividual rdf:about="#GPU_GTX_1660">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RADEON HD 6350</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_R7_370">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R7 370</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_550">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 550</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_980">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 980</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_780">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 780</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7450">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7450</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_9600_GT">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce 9600 GT</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_RX_5500">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 5500</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Qualcomm_Adreno_X1_85_GPU">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualcomm Adreno X1-85 GPU</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_T600">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T600</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7790">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7790</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_950">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 950</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#GPU_Radeon_680M">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon 680M</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1660</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ARC_Raiders">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_ARC_Raiders"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARC Raiders</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -1101,16 +1126,17 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARC Raiders</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Where_Winds_Meet">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Where_Winds_Meet"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Where Winds Meet</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1132,6 +1158,8 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Where Winds Meet</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9629</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Euro_Truck_Simulator_2">
@@ -1149,14 +1177,14 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_StarRupture">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_StarRupture"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StarRupture</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.98</hasPrice>
@@ -1167,16 +1195,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for StarRupture</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Grand_Theft_Auto_V_Enhanced">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Grand_Theft_Auto_V_Enhanced"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grand Theft Auto V Enhanced</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
@@ -1194,11 +1222,11 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4996</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6822</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ARK_Survival_Ascended">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_PvP"/>
@@ -1207,6 +1235,7 @@
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_ARK_Survival_Ascended"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARK: Survival Ascended</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.94</hasPrice>
@@ -1238,15 +1267,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13432</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10714</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Path_of_Exile_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Path_of_Exile_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path of Exile 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.75</hasPrice>
@@ -1258,15 +1287,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6134</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9391</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8637</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Dead_by_Daylight">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Dead_by_Daylight"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dead by Daylight</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.99</hasPrice>
@@ -1277,14 +1306,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dead by Daylight</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3578</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Battlefield_6">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Battlefield_6"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battlefield™ 6</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.99</hasPrice>
@@ -1296,16 +1326,16 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Baldur_s_Gate_3">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Baldur_s_Gate_3"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baldur's Gate 3</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -1317,15 +1347,16 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6090</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Warhammer_40_000_Space_Marine_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Warhammer_40_000_Space_Marine_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warhammer 40,000: Space Marine 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">167.02</hasPrice>
@@ -1336,19 +1367,19 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Warhammer 40,000: Space Marine 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10140</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_EA_SPORTS_FC_26">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_EA_SPORTS_FC_26"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EA SPORTS FC™ 26</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.99</hasPrice>
@@ -1364,14 +1395,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for EA SPORTS FC™ 26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_RV_There_Yet">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_RV_There_Yet"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RV There Yet?</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.79</hasPrice>
@@ -1382,12 +1414,13 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for RV There Yet?</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5791</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Dota_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Dota_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dota 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1396,15 +1429,17 @@
 <owl:NamedIndividual rdf:about="#Req_Dota_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dota 2</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Apex_Legends">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Apex_Legends"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apex Legends™</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1416,13 +1451,14 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3090</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Avatar_Frontiers_of_Pandora">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Avatar_Frontiers_of_Pandora"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avatar: Frontiers of Pandora™</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
@@ -1433,8 +1469,8 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Avatar: Frontiers of Pandora™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12615</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17682</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13572</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Farming_Simulator_25">
@@ -1451,17 +1487,17 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Farming Simulator 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5041</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7735</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Rust">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Rust"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rust</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -1472,14 +1508,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Rust</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10061</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7735</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6063</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Quarantine_Zone_The_Last_Check">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Quarantine_Zone_The_Last_Check"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quarantine Zone: The Last Check</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.99</hasPrice>
@@ -1490,15 +1526,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Quarantine Zone: The Last Check</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11069</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6181</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_World_of_Warships">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_World_of_Warships"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World of Warships</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1507,13 +1544,14 @@
 <owl:NamedIndividual rdf:about="#Req_World_of_Warships">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for World of Warships</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5965</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2227</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Detroit_Become_Human">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Detroit_Become_Human"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detroit: Become Human</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.99</hasPrice>
@@ -1525,15 +1563,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7951</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3469</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Arena_Breakout_Infinite">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Arena_Breakout_Infinite"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arena Breakout: Infinite</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1545,13 +1583,13 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7735</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6030</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Wuthering_Waves">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Wuthering_Waves"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wuthering Waves</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1562,13 +1600,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Wuthering Waves</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_PUBG_BATTLEGROUNDS">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_PUBG_BATTLEGROUNDS"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUBG: BATTLEGROUNDS</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1580,12 +1619,13 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4482</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4225</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Dispatch">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Dispatch"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dispatch</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.99</hasPrice>
@@ -1596,15 +1636,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dispatch</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5342</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Anno_117_Pax_Romana">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Anno_117_Pax_Romana"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anno 117: Pax Romana</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -1621,9 +1661,9 @@
 
 <owl:NamedIndividual rdf:about="#Game_Schedule_I">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Schedule_I"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule I</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.5</hasPrice>
@@ -1634,16 +1674,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Schedule I</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Diablo_IV">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Diablo_IV"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diablo® IV</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -1655,13 +1695,14 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4043</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4141</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_PEAK">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_PEAK"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PEAK</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.64</hasPrice>
@@ -1672,6 +1713,8 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for PEAK</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_F1_25">
@@ -1693,14 +1736,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for F1® 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Dead_Island_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Dead_Island_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dead Island 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -1711,14 +1755,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dead Island 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9275</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6822</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_theHunter_Call_of_the_Wild">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_theHunter_Call_of_the_Wild"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theHunter: Call of the Wild™</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.5</hasPrice>
@@ -1729,14 +1774,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for theHunter: Call of the Wild™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Black_Desert">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Black_Desert"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Desert</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.99</hasPrice>
@@ -1748,13 +1794,14 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8541</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_R_E_P_O">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_R_E_P_O"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R.E.P.O.</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.82</hasPrice>
@@ -1765,14 +1812,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for R.E.P.O.</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ELDEN_RING">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_ELDEN_RING"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELDEN RING</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -1783,8 +1831,8 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ELDEN RING</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12594</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Euro_Truck_Simulator_2_Nordic_Horizons">
@@ -1802,15 +1850,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Marvel_Rivals">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Marvel_Rivals"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marvel Rivals</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1822,13 +1870,13 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13013</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_HELLDIVERS_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_HELLDIVERS_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HELLDIVERS™ 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -1839,14 +1887,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for HELLDIVERS™ 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6354</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9074</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8061</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Clair_Obscur_Expedition_33">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Clair_Obscur_Expedition_33"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clair Obscur: Expedition 33</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -1863,11 +1911,11 @@
 
 <owl:NamedIndividual rdf:about="#Game_Age_of_Mythology_Retold">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Age_of_Mythology_Retold"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Age of Mythology: Retold</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.45</hasPrice>
@@ -1896,13 +1944,13 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Cyberpunk_2077">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Cyberpunk_2077"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyberpunk 2077</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -1913,15 +1961,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cyberpunk 2077</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8037</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Anno_1800">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_Anno_1800"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anno 1800</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">236.15</hasPrice>
@@ -1936,15 +1985,16 @@
 <owl:NamedIndividual rdf:about="#Req_Anno_1800">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Anno 1800</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Enshrouded">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Enshrouded"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enshrouded</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
@@ -1956,15 +2006,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9074</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Yu_Gi_Oh_Master_Duel">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_Yu_Gi_Oh_Master_Duel"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu-Gi-Oh! Master Duel</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -1975,17 +2025,18 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Yu-Gi-Oh! Master Duel</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7867</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6968</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9461</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_FINAL_FANTASY_XIV_Online">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_FINAL_FANTASY_XIV_Online"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FINAL FANTASY XIV Online</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.99</hasPrice>
@@ -2001,10 +2052,10 @@
 
 <owl:NamedIndividual rdf:about="#Game_Fallout_76">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Fallout_76"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallout 76</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -2014,7 +2065,7 @@
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Fallout 76</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6680</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6925</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Microsoft_Flight_Simulator_2024">
@@ -2032,18 +2083,18 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10714</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Age_of_Empires_II_Definitive_Edition">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Age_of_Empires_II_Definitive_Edition"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Age of Empires II: Definitive Edition</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.99</hasPrice>
@@ -2052,15 +2103,16 @@
 <owl:NamedIndividual rdf:about="#Req_Age_of_Empires_II_Definitive_Edition">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Age of Empires II: Definitive Edition</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1938</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">433</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Manor_Lords">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Manor_Lords"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manor Lords</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.99</hasPrice>
@@ -2072,15 +2124,16 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4100</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5494</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Forza_Horizon_5">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_Forza_Horizon_5"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forza Horizon 5</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -2097,8 +2150,8 @@
 
 <owl:NamedIndividual rdf:about="#Game_The_Sims_4">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_The_Sims_4"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sims™ 4</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2115,10 +2168,10 @@
 
 <owl:NamedIndividual rdf:about="#Game_Tom_Clancy_s_Rainbow_Six_Siege_X">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Tom_Clancy_s_Rainbow_Six_Siege_X"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Clancy's Rainbow Six® Siege X</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2135,9 +2188,9 @@
 
 <owl:NamedIndividual rdf:about="#Game_ICARUS">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_ICARUS"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICARUS</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33.99</hasPrice>
@@ -2148,6 +2201,7 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ICARUS</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_BeamNG_drive">
@@ -2161,8 +2215,8 @@
 <owl:NamedIndividual rdf:about="#Req_BeamNG_drive">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for BeamNG.drive</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10061</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Blue_Prince">
@@ -2178,14 +2232,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Blue Prince</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10061</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3469</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Hearts_of_Iron_IV">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Hearts_of_Iron_IV"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hearts of Iron IV</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -2197,14 +2252,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2617</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1326</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ARC_Raiders_The_Bonecrown_Set">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_ARC_Raiders_The_Bonecrown_Set"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARC Raiders - The Bonecrown Set</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.99</hasPrice>
@@ -2215,12 +2271,12 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARC Raiders - The Bonecrown Set</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ARK_Lost_Colony_Expansion_Pass">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_PvP"/>
@@ -2229,6 +2285,7 @@
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_ARK_Lost_Colony_Expansion_Pass"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARK: Lost Colony Expansion Pass</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
@@ -2240,15 +2297,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13432</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10714</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Once_Human">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Once_Human"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Once Human</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2259,13 +2316,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Once Human</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4918</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Sons_Of_The_Forest">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Sons_Of_The_Forest"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sons Of The Forest</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.99</hasPrice>
@@ -2276,15 +2334,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Sons Of The Forest</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10061</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12594</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_It_Takes_Two_Friend_s_Pass">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_Co_op"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_It_Takes_Two_Friend_s_Pass"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It Takes Two Friend's Pass</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2294,12 +2352,13 @@
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for It Takes Two Friend's Pass</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4043</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1542</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Kingdom_Come_Deliverance_II">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Kingdom_Come_Deliverance_II"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingdom Come: Deliverance II</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -2310,16 +2369,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Kingdom Come: Deliverance II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Destiny_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Destiny_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Destiny 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2331,14 +2390,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3898</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_The_Elder_Scrolls_Online">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_The_Elder_Scrolls_Online"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Elder Scrolls® Online</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.99</hasPrice>
@@ -2349,14 +2409,15 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Elder Scrolls® Online</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3184</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Guild_Wars_2">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Guild_Wars_2"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild Wars 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2366,13 +2427,14 @@
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Guild Wars 2</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5612</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1786</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Mount_Blade_II_Bannerlord">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Mount_Blade_II_Bannerlord"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount &amp; Blade II: Bannerlord</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -2384,13 +2446,13 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6073</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_HITMAN_World_of_Assassination">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_HITMAN_World_of_Assassination"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HITMAN World of Assassination</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.99</hasPrice>
@@ -2399,6 +2461,7 @@
 <owl:NamedIndividual rdf:about="#Req_HITMAN_World_of_Assassination">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for HITMAN World of Assassination</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4043</requiresGPUBenchmarkScore>
@@ -2406,12 +2469,12 @@
 
 <owl:NamedIndividual rdf:about="#Game_Total_War_WARHAMMER_III">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Total_War_WARHAMMER_III"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Total War: WARHAMMER III</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -2427,8 +2490,8 @@
 
 <owl:NamedIndividual rdf:about="#Game_Tainted_Grail_The_Fall_of_Avalon">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Tainted_Grail_The_Fall_of_Avalon"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tainted Grail: The Fall of Avalon</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.99</hasPrice>
@@ -2437,14 +2500,16 @@
 <owl:NamedIndividual rdf:about="#Req_Tainted_Grail_The_Fall_of_Avalon">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tainted Grail: The Fall of Avalon</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_The_Last_Caretaker">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_The_Last_Caretaker"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Last Caretaker</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
@@ -2453,16 +2518,17 @@
 <owl:NamedIndividual rdf:about="#Req_The_Last_Caretaker">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Last Caretaker</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13508</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10465</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Solo_Leveling_ARISE_OVERDRIVE">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Solo_Leveling_ARISE_OVERDRIVE"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solo Leveling: ARISE OVERDRIVE</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -2471,16 +2537,17 @@
 <owl:NamedIndividual rdf:about="#Req_Solo_Leveling_ARISE_OVERDRIVE">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Solo Leveling: ARISE OVERDRIVE</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">178</requiresCPUBenchmarkScore>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5041</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Magic_The_Gathering_Arena">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_Magic_The_Gathering_Arena"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magic: The Gathering Arena</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2495,8 +2562,8 @@
 
 <owl:NamedIndividual rdf:about="#Game_Disney_Dreamlight_Valley">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Disney_Dreamlight_Valley"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disney Dreamlight Valley</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -2508,17 +2575,17 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">473</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2363</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1557</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_NBA_2K26">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_NBA_2K26"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NBA 2K26</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.99</hasPrice>
@@ -2529,16 +2596,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for NBA 2K26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9078</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Satisfactory">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_Satisfactory"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfactory</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38.99</hasPrice>
@@ -2549,12 +2616,13 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Satisfactory</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_MIMESIS">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_MIMESIS"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIMESIS</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.75</hasPrice>
@@ -2565,16 +2633,17 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for MIMESIS</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6735</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6073</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Factorio">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_LAN_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_6"/>
   <hasMinRequirement rdf:resource="#Req_Factorio"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Factorio</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2603,13 +2672,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Alchemy Factory</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ELDEN_RING_NIGHTREIGN">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_ELDEN_RING_NIGHTREIGN"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELDEN RING NIGHTREIGN</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
@@ -2620,14 +2690,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ELDEN RING NIGHTREIGN</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19306</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13570</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_STAR_WARS_The_Old_Republic">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_STAR_WARS_The_Old_Republic"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAR WARS™: The Old Republic™</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2643,9 +2713,9 @@
 
 <owl:NamedIndividual rdf:about="#Game_Ashes_of_Creation">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Ashes_of_Creation"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ashes of Creation</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48.99</hasPrice>
@@ -2661,8 +2731,8 @@
 
 <owl:NamedIndividual rdf:about="#Game_Jurassic_World_Evolution_3">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Jurassic_World_Evolution_3"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jurassic World Evolution 3</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
@@ -2673,16 +2743,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Jurassic World Evolution 3</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3684</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Palworld">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Palworld"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palworld</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.99</hasPrice>
@@ -2693,14 +2763,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Palworld</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5041</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Raft">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Raft"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raft</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.99</hasPrice>
@@ -2709,12 +2779,13 @@
 <owl:NamedIndividual rdf:about="#Req_Raft">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Raft</rdfs:label>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Cyberpunk_2077_Phantom_Liberty">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Cyberpunk_2077_Phantom_Liberty"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyberpunk 2077: Phantom Liberty</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
@@ -2725,13 +2796,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cyberpunk 2077: Phantom Liberty</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8037</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Fallout_4">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_18"/>
   <hasMinRequirement rdf:resource="#Req_Fallout_4"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fallout 4</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.99</hasPrice>
@@ -2758,14 +2830,14 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3902</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9074</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5586</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Phasmophobia">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Phasmophobia"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phasmophobia</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.5</hasPrice>
@@ -2777,15 +2849,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8823</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5375</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Monster_Hunter_Wilds">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Monster_Hunter_Wilds"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monster Hunter Wilds</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.99</hasPrice>
@@ -2797,15 +2869,15 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9078</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12367</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11981</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Escape_from_Tarkov">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
+  <hasPEGI rdf:resource="#PEGI_16"/>
   <hasMinRequirement rdf:resource="#Req_Escape_from_Tarkov"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escape from Tarkov</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -2816,15 +2888,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Escape from Tarkov</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11631</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17682</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Split_Fiction">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasPlayerMode rdf:resource="#Mode_Shared_Split_Screen_Co_op"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_Split_Fiction"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Split Fiction</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
@@ -2835,16 +2908,16 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Split Fiction</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</requiresGPUBenchmarkScore>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</requiresCPUBenchmarkScore>
+  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7931</requiresGPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_iRacing">
   <rdf:type rdf:resource="#VideoGame"/>
-  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasPlayerMode rdf:resource="#Mode_MMO"/>
   <hasPlayerMode rdf:resource="#Mode_Online_PvP"/>
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
+  <hasPEGI rdf:resource="#PEGI_12"/>
   <hasMinRequirement rdf:resource="#Req_iRacing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iRacing</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
@@ -2855,8 +2928,124 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for iRacing</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
-  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
+  <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3690</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#GameGenre"/>
+    <rdf:Description rdf:about="#PlayerMode"/>
+    <rdf:Description rdf:about="#PEGIRating"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CPU"/>
+    <rdf:Description rdf:about="#GPU"/>
+    <rdf:Description rdf:about="#RAM"/>
+    <rdf:Description rdf:about="#Storage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#User"/>
+    <rdf:Description rdf:about="#Computer"/>
+    <rdf:Description rdf:about="#Component"/>
+    <rdf:Description rdf:about="#OperatingSystem"/>
+    <rdf:Description rdf:about="#VideoGame"/>
+    <rdf:Description rdf:about="#MinimumRequirement"/>
+    <rdf:Description rdf:about="#GameAttribute"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#GameGenre"/>
+    <rdf:Description rdf:about="#PlayerMode"/>
+    <rdf:Description rdf:about="#PEGIRating"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CPU"/>
+    <rdf:Description rdf:about="#GPU"/>
+    <rdf:Description rdf:about="#RAM"/>
+    <rdf:Description rdf:about="#Storage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#User"/>
+    <rdf:Description rdf:about="#Computer"/>
+    <rdf:Description rdf:about="#Component"/>
+    <rdf:Description rdf:about="#OperatingSystem"/>
+    <rdf:Description rdf:about="#VideoGame"/>
+    <rdf:Description rdf:about="#MinimumRequirement"/>
+    <rdf:Description rdf:about="#GameAttribute"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#GameGenre"/>
+    <rdf:Description rdf:about="#PlayerMode"/>
+    <rdf:Description rdf:about="#PEGIRating"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CPU"/>
+    <rdf:Description rdf:about="#GPU"/>
+    <rdf:Description rdf:about="#RAM"/>
+    <rdf:Description rdf:about="#Storage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#User"/>
+    <rdf:Description rdf:about="#Computer"/>
+    <rdf:Description rdf:about="#Component"/>
+    <rdf:Description rdf:about="#OperatingSystem"/>
+    <rdf:Description rdf:about="#VideoGame"/>
+    <rdf:Description rdf:about="#MinimumRequirement"/>
+    <rdf:Description rdf:about="#GameAttribute"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#GameGenre"/>
+    <rdf:Description rdf:about="#PlayerMode"/>
+    <rdf:Description rdf:about="#PEGIRating"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#CPU"/>
+    <rdf:Description rdf:about="#GPU"/>
+    <rdf:Description rdf:about="#RAM"/>
+    <rdf:Description rdf:about="#Storage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#User"/>
+    <rdf:Description rdf:about="#Computer"/>
+    <rdf:Description rdf:about="#Component"/>
+    <rdf:Description rdf:about="#OperatingSystem"/>
+    <rdf:Description rdf:about="#VideoGame"/>
+    <rdf:Description rdf:about="#MinimumRequirement"/>
+    <rdf:Description rdf:about="#GameAttribute"/>
+  </owl:members>
+</owl:AllDisjointClasses>
 
 <owl:AllDisjointClasses>
   <owl:members rdf:parseType="Collection">
