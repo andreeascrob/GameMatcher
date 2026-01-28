@@ -1,0 +1,357 @@
+[
+  {
+    "name": "Intel Core i5-6600K",
+    "mark": 6297,
+    "rank": 2046
+  },
+  {
+    "name": "Core i7-7700K",
+    "mark": 9629,
+    "rank": 1575
+  },
+  {
+    "name": "Ryzen 5 1600",
+    "mark": 12260,
+    "rank": 1377
+  },
+  {
+    "name": "Intel Core i5-6400",
+    "mark": 5174,
+    "rank": 2306
+  },
+  {
+    "name": "AMD Ryzen 3 1200",
+    "mark": 6267,
+    "rank": 2049
+  },
+  {
+    "name": "Intel Core i5-8400",
+    "mark": 9230,
+    "rank": 1618
+  },
+  {
+    "name": "AMD Ryzen 5 2600",
+    "mark": 13144,
+    "rank": 1319
+  },
+  {
+    "name": "Intel Core i7-4770",
+    "mark": 7060,
+    "rank": 1894
+  },
+  {
+    "name": "AMD FX-9590",
+    "mark": 6822,
+    "rank": 1938
+  },
+  {
+    "name": "AMD Ryzen 5 2600X",
+    "mark": 13874,
+    "rank": 1264
+  },
+  {
+    "name": "Intel Core i7-6800K",
+    "mark": 10714,
+    "rank": 1489
+  },
+  {
+    "name": "Intel Core i7-7700",
+    "mark": 8637,
+    "rank": 1671
+  },
+  {
+    "name": "AMD Ryzen 5 2500x",
+    "mark": 9391,
+    "rank": 1599
+  },
+  {
+    "name": "Intel Core i3-4170",
+    "mark": 3578,
+    "rank": 2717
+  },
+  {
+    "name": "AMD FX-8120",
+    "mark": 4635,
+    "rank": 2416
+  },
+  {
+    "name": "Snapdragon X Elite",
+    "mark": 22695,
+    "rank": 753
+  },
+  {
+    "name": "Intel Core i5-8600K",
+    "mark": 10140,
+    "rank": 1527
+  },
+  {
+    "name": "AMD Ryzen 5 1600",
+    "mark": 12260,
+    "rank": 1377
+  },
+  {
+    "name": "Core i7-3820",
+    "mark": 5791,
+    "rank": 2148
+  },
+  {
+    "name": "AMD at",
+    "mark": 191,
+    "rank": 5391
+  },
+  {
+    "name": "AMD Ryzen 5 3600",
+    "mark": 17682,
+    "rank": 1036
+  },
+  {
+    "name": "Intel Core i7-8700K",
+    "mark": 13572,
+    "rank": 1285
+  },
+  {
+    "name": "AMD Ryzen 5 1400",
+    "mark": 7735,
+    "rank": 1784
+  },
+  {
+    "name": "Intel Core i5-6600",
+    "mark": 6063,
+    "rank": 2091
+  },
+  {
+    "name": "Intel Core i7-5820K",
+    "mark": 9827,
+    "rank": 1558
+  },
+  {
+    "name": "AMD FX-8370",
+    "mark": 6181,
+    "rank": 2066
+  },
+  {
+    "name": "Intel Core i3-3210",
+    "mark": 2227,
+    "rank": 3411
+  },
+  {
+    "name": "Intel Core i5-2300",
+    "mark": 3469,
+    "rank": 2755
+  },
+  {
+    "name": "AMD FX-8350",
+    "mark": 6090,
+    "rank": 2084
+  },
+  {
+    "name": "Intel Core i5-7500",
+    "mark": 6030,
+    "rank": 2103
+  },
+  {
+    "name": "Intel Core i5",
+    "mark": 2255,
+    "rank": 3387
+  },
+  {
+    "name": "Intel Core i5-4430",
+    "mark": 4657,
+    "rank": 2407
+  },
+  {
+    "name": "AMD FX-6300",
+    "mark": 4225,
+    "rank": 2512
+  },
+  {
+    "name": "Intel Core i5-6402p CPU",
+    "mark": 5342,
+    "rank": 2262
+  },
+  {
+    "name": "Intel Core i5-2500K",
+    "mark": 4141,
+    "rank": 2531
+  },
+  {
+    "name": "Core i5-9600k",
+    "mark": 10650,
+    "rank": 1493
+  },
+  {
+    "name": "Ryzen 5 2600X",
+    "mark": 13874,
+    "rank": 1264
+  },
+  {
+    "name": "Intel Core i7-7700HQ",
+    "mark": 6880,
+    "rank": 1930
+  },
+  {
+    "name": "Intel Core i3",
+    "mark": 1517,
+    "rank": 3907
+  },
+  {
+    "name": "AMD RYZEN 3 3300X",
+    "mark": 12594,
+    "rank": 1356
+  },
+  {
+    "name": "AMD Ryzen 5 1600X",
+    "mark": 13013,
+    "rank": 1331
+  },
+  {
+    "name": "Intel Core i7-4790K",
+    "mark": 8061,
+    "rank": 1739
+  },
+  {
+    "name": "AMD Ryzen 5 1500X @",
+    "mark": 9074,
+    "rank": 1635
+  },
+  {
+    "name": "Core i7-6700",
+    "mark": 8037,
+    "rank": 1745
+  },
+  {
+    "name": "Intel Core i5-9400F",
+    "mark": 9461,
+    "rank": 1589
+  },
+  {
+    "name": "AMD Ryzen 3 1300X",
+    "mark": 6925,
+    "rank": 1921
+  },
+  {
+    "name": "Intel Core i5-4670",
+    "mark": 5494,
+    "rank": 2224
+  },
+  {
+    "name": "AMD Ryzen 3 1200 3.1 GHz",
+    "mark": 6267,
+    "rank": 2049
+  },
+  {
+    "name": "AMD Ryzen 3 3100",
+    "mark": 11528,
+    "rank": 1426
+  },
+  {
+    "name": "i5-2300",
+    "mark": 3469,
+    "rank": 2755
+  },
+  {
+    "name": "Ryzen 3 1200",
+    "mark": 6267,
+    "rank": 2049
+  },
+  {
+    "name": "Intel Core i5 750",
+    "mark": 1326,
+    "rank": 4049
+  },
+  {
+    "name": "Intel Core i5-4460",
+    "mark": 4918,
+    "rank": 2357
+  },
+  {
+    "name": "Intel Core i3-2100T",
+    "mark": 1542,
+    "rank": 3885
+  },
+  {
+    "name": "Intel Pentium G4560",
+    "mark": 3536,
+    "rank": 2730
+  },
+  {
+    "name": "AMD FX4350",
+    "mark": 3184,
+    "rank": 2882
+  },
+  {
+    "name": "AMD Athlon x4",
+    "mark": 1786,
+    "rank": 3705
+  },
+  {
+    "name": "Intel Core i3-8100",
+    "mark": 6073,
+    "rank": 2088
+  },
+  {
+    "name": "AMD",
+    "mark": 178,
+    "rank": 5412
+  },
+  {
+    "name": "Intel Core i3-540",
+    "mark": 1557,
+    "rank": 3871
+  },
+  {
+    "name": "AMD Phenom II X4 940",
+    "mark": 2363,
+    "rank": 3322
+  },
+  {
+    "name": "Intel Core i3-9100",
+    "mark": 6595,
+    "rank": 1979
+  },
+  {
+    "name": "AMD Ryzen 3 2200G",
+    "mark": 6735,
+    "rank": 1955
+  },
+  {
+    "name": "Intel Core i5-10600",
+    "mark": 13570,
+    "rank": 1286
+  },
+  {
+    "name": "AMD RYZEN 5 5500",
+    "mark": 19306,
+    "rank": 941
+  },
+  {
+    "name": "AMD Phenom II X4 945",
+    "mark": 2422,
+    "rank": 3280
+  },
+  {
+    "name": "Intel Core i5-4690 @",
+    "mark": 5586,
+    "rank": 2197
+  },
+  {
+    "name": "Intel Core i5-4590",
+    "mark": 5375,
+    "rank": 2253
+  },
+  {
+    "name": "Intel Core i5-10400",
+    "mark": 11981,
+    "rank": 1390
+  },
+  {
+    "name": "Intel Core i3-12100",
+    "mark": 12367,
+    "rank": 1372
+  },
+  {
+    "name": "Intel Core i5-2320",
+    "mark": 3690,
+    "rank": 2684
+  }
+]

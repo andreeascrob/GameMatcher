@@ -1,0 +1,402 @@
+[
+  {
+    "name": "NVIDIA GeForce GTX 1050 Ti",
+    "mark": 5918,
+    "rank": 456
+  },
+  {
+    "name": "AMD Radeon RX 580",
+    "mark": 8796,
+    "rank": 336
+  },
+  {
+    "name": "Intel Arc A380",
+    "mark": 6306,
+    "rank": 430
+  },
+  {
+    "name": "GTX 1060",
+    "mark": 8160,
+    "rank": 356
+  },
+  {
+    "name": "RX 480",
+    "mark": 8541,
+    "rank": 341
+  },
+  {
+    "name": "NVIDIA GeForce GTX 660",
+    "mark": 4043,
+    "rank": 611
+  },
+  {
+    "name": "AMD Radeon RX 460",
+    "mark": 4100,
+    "rank": 606
+  },
+  {
+    "name": "Intel HD 630",
+    "mark": 1111,
+    "rank": 1295
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1060",
+    "mark": 8160,
+    "rank": 356
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1630",
+    "mark": 4996,
+    "rank": 531
+  },
+  {
+    "name": "AMD Radeon RX 6400",
+    "mark": 7739,
+    "rank": 371
+  },
+  {
+    "name": "AMD Radeon RX 5600 XT",
+    "mark": 13432,
+    "rank": 206
+  },
+  {
+    "name": "NVIDIA GeForce GTX 960",
+    "mark": 6134,
+    "rank": 442
+  },
+  {
+    "name": "Qualcomm Adreno X1",
+    "mark": 1890,
+    "rank": 1000
+  },
+  {
+    "name": "ATI",
+    "mark": 9106,
+    "rank": 0
+  },
+  {
+    "name": "3600",
+    "mark": 180,
+    "rank": 2180
+  },
+  {
+    "name": "AMD Radeon HD 7790",
+    "mark": 3090,
+    "rank": 734
+  },
+  {
+    "name": "NVIDIA GeForce GTX 950",
+    "mark": 5355,
+    "rank": 494
+  },
+  {
+    "name": "Intel Arc A750",
+    "mark": 12615,
+    "rank": 230
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1070",
+    "mark": 10465,
+    "rank": 282
+  },
+  {
+    "name": "Nvidia GeForce GTX 1050Ti",
+    "mark": 4463,
+    "rank": 579
+  },
+  {
+    "name": "Intel Arc A580",
+    "mark": 12086,
+    "rank": 245
+  },
+  {
+    "name": "GeForce GeForce GTX 980",
+    "mark": 11069,
+    "rank": 272
+  },
+  {
+    "name": "Radeon RX 470 -",
+    "mark": 7931,
+    "rank": 363
+  },
+  {
+    "name": "Arc A380",
+    "mark": 6306,
+    "rank": 430
+  },
+  {
+    "name": "NVIDIA GeForce GTX 770",
+    "mark": 5965,
+    "rank": 452
+  },
+  {
+    "name": "Nvidia GeForce GTX 780",
+    "mark": 7951,
+    "rank": 362
+  },
+  {
+    "name": "AMD Radeon RX 5500",
+    "mark": 8838,
+    "rank": 333
+  },
+  {
+    "name": "AMD Radeon R7 370",
+    "mark": 4482,
+    "rank": 574
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1660",
+    "mark": 11631,
+    "rank": 259
+  },
+  {
+    "name": "GeForce GTX 1060",
+    "mark": 8160,
+    "rank": 356
+  },
+  {
+    "name": "Radeon RX 580",
+    "mark": 8796,
+    "rank": 336
+  },
+  {
+    "name": "AMD Radeon R9 280",
+    "mark": 5532,
+    "rank": 482
+  },
+  {
+    "name": "RX 6600 XT",
+    "mark": 16444,
+    "rank": 139
+  },
+  {
+    "name": "RTX 2060",
+    "mark": 11353,
+    "rank": 268
+  },
+  {
+    "name": "RX 590",
+    "mark": 9304,
+    "rank": 321
+  },
+  {
+    "name": "Intel Arc A380 (VR",
+    "mark": 6306,
+    "rank": 430
+  },
+  {
+    "name": "RT)",
+    "mark": 5987,
+    "rank": 448
+  },
+  {
+    "name": "Radeon R9 390X",
+    "mark": 9275,
+    "rank": 322
+  },
+  {
+    "name": "GeForce GTX 970",
+    "mark": 9638,
+    "rank": 303
+  },
+  {
+    "name": "Radeon RX 480",
+    "mark": 8541,
+    "rank": 341
+  },
+  {
+    "name": "GTX 970",
+    "mark": 9638,
+    "rank": 303
+  },
+  {
+    "name": "NVIDIA GeForce GTX 645",
+    "mark": 1876,
+    "rank": 1004
+  },
+  {
+    "name": "AMD Radeon Vega 8",
+    "mark": 1568,
+    "rank": 1134
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1650",
+    "mark": 6968,
+    "rank": 398
+  },
+  {
+    "name": "NVIDIA GeForce GTX 970 -",
+    "mark": 9638,
+    "rank": 303
+  },
+  {
+    "name": "AMD Radeon RX 480",
+    "mark": 8541,
+    "rank": 341
+  },
+  {
+    "name": "AMD Radeon R9 285",
+    "mark": 6680,
+    "rank": 0
+  },
+  {
+    "name": "Radeon RX 5700",
+    "mark": 14280,
+    "rank": 182
+  },
+  {
+    "name": "NVIDIA GeForce GT 420",
+    "mark": 433,
+    "rank": 1924
+  },
+  {
+    "name": "ATI Radeon HD 6850",
+    "mark": 1938,
+    "rank": 985
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1050",
+    "mark": 4463,
+    "rank": 579
+  },
+  {
+    "name": "OR Intel Arc A380",
+    "mark": 6306,
+    "rank": 430
+  },
+  {
+    "name": "ATI Radeon X1300",
+    "mark": 58,
+    "rank": 2479
+  },
+  {
+    "name": "Nvidia GeForce GTX 470",
+    "mark": 3160,
+    "rank": 723
+  },
+  {
+    "name": "Intel Iris Xe G7",
+    "mark": 2617,
+    "rank": 799
+  },
+  {
+    "name": "AMD Radeon RX Vega 11",
+    "mark": 2091,
+    "rank": 933
+  },
+  {
+    "name": "GTX 1050",
+    "mark": 4463,
+    "rank": 579
+  },
+  {
+    "name": "AMD Radeon HD 7850",
+    "mark": 3898,
+    "rank": 623
+  },
+  {
+    "name": "NVIDIA GeForce GTX 680",
+    "mark": 5612,
+    "rank": 471
+  },
+  {
+    "name": "Intel UHD Graphics 630",
+    "mark": 1229,
+    "rank": 1246
+  },
+  {
+    "name": "Radeon HD 7870",
+    "mark": 4565,
+    "rank": 564
+  },
+  {
+    "name": "Intel Iris Xe Graphics",
+    "mark": 2617,
+    "rank": 799
+  },
+  {
+    "name": "AMD Radeon RX 5700",
+    "mark": 14280,
+    "rank": 182
+  },
+  {
+    "name": "NVIDIA GeForce GTX 1050 Over",
+    "mark": 4463,
+    "rank": 579
+  },
+  {
+    "name": "NVIDIA GeForce 9600 GT",
+    "mark": 473,
+    "rank": 1886
+  },
+  {
+    "name": "AMD Radeon HD 6570",
+    "mark": 555,
+    "rank": 1778
+  },
+  {
+    "name": "AMD Radeon RX 5500 XT",
+    "mark": 9078,
+    "rank": 328
+  },
+  {
+    "name": "RX 570",
+    "mark": 1923,
+    "rank": 988
+  },
+  {
+    "name": "GTX 1050 Ti",
+    "mark": 5918,
+    "rank": 456
+  },
+  {
+    "name": "Radeon R7 360",
+    "mark": 3122,
+    "rank": 728
+  },
+  {
+    "name": "Intel UHD Graphics 730",
+    "mark": 1539,
+    "rank": 1146
+  },
+  {
+    "name": "AMD Radeon HD 7450",
+    "mark": 224,
+    "rank": 2122
+  },
+  {
+    "name": "AMD Radeon RX 5600XT",
+    "mark": 11753,
+    "rank": 255
+  },
+  {
+    "name": "GeForce GTX 1050",
+    "mark": 4463,
+    "rank": 579
+  },
+  {
+    "name": "AMD Radeon HD 7870",
+    "mark": 4565,
+    "rank": 564
+  },
+  {
+    "name": "NVIDIA GeForce GTX 750 Ti",
+    "mark": 3902,
+    "rank": 622
+  },
+  {
+    "name": "AMD Radeon RX 460 with",
+    "mark": 4100,
+    "rank": 606
+  },
+  {
+    "name": "AMD Radeon R9 390",
+    "mark": 8823,
+    "rank": 334
+  },
+  {
+    "name": "GTX 1660",
+    "mark": 11631,
+    "rank": 259
+  }
+]
