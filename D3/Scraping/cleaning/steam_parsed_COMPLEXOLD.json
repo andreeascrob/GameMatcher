@@ -18,27 +18,27 @@
         "PRICE": "Free To Play"
     },
     {
-        "NAME": "N/A",
-        "CPU": "N/A",
-        "GPU": "N/A",
-        "PRICE": "N/A"
-    },
-    {
         "NAME": "Lost Ark",
         "CPU": "Intel Core i3 – 10100 AMD Ryzen3 3100",
         "GPU": "Nvidia Geforce GTX 1050 Ti / AMD Radeon RX 560",
         "PRICE": "Free To Play"
     },
     {
-        "NAME": "Dwarves: Glory, Death and Loot",
-        "CPU": "Intel i3-2100 / AMD A8-5600k",
+        "NAME": "N/A",
+        "CPU": "N/A",
         "GPU": "N/A",
-        "PRICE": "4,99€"
+        "PRICE": "N/A"
     },
     {
-        "NAME": "Tabletop Simulator",
-        "CPU": "SSE2 instruction set support.",
-        "GPU": "Graphics card with DX10 (shader model 4.0) capabilities.",
-        "PRICE": "146,27€"
+        "NAME": "The Planet Crafter",
+        "CPU": "Intel Core2 Duo 2.4GHz or equivalent",
+        "GPU": "3GB VRAM",
+        "PRICE": "19,97€"
+    },
+    {
+        "NAME": "Stardew Valley",
+        "CPU": "2 Ghz",
+        "GPU": "256 mb video memory, shader model 3.0+",
+        "PRICE": "13,99€"
     }
 ]

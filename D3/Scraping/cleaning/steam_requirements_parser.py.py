@@ -1,9 +1,10 @@
 import json
 import re
 import pandas as pd
-
+from pathlib import Path
 # 1. Load Data
-input_filename = '/home/andreea/GameMatcher/D3/Scraping/deta/steam_top_100.json' 
+# input_filename = '/home/andreea/GameMatcher/D3/Scraping/deta/steam_top_100.json' 
+input_filename = Path(r"C:\Users\tomma\Desktop\Clone Repository Actionable Knowledge\GameMatcher\D3\Scraping\row data\steam_top_100.json")
 # Ensure the file is in the same folder or provide the full path
 with open(input_filename, 'r', encoding='utf-8') as f:
     data = json.load(f)

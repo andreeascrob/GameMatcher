@@ -1,20 +1,30 @@
 import csv
 import json
+from pathlib import Path
 
-def csv_to_json(csv_file_path, json_file_path):
+def csv_to_json(csv_filename, json_filename):
+    # Get the directory where the script is currently located
+    base_path = Path(__file__).parent
+    
+    # Create full paths based on that directory
+    csv_path = base_path / csv_filename
+    json_path = base_path / json_filename
+    
     dati = []
     
-    # Apriamo il file CSV in lettura
-    with open(csv_file_path, encoding='utf-8') as csv_file:
+    if not csv_path.exists():
+        print(f"Error: {csv_filename} not found in {base_path}")
+        return
+
+    with open(csv_path, encoding='utf-8') as csv_file:
         csv_reader = csv.DictReader(csv_file)
-        
-        # Trasformiamo ogni riga in un dizionario e la aggiungiamo alla lista
         for rows in csv_reader:
             dati.append(rows)
 
-    # Scriviamo i dati in un file JSON
-    with open(json_file_path, 'w', encoding='utf-8') as json_file:
+    with open(json_path, 'w', encoding='utf-8') as json_file:
         json.dump(dati, json_file, indent=4, ensure_ascii=False)
+    
+    print(f"Successfully converted {csv_filename} to {json_filename}")
 
-# Esempio di utilizzo
-csv_to_json('/home/andreea/GameMatcher/D3/Scraping/steam_top_100.csv', 'steam_top_100.json')
+# Usage: Now you only need the filenames
+csv_to_json('steam_top_100.csv', 'steam_top_100.json')
