@@ -155,6 +155,13 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires operating system</rdfs:label>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="#requiresRAM">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#MinimumRequirement"/>
+  <rdfs:range rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires RAM</rdfs:label>
+</owl:ObjectProperty>
+
 <owl:DatatypeProperty rdf:about="#requiresCPUBenchmarkScore">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#MinimumRequirement"/>
@@ -1120,6 +1127,66 @@
   <hasOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</hasOSVersionValue>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#RAM_2GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_4GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_6GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_8GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_12GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_16GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_24GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_32GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_64GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">64 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#RAM_128GB">
+  <rdf:type rdf:resource="#RAM"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">128 GB RAM</rdfs:label>
+  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128.0</hasMemorySizeGB>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#Game_ARC_Raiders">
   <rdf:type rdf:resource="#VideoGame"/>
   <hasPEGI rdf:resource="#PEGI_16"/>
@@ -1155,9 +1222,10 @@
 <owl:NamedIndividual rdf:about="#Req_ARC_Raiders">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARC Raiders</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1182,9 +1250,10 @@
 <owl:NamedIndividual rdf:about="#Req_Dead_by_Daylight">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dead by Daylight</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3578</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1226,9 +1295,10 @@
 <owl:NamedIndividual rdf:about="#Req_EA_SPORTS_FC_26">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for EA SPORTS FC™ 26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1247,9 +1317,10 @@
 <owl:NamedIndividual rdf:about="#Req_Grand_Theft_Auto_V_Enhanced">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Grand Theft Auto V Enhanced</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4996</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6822</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1268,9 +1339,10 @@
 <owl:NamedIndividual rdf:about="#Req_Red_Dead_Redemption_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Red Dead Redemption 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5532</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4141</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1290,9 +1362,10 @@
 <owl:NamedIndividual rdf:about="#Req_Where_Winds_Meet">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Where Winds Meet</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9629</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1310,9 +1383,10 @@
 <owl:NamedIndividual rdf:about="#Req_No_Rest_for_the_Wicked">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for No Rest for the Wicked</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1328,9 +1402,10 @@
 <owl:NamedIndividual rdf:about="#Req_Euro_Truck_Simulator_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Euro Truck Simulator 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1369,9 +1444,10 @@
 <owl:NamedIndividual rdf:about="#Req_ARK_Survival_Ascended">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARK: Survival Ascended</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13432</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10714</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1397,9 +1473,10 @@
 <owl:NamedIndividual rdf:about="#Req_Forza_Horizon_5">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Forza Horizon 5</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1416,9 +1493,10 @@
 <owl:NamedIndividual rdf:about="#Req_Quarantine_Zone_The_Last_Check">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Quarantine Zone: The Last Check</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6181</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1436,9 +1514,10 @@
 <owl:NamedIndividual rdf:about="#Req_Cult_of_the_Lamb">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cult of the Lamb</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1457,9 +1536,10 @@
 <owl:NamedIndividual rdf:about="#Req_Baldur_s_Gate_3">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Baldur's Gate 3</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6090</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1476,9 +1556,10 @@
 <owl:NamedIndividual rdf:about="#Req_The_Sims_4">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Sims™ 4</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1501,9 +1582,10 @@
 <owl:NamedIndividual rdf:about="#Req_HELLDIVERS_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for HELLDIVERS™ 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8061</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1522,9 +1604,10 @@
 <owl:NamedIndividual rdf:about="#Req_Battlefield_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Battlefield™ 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1542,9 +1625,10 @@
 <owl:NamedIndividual rdf:about="#Req_Enshrouded">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Enshrouded</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1562,9 +1646,10 @@
 <owl:NamedIndividual rdf:about="#Req_Apex_Legends">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Apex Legends™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3090</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1582,7 +1667,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_World_of_Warships">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for World of Warships</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2227</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1599,9 +1686,10 @@
 <owl:NamedIndividual rdf:about="#Req_PUBG_BATTLEGROUNDS">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for PUBG: BATTLEGROUNDS</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4482</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4225</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1619,9 +1707,10 @@
 <owl:NamedIndividual rdf:about="#Req_StarRupture">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for StarRupture</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1639,7 +1728,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_Fallout_76">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Fallout 76</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6680</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1658,9 +1749,10 @@
 <owl:NamedIndividual rdf:about="#Req_Torchlight_Infinite">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Torchlight: Infinite</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1678,9 +1770,10 @@
 <owl:NamedIndividual rdf:about="#Req_Path_of_Exile_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Path of Exile 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6134</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8637</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1697,9 +1790,10 @@
 <owl:NamedIndividual rdf:about="#Req_Farming_Simulator_25">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Farming Simulator 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1716,9 +1810,10 @@
 <owl:NamedIndividual rdf:about="#Req_CODE_VEIN_II">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_11"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for CODE VEIN II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11631</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1735,9 +1830,10 @@
 <owl:NamedIndividual rdf:about="#Req_Tainted_Grail_The_Fall_of_Avalon">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tainted Grail: The Fall of Avalon</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1755,9 +1851,10 @@
 <owl:NamedIndividual rdf:about="#Req_Black_Desert">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Black Desert</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8541</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1776,9 +1873,10 @@
 <owl:NamedIndividual rdf:about="#Req_Marvel_Rivals">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Marvel Rivals</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1796,9 +1894,10 @@
 <owl:NamedIndividual rdf:about="#Req_Crusader_Kings_III">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Crusader Kings III</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4043</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1326</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1817,9 +1916,10 @@
 <owl:NamedIndividual rdf:about="#Req_Destiny_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Destiny 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3898</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1836,9 +1936,10 @@
 <owl:NamedIndividual rdf:about="#Req_Dota_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dota 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1856,9 +1957,10 @@
 <owl:NamedIndividual rdf:about="#Req_Dead_by_Daylight_Stranger_Things_Chapter_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dead by Daylight: Stranger Things Chapter 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3578</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1875,9 +1977,10 @@
 <owl:NamedIndividual rdf:about="#Req_RV_There_Yet">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for RV There Yet?</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5791</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1896,9 +1999,10 @@
 <owl:NamedIndividual rdf:about="#Req_Rust">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_11"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Rust</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6063</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1917,9 +2021,10 @@
 <owl:NamedIndividual rdf:about="#Req_Arena_Breakout_Infinite">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Arena Breakout: Infinite</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6030</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1938,9 +2043,10 @@
 <owl:NamedIndividual rdf:about="#Req_Tom_Clancy_s_Rainbow_Six_Siege_X">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tom Clancy's Rainbow Six® Siege X</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11528</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -1958,9 +2064,10 @@
 <owl:NamedIndividual rdf:about="#Req_Schedule_I">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Schedule I</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -1975,7 +2082,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_SnowRunner">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for SnowRunner</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ELDEN_RING">
@@ -1992,9 +2101,10 @@
 <owl:NamedIndividual rdf:about="#Req_ELDEN_RING">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ELDEN RING</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2012,9 +2122,10 @@
 <owl:NamedIndividual rdf:about="#Req_Avatar_Frontiers_of_Pandora">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Avatar: Frontiers of Pandora™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13572</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2031,9 +2142,10 @@
 <owl:NamedIndividual rdf:about="#Req_Dispatch">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_2GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dispatch</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5342</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2051,9 +2163,10 @@
 <owl:NamedIndividual rdf:about="#Req_The_Elder_Scrolls_Online">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Elder Scrolls® Online</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3184</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2070,9 +2183,10 @@
 <owl:NamedIndividual rdf:about="#Req_World_of_Tanks">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for World of Tanks</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2088,9 +2202,10 @@
 <owl:NamedIndividual rdf:about="#Req_Wuthering_Waves">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Wuthering Waves</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2109,9 +2224,10 @@
 <owl:NamedIndividual rdf:about="#Req_Anno_117_Pax_Romana">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Anno 117: Pax Romana</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11631</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2130,9 +2246,10 @@
 <owl:NamedIndividual rdf:about="#Req_ARC_Raiders_The_Bonecrown_Set">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARC Raiders - The Bonecrown Set</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2149,9 +2266,10 @@
 <owl:NamedIndividual rdf:about="#Req_Cyberpunk_2077">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cyberpunk 2077</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8037</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2172,9 +2290,10 @@
 <owl:NamedIndividual rdf:about="#Req_NBA_2K26">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for NBA 2K26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2192,9 +2311,10 @@
 <owl:NamedIndividual rdf:about="#Req_Cult_of_the_Lamb_Woolhaven">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cult of the Lamb: Woolhaven</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2210,9 +2330,10 @@
 <owl:NamedIndividual rdf:about="#Req_Kingdom_Come_Deliverance_II">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Kingdom Come: Deliverance II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2229,9 +2350,10 @@
 <owl:NamedIndividual rdf:about="#Req_STAR_WARS_Jedi_Survivor">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS Jedi: Survivor™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8637</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2249,9 +2371,10 @@
 <owl:NamedIndividual rdf:about="#Req_theHunter_Call_of_the_Wild">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for theHunter: Call of the Wild™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2268,9 +2391,10 @@
 <owl:NamedIndividual rdf:about="#Req_Hearts_of_Iron_IV">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Hearts of Iron IV</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2617</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1326</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2290,9 +2414,10 @@
 <owl:NamedIndividual rdf:about="#Req_Diablo_IV">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Diablo® IV</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4043</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4141</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2309,9 +2434,10 @@
 <owl:NamedIndividual rdf:about="#Req_Microsoft_Flight_Simulator_2024">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Microsoft Flight Simulator 2024</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10714</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2333,9 +2459,10 @@
 <owl:NamedIndividual rdf:about="#Req_F1_25">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for F1® 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2353,7 +2480,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_Guild_Wars_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Guild Wars 2®</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5612</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1786</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2371,9 +2500,10 @@
 <owl:NamedIndividual rdf:about="#Req_Forza_Horizon_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Forza Horizon 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2391,9 +2521,10 @@
 <owl:NamedIndividual rdf:about="#Req_ICARUS">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ICARUS</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2410,9 +2541,10 @@
 <owl:NamedIndividual rdf:about="#Req_Sons_Of_The_Forest">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Sons Of The Forest</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2430,9 +2562,10 @@
 <owl:NamedIndividual rdf:about="#Req_R_E_P_O">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for R.E.P.O.</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2446,7 +2579,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_BeamNG_drive">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for BeamNG.drive</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2465,9 +2600,10 @@
 <owl:NamedIndividual rdf:about="#Req_Once_Human">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Once Human</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4918</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2484,9 +2620,10 @@
 <owl:NamedIndividual rdf:about="#Req_Bellwright">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Bellwright</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2507,9 +2644,10 @@
 <owl:NamedIndividual rdf:about="#Req_FINAL_FANTASY_XIV_Online">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_11"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for FINAL FANTASY XIV Online</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8541</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2525,9 +2663,10 @@
 <owl:NamedIndividual rdf:about="#Req_Clair_Obscur_Expedition_33">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Clair Obscur: Expedition 33</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13013</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2545,9 +2684,10 @@
 <owl:NamedIndividual rdf:about="#Req_Phasmophobia">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Phasmophobia</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8823</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5375</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2564,9 +2704,10 @@
 <owl:NamedIndividual rdf:about="#Req_Disney_Dreamlight_Valley">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Disney Dreamlight Valley</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">473</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1557</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2584,9 +2725,10 @@
 <owl:NamedIndividual rdf:about="#Req_Warhammer_40_000_Darktide">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Warhammer 40,000: Darktide</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2605,9 +2747,10 @@
 <owl:NamedIndividual rdf:about="#Req_Factorio">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_11"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Factorio</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1539</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2622,9 +2765,10 @@
 <owl:NamedIndividual rdf:about="#Req_Train_Sim_World_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Train Sim World® 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3902</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5586</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2641,9 +2785,10 @@
 <owl:NamedIndividual rdf:about="#Req_STAR_WARS_The_Old_Republic">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS™: The Old Republic™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2660,9 +2805,10 @@
 <owl:NamedIndividual rdf:about="#Req_Titan_Quest_II">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Titan Quest II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10140</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2678,9 +2824,10 @@
 <owl:NamedIndividual rdf:about="#Req_Euro_Truck_Simulator_2_Nordic_Horizons">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Euro Truck Simulator 2 - Nordic Horizons</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2697,9 +2844,10 @@
 <owl:NamedIndividual rdf:about="#Req_Half_Life_Alyx">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Half-Life: Alyx</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2716,9 +2864,10 @@
 <owl:NamedIndividual rdf:about="#Req_Red_Dead_Redemption">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Red Dead Redemption</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3122</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5494</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2735,9 +2884,10 @@
 <owl:NamedIndividual rdf:about="#Req_SILENT_HILL_f">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_11"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for SILENT HILL f</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10465</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2755,9 +2905,10 @@
 <owl:NamedIndividual rdf:about="#Req_Magic_The_Gathering_Arena">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_2GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Magic: The Gathering Arena</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</requiresMemoryGB>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_ELDEN_RING_NIGHTREIGN">
@@ -2773,9 +2924,10 @@
 <owl:NamedIndividual rdf:about="#Req_ELDEN_RING_NIGHTREIGN">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ELDEN RING NIGHTREIGN</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13570</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2792,9 +2944,10 @@
 <owl:NamedIndividual rdf:about="#Req_American_Truck_Simulator">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for American Truck Simulator</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2811,7 +2964,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_Raft">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Raft</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2826,9 +2981,10 @@
 <owl:NamedIndividual rdf:about="#Req_Foundation">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Foundation</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4918</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2845,9 +3001,10 @@
 <owl:NamedIndividual rdf:about="#Req_Ready_or_Not">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Ready or Not</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4482</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4225</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2865,9 +3022,10 @@
 <owl:NamedIndividual rdf:about="#Req_Mount_Blade_II_Bannerlord">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Mount &amp; Blade II: Bannerlord</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6073</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2883,7 +3041,9 @@
 
 <owl:NamedIndividual rdf:about="#Req_Fallout_4">
   <rdf:type rdf:resource="#MinimumRequirement"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Fallout 4</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4565</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2422</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2901,9 +3061,10 @@
 <owl:NamedIndividual rdf:about="#Req_Grounded_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Grounded 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2920,9 +3081,10 @@
 <owl:NamedIndividual rdf:about="#Req_Resident_Evil_Requiem">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_11"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Resident Evil Requiem</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 11.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11631</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2939,9 +3101,10 @@
 <owl:NamedIndividual rdf:about="#Req_PEAK">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for PEAK</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2958,9 +3121,10 @@
 <owl:NamedIndividual rdf:about="#Req_BALL_x_PIT">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for BALL x PIT</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1786</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -2978,9 +3142,10 @@
 <owl:NamedIndividual rdf:about="#Req_Split_Fiction">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_64_0"/>
+  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Split Fiction</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 64.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7931</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -2999,9 +3164,10 @@
 <owl:NamedIndividual rdf:about="#Req_Satisfactory">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Satisfactory</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
@@ -3018,9 +3184,10 @@
 <owl:NamedIndividual rdf:about="#Req_ARK_Survival_Evolved">
   <rdf:type rdf:resource="#MinimumRequirement"/>
   <requiresOS rdf:resource="#OS_Windows_10"/>
+  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARK: Survival Evolved</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OS Version Required: 10.0</rdfs:label>
+  <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4565</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
 </owl:NamedIndividual>
@@ -3041,15 +3208,9 @@
   <hasCPU rdf:resource="#CPU_Intel_Core_i7_4790K"/>
   <hasGPU rdf:resource="#GPU_NVIDIA_GeForce_GTX_1050"/>
   <hasOS rdf:resource="#OS_Windows_11"/>
-  <hasRAM rdf:resource="#RAM_Mark"/>
+  <hasRAM rdf:resource="#RAM_64GB"/>
   <hasStorage rdf:resource="#Storage_Mark"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark's Computer</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#RAM_Mark">
-  <rdf:type rdf:resource="#RAM"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32.0 GB RAM</rdfs:label>
-  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</hasMemorySizeGB>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Storage_Mark">
@@ -3084,15 +3245,9 @@
   <hasCPU rdf:resource="#CPU_Intel_Core_i5_6600K"/>
   <hasGPU rdf:resource="#GPU_NVIDIA_GeForce_GTX_1060"/>
   <hasOS rdf:resource="#OS_Windows_10"/>
-  <hasRAM rdf:resource="#RAM_Giulio"/>
+  <hasRAM rdf:resource="#RAM_8GB"/>
   <hasStorage rdf:resource="#Storage_Giulio"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giulio's Computer</rdfs:label>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#RAM_Giulio">
-  <rdf:type rdf:resource="#RAM"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.0 GB RAM</rdfs:label>
-  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</hasMemorySizeGB>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Storage_Giulio">
@@ -3111,48 +3266,42 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indie</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#User_Luca">
+<owl:NamedIndividual rdf:about="#User_Dev_User">
   <rdf:type rdf:resource="#User"/>
-  <hasComputer rdf:resource="#PC_Luca"/>
+  <hasComputer rdf:resource="#PC_Dev_User"/>
   <preferredGenre rdf:resource="#Genre_Strategy"/>
   <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luca</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev_User</rdfs:label>
   <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasAge>
-  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</hasBudget>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasBudget>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#PC_Luca">
+<owl:NamedIndividual rdf:about="#PC_Dev_User">
   <rdf:type rdf:resource="#Computer"/>
-  <hasCPU rdf:resource="#CPU_Luca_Local"/>
-  <hasGPU rdf:resource="#GPU_Luca_Local"/>
-  <hasOS rdf:resource="#OS_Windows_7"/>
-  <hasRAM rdf:resource="#RAM_Luca"/>
-  <hasStorage rdf:resource="#Storage_Luca"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luca's Computer</rdfs:label>
+  <hasCPU rdf:resource="#CPU_Dev_User_Local"/>
+  <hasGPU rdf:resource="#GPU_Dev_User_Local"/>
+  <hasOS rdf:resource="#OS_Windows_11"/>
+  <hasRAM rdf:resource="#RAM_128GB"/>
+  <hasStorage rdf:resource="#Storage_Dev_User"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dev_User's Computer</rdfs:label>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#CPU_Luca_Local">
+<owl:NamedIndividual rdf:about="#CPU_Dev_User_Local">
   <rdf:type rdf:resource="#CPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Very Old CPU 123</rdfs:label>
-  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</hasBenchmarkScore>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 9 7950X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_Luca_Local">
+<owl:NamedIndividual rdf:about="#GPU_Dev_User_Local">
   <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrated Graphics</rdfs:label>
-  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</hasBenchmarkScore>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce RTX 4090</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#RAM_Luca">
-  <rdf:type rdf:resource="#RAM"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.0 GB RAM</rdfs:label>
-  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasMemorySizeGB>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Storage_Luca">
+<owl:NamedIndividual rdf:about="#Storage_Dev_User">
   <rdf:type rdf:resource="#Storage"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256.0 GB Drive</rdfs:label>
-  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">256.0</hasStorageSizeGB>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000.0</hasStorageSizeGB>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Genre_Strategy">
