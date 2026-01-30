@@ -176,12 +176,19 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires GPU benchmark score</rdfs:label>
 </owl:DatatypeProperty>
 
+<owl:DatatypeProperty rdf:about="#hasBenchmarkScore">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#CPU"/>
+  <rdfs:domain rdf:resource="#GPU"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has benchmark score</rdfs:label>
+</owl:DatatypeProperty>
+
 <owl:DatatypeProperty rdf:about="#hasMemorySizeGB">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#RAM"/>
-  <rdfs:domain rdf:resource="#GPU"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of memory in Gigabytes.</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The amount of  RAM memory in Gigabytes.</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has memory size (GB)</rdfs:label>
 </owl:DatatypeProperty>
 
@@ -189,7 +196,7 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#MinimumRequirement"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum RAM or VRAM required in Gigabytes.</rdfs:comment>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum RAM required in Gigabytes.</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires memory (GB)</rdfs:label>
 </owl:DatatypeProperty>
 
@@ -255,14 +262,6 @@
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The numeric age threshold (e.g., 18).</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has PEGI threshold</rdfs:label>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#hasBenchmarkScore">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#GPU"/>
-  <rdfs:domain rdf:resource="#CPU"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has benchmark score</rdfs:label>
 </owl:DatatypeProperty>
 
 <owl:Class rdf:about="#User">
@@ -359,748 +358,895 @@
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6600K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6600K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6297</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Core_i7_7700K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i7-7700K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9629</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Ryzen_5_1600">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 5 1600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6400">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6400</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5174</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1200">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1200</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_8400">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-8400</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9230</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2600">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13144</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_4770">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-4770</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7060</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_FX_9590">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-9590</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6822</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2600X">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2600X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_6800K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-6800K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10714</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_7700">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-7700</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8637</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_2500x">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 2500x</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9391</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_4170">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-4170</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3578</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_FX_8120">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-8120</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4635</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Snapdragon_X_Elite">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snapdragon X Elite</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22695</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_8600K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-8600K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10140</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1600">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12260</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Core_i7_3820">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i7-3820</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5791</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_3600">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 3600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17682</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_8700K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-8700K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13572</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1400">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1400</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7735</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6600">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6063</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_5820K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-5820K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9827</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_FX_8370">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-8370</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6181</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_3210">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-3210</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2227</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_2300">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-2300</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3469</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_FX_8350">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-8350</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6090</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_7500">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-7500</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6030</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4430">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4430</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4657</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_FX_6300">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX-6300</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4225</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_6402p_CPU">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-6402p CPU</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5342</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_2500K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-2500K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4141</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Core_i5_9600k">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i5-9600k</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10650</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Ryzen_5_2600X">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 5 2600X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13874</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_7700HQ">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-7700HQ</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6880</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1517</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_RYZEN_3_3300X">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD RYZEN 3 3300X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12594</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1600X">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1600X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13013</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i7_4790K">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-4790K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8061</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_5_1500X">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 1500X @</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9074</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Core_i7_6700">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Core i7-6700</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8037</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_9400F">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-9400F</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9461</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1300X">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1300X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6925</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4670">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4670</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5494</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_1200_3_1_GHz">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 1200 3.1 GHz</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_3100">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 3100</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11528</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_i5_2300">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i5-2300</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3469</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Ryzen_3_1200">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 3 1200</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_750">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5 750</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1326</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4460">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4460</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4918</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_2100T">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-2100T</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1542</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Pentium_G4560">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Pentium G4560</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3536</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_FX4350">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD FX4350</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3184</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Athlon_x4">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Athlon x4</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1786</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_8100">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-8100</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6073</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_540">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-540</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1557</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Phenom_II_X4_940">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X4 940</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2363</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_9100">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-9100</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6595</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Ryzen_3_2200G">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 2200G</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6735</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_10600">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-10600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13570</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_RYZEN_5_5500">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD RYZEN 5 5500</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19306</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_AMD_Phenom_II_X4_945">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X4 945</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2422</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4690">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4690 @</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5586</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_4590">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-4590</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5375</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_10400">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-10400</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11981</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i3_12100">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i3-12100</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12367</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#CPU_Intel_Core_i5_2320">
   <rdf:type rdf:resource="#CPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i5-2320</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3690</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1050_Ti">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1050 Ti</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_580">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 580</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A380">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A380</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GTX_1060">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1060</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_RX_480">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 480</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8541</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_660">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 660</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4043</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_460">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 460</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4100</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_HD_630">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel HD 630</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1060">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1060</rdfs:label>
-  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</hasMemorySizeGB>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1630">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1630</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4996</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_6400">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 6400</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7739</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5600_XT">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5600 XT</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13432</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_960">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 960</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6134</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Qualcomm_Adreno_X1">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qualcomm Adreno X1</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1890</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_ATI">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_3600">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7790">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7790</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3090</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_950">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 950</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5355</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A750">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A750</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12615</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1070">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1070</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10465</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Nvidia_GeForce_GTX_1050Ti">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia GeForce GTX 1050Ti</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A580">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A580</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12086</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GeForce_GeForce_GTX_980">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GeForce GTX 980</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11069</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_RX_470">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 470 -</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7931</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Arc_A380">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arc A380</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_770">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 770</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5965</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Nvidia_GeForce_GTX_780">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia GeForce GTX 780</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7951</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5500">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5500</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8838</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R7_370">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R7 370</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4482</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1660">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1660</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11631</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1060">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1060</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_RX_580">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 580</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8796</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R9_280">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R9 280</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5532</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_RX_6600_XT">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 6600 XT</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16444</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_RTX_2060">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX 2060</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11353</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_RX_590">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 590</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9304</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Arc_A380_VR">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Arc A380 (VR</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_RT">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT)</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5987</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_R9_390X">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R9 390X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9275</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_970">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 970</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_RX_480">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 480</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8541</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GTX_970">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 970</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_645">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 645</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1876</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_Vega_8">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon Vega 8</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1568</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1650">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1650</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6968</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_970">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 970 -</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9638</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_480">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 480</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8541</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R9_285">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R9 285</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6680</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_RX_5700">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 5700</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14280</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GT_420">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GT 420</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">433</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_ATI_Radeon_HD_6850">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI Radeon HD 6850</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1938</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1050">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1050</rdfs:label>
-  <hasMemorySizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hasMemorySizeGB>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_OR_Intel_Arc_A380">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR Intel Arc A380</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6306</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_ATI_Radeon_X1300">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI Radeon X1300</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Nvidia_GeForce_GTX_470">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia GeForce GTX 470</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3160</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Iris_Xe_G7">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Iris Xe G7</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2617</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_Vega_11">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX Vega 11</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2091</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GTX_1050">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1050</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7850">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7850</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3898</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_680">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 680</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5612</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_UHD_Graphics_630">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD Graphics 630</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1229</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_HD_7870">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon HD 7870</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4565</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_Iris_Xe_Graphics">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Iris Xe Graphics</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2617</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5700">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5700</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14280</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_1050_Over">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 1050 Over</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_9600_GT">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce 9600 GT</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">473</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_6570">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 6570</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">555</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5500_XT">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5500 XT</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9078</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_RX_570">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RX 570</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GTX_1050_Ti">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1050 Ti</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5918</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Radeon_R7_360">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon R7 360</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3122</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_Intel_UHD_Graphics_730">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel UHD Graphics 730</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1539</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7450">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7450</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_5600XT">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 5600XT</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11753</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GeForce_GTX_1050">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 1050</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4463</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_HD_7870">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon HD 7870</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4565</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_NVIDIA_GeForce_GTX_750_Ti">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce GTX 750 Ti</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3902</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_RX_460_with">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 460 with</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4100</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_AMD_Radeon_R9_390">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon R9 390</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8823</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#GPU_GTX_1660">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GTX 1660</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11631</hasBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#OS_Windows_7">
@@ -1221,8 +1367,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ARC_Raiders">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARC Raiders</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -1249,8 +1393,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Dead_by_Daylight">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dead by Daylight</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1294,8 +1436,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_EA_SPORTS_FC_26">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for EA SPORTS FC™ 26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1316,8 +1456,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Grand_Theft_Auto_V_Enhanced">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Grand Theft Auto V Enhanced</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1338,8 +1476,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Red_Dead_Redemption_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Red Dead Redemption 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1361,8 +1497,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Where_Winds_Meet">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Where Winds Meet</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1382,8 +1516,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_No_Rest_for_the_Wicked">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for No Rest for the Wicked</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1401,8 +1533,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Euro_Truck_Simulator_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Euro Truck Simulator 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1443,8 +1573,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ARK_Survival_Ascended">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARK: Survival Ascended</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1472,8 +1600,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Forza_Horizon_5">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Forza Horizon 5</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1492,8 +1618,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Quarantine_Zone_The_Last_Check">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Quarantine Zone: The Last Check</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1513,8 +1637,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Cult_of_the_Lamb">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cult of the Lamb</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -1535,8 +1657,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Baldur_s_Gate_3">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Baldur's Gate 3</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1555,19 +1675,11 @@
 
 <owl:NamedIndividual rdf:about="#Req_The_Sims_4">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Sims™ 4</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</requiresGPUBenchmarkScore>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6267</requiresCPUBenchmarkScore>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#OS_Windows_64_0">
-  <rdf:type rdf:resource="#OperatingSystem"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows 64.0</rdfs:label>
-  <hasOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</hasOSVersionValue>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_HELLDIVERS_2">
@@ -1581,8 +1693,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_HELLDIVERS_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for HELLDIVERS™ 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1603,8 +1713,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Battlefield_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Battlefield™ 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1624,8 +1732,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Enshrouded">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Enshrouded</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1645,8 +1751,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Apex_Legends">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Apex Legends™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
@@ -1667,7 +1771,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_World_of_Warships">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for World of Warships</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1923</requiresGPUBenchmarkScore>
@@ -1685,8 +1788,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_PUBG_BATTLEGROUNDS">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for PUBG: BATTLEGROUNDS</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1706,8 +1807,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_StarRupture">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for StarRupture</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1728,7 +1827,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Fallout_76">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Fallout 76</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6680</requiresGPUBenchmarkScore>
@@ -1748,8 +1846,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Torchlight_Infinite">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Torchlight: Infinite</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1769,8 +1865,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Path_of_Exile_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Path of Exile 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1789,8 +1883,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Farming_Simulator_25">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Farming Simulator 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1809,8 +1901,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_CODE_VEIN_II">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_11"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for CODE VEIN II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1829,8 +1919,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Tainted_Grail_The_Fall_of_Avalon">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tainted Grail: The Fall of Avalon</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -1850,8 +1938,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Black_Desert">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Black Desert</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1872,8 +1958,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Marvel_Rivals">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Marvel Rivals</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -1893,8 +1977,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Crusader_Kings_III">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Crusader Kings III</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1915,8 +1997,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Destiny_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Destiny 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
@@ -1935,8 +2015,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Dota_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dota 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -1956,8 +2034,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Dead_by_Daylight_Stranger_Things_Chapter_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dead by Daylight: Stranger Things Chapter 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1976,8 +2052,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_RV_There_Yet">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for RV There Yet?</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -1998,8 +2072,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Rust">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_11"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Rust</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2020,8 +2092,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Arena_Breakout_Infinite">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Arena Breakout: Infinite</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2042,8 +2112,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Tom_Clancy_s_Rainbow_Six_Siege_X">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tom Clancy's Rainbow Six® Siege X</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2063,8 +2131,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Schedule_I">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Schedule I</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2082,7 +2148,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_SnowRunner">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for SnowRunner</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
 </owl:NamedIndividual>
@@ -2100,8 +2165,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ELDEN_RING">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ELDEN RING</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2121,8 +2184,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Avatar_Frontiers_of_Pandora">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Avatar: Frontiers of Pandora™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2141,8 +2202,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Dispatch">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_2GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Dispatch</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</requiresMemoryGB>
@@ -2162,8 +2221,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_The_Elder_Scrolls_Online">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Elder Scrolls® Online</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -2182,8 +2239,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_World_of_Tanks">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for World of Tanks</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -2201,8 +2256,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Wuthering_Waves">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Wuthering Waves</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2223,8 +2276,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Anno_117_Pax_Romana">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Anno 117: Pax Romana</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2245,8 +2296,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ARC_Raiders_The_Bonecrown_Set">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARC Raiders - The Bonecrown Set</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2265,8 +2314,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Cyberpunk_2077">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cyberpunk 2077</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2289,8 +2336,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_NBA_2K26">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for NBA 2K26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2310,8 +2355,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Cult_of_the_Lamb_Woolhaven">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Cult of the Lamb: Woolhaven</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -2329,8 +2372,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Kingdom_Come_Deliverance_II">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Kingdom Come: Deliverance II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2349,8 +2390,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_STAR_WARS_Jedi_Survivor">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS Jedi: Survivor™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2370,8 +2409,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_theHunter_Call_of_the_Wild">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for theHunter: Call of the Wild™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -2390,8 +2427,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Hearts_of_Iron_IV">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_4GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Hearts of Iron IV</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
@@ -2413,8 +2448,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Diablo_IV">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Diablo® IV</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2433,8 +2466,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Microsoft_Flight_Simulator_2024">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Microsoft Flight Simulator 2024</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2458,8 +2489,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_F1_25">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for F1® 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2480,7 +2509,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Guild_Wars_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Guild Wars 2®</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5612</requiresGPUBenchmarkScore>
@@ -2499,8 +2527,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Forza_Horizon_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Forza Horizon 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2520,8 +2546,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ICARUS">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ICARUS</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2540,8 +2564,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Sons_Of_The_Forest">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Sons Of The Forest</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2561,8 +2583,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_R_E_P_O">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for R.E.P.O.</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2579,7 +2599,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_BeamNG_drive">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for BeamNG.drive</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8160</requiresGPUBenchmarkScore>
@@ -2599,8 +2618,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Once_Human">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Once Human</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2619,8 +2636,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Bellwright">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Bellwright</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2643,8 +2658,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_FINAL_FANTASY_XIV_Online">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_11"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for FINAL FANTASY XIV Online</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2662,8 +2675,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Clair_Obscur_Expedition_33">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Clair Obscur: Expedition 33</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2683,8 +2694,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Phasmophobia">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Phasmophobia</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2703,8 +2712,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Disney_Dreamlight_Valley">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Disney Dreamlight Valley</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
@@ -2724,8 +2731,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Warhammer_40_000_Darktide">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Warhammer 40,000: Darktide</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2746,8 +2751,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Factorio">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_11"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Factorio</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2764,8 +2767,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Train_Sim_World_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Train Sim World® 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2784,8 +2785,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_STAR_WARS_The_Old_Republic">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS™: The Old Republic™</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
@@ -2804,8 +2803,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Titan_Quest_II">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Titan Quest II</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2823,8 +2820,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Euro_Truck_Simulator_2_Nordic_Horizons">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Euro Truck Simulator 2 - Nordic Horizons</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2843,8 +2838,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Half_Life_Alyx">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Half-Life: Alyx</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2863,8 +2856,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Red_Dead_Redemption">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Red Dead Redemption</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2883,8 +2874,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_SILENT_HILL_f">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_11"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for SILENT HILL f</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -2904,8 +2893,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Magic_The_Gathering_Arena">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_2GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Magic: The Gathering Arena</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</requiresMemoryGB>
@@ -2923,8 +2910,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ELDEN_RING_NIGHTREIGN">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_12GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ELDEN RING NIGHTREIGN</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</requiresMemoryGB>
@@ -2943,8 +2928,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_American_Truck_Simulator">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for American Truck Simulator</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -2964,7 +2947,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Raft">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Raft</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresCPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2255</requiresCPUBenchmarkScore>
@@ -2980,8 +2962,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Foundation">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Foundation</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -3000,8 +2980,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Ready_or_Not">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Ready or Not</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -3021,8 +2999,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Mount_Blade_II_Bannerlord">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_6GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Mount &amp; Blade II: Bannerlord</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
@@ -3041,7 +3017,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Fallout_4">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Fallout 4</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4565</requiresGPUBenchmarkScore>
@@ -3060,8 +3035,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Grounded_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Grounded 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -3080,8 +3053,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Resident_Evil_Requiem">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_11"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Resident Evil Requiem</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -3100,8 +3071,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_PEAK">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for PEAK</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -3120,8 +3089,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_BALL_x_PIT">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for BALL x PIT</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -3141,8 +3108,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Split_Fiction">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_64_0"/>
-  <requiresRAM rdf:resource="#RAM_16GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Split Fiction</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
@@ -3163,8 +3128,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_Satisfactory">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Satisfactory</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
@@ -3183,8 +3146,6 @@
 
 <owl:NamedIndividual rdf:about="#Req_ARK_Survival_Evolved">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <requiresOS rdf:resource="#OS_Windows_10"/>
-  <requiresRAM rdf:resource="#RAM_8GB"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for ARK: Survival Evolved</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
