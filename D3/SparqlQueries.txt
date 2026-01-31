@@ -1,0 +1,133 @@
+------------------------------------------------------
+
+QUERY 1:
+-
+
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame 
+WHERE {
+  # Define the input
+  VALUES (?targetUser) { 
+    ("Giulio") 
+  }
+
+  # Define specific user
+  ?user rdfs:label ?name .
+  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
+
+  # All videogames in the database
+  ?videogame rdfs:label ?nameGame .
+
+  # User PC LOGIC
+  ?user onto:hasComputer ?pc .
+  ?pc onto:hasCPU ?cpuU ;
+      onto:hasGPU ?gpuU ;
+      onto:hasRAM ?ramU ;
+      onto:hasOS ?osU ;
+      onto:hasStorage ?romU.
+      
+  ?cpuU onto:hasBenchmarkScore ?cpu_scoreU .
+  ?gpuU onto:hasBenchmarkScore ?gpu_scoreU .
+  ?ramU onto:hasMemorySizeGB ?ram_sizeU .
+  ?romU onto:hasStorageSizeGB ?rom_sizeU .
+  ?osU onto:hasOSVersionValue ?os_versionU .
+  
+
+  # Requirement Logic
+  ?videogame onto:hasMinRequirement ?min_req .
+  ?videogame onto:hasPrice ?price .
+
+  ?min_req onto:requiresCPUBenchmarkScore ?cpu_scoreG ;
+           onto:requiresGPUBenchmarkScore ?gpu_scoreG ;
+           onto:requiresMemoryGB ?ram_sizeG ;
+           onto:requiresStorageSpaceGB ?rom_sizeG ;
+           onto:requiresMinOSVersionValue ?os_versionG .
+            
+
+  # Comparations for testing
+  BIND(IF(?cpu_scoreU >= ?cpu_scoreG, "OK", "WEAK") AS ?cpu_status)
+  BIND(IF(?gpu_scoreU >= ?gpu_scoreG, "OK", "WEAK") AS ?gpu_status)
+  BIND(IF(?ram_sizeU >= ?ram_sizeG, "OK", "WEAK") AS ?ram_status)
+  BIND(IF(?rom_sizeU >= ?rom_sizeG, "OK", "WEAK") AS ?storage_status)
+  BIND(IF(?os_versionU >= ?os_versionG, "OK", "WEAK") AS ?os_status)
+
+  # Filtering
+  FILTER(?cpu_scoreU >= ?cpu_scoreG && ?gpu_scoreU >= ?gpu_scoreG && ?ram_sizeU >= ?ram_sizeG && ?rom_sizeU >= ?rom_sizeG && ?os_versionU >= ?os_versionG)
+}
+
+------------------------------------------------------
+
+Query 2: 
+-
+
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame ?price
+WHERE {
+  # Define the input
+  VALUES (?targetUser) { 
+    ("Giulio") 
+  }
+
+  # Define specific user
+  ?user rdfs:label ?name .
+  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
+
+  # All videogames in the database
+  ?videogame rdfs:label ?nameGame .
+
+  # User Logic
+  ?user onto:hasBudget ?budget .
+  
+  # Game Logic
+  ?videogame onto:hasPrice ?price .
+            
+  # Comparation for testing
+  BIND(IF(?price <= ?budget, "CanBuy", "TooExpensive") AS ?budget_status)
+ 
+  # Budget Filter
+  FILTER(?price <= ?budget)
+}
+ORDER BY ASC(?price)
+
+------------------------------------------------------
+
+Query 3: 
+-
+
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame ?pegi_value
+WHERE {
+  # Define the input
+  VALUES (?targetUser) { 
+    ("Giulio") 
+  }
+
+  # Define specific user
+  ?user rdfs:label ?name .
+  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
+
+  # All videogames in the database
+  ?videogame rdfs:label ?nameGame .
+
+  # User Logic
+  ?user onto:hasAge ?age .
+  
+  # Game Logic
+  ?videogame onto:hasPEGI ?pegi .
+
+  ?pegi onto:hasPEGIAgeThreshold ?pegi_value.
+            
+  # Comparation for testing
+  BIND(IF(?pegi_value <= ?age, "CanPlay", "TooYoung") AS ?pegi_status)
+ 
+  # Budget Filter
+  FILTER(?pegi_value <= ?age)
+}
+
+------------------------------------------------------
