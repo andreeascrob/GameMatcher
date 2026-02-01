@@ -131,3 +131,114 @@ WHERE {
 }
 
 ------------------------------------------------------
+
+Query 4, v1:
+
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame ?genreLabel
+WHERE {
+  #Define the input user
+  VALUES (?targetUser) { 
+    ("Giulio") 
+  }
+
+  # Find the specific user
+  ?user rdfs:label ?name .
+  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
+
+  #Get User's Preferred Genres
+  ?user onto:preferredGenre ?genre .
+  ?genre rdfs:label ?genreLabel .
+
+  #Find Games that have THAT specific genre
+  ?videogame a onto:VideoGame ;
+             rdfs:label ?nameGame ;
+             onto:hasGenre ?genre .
+}
+ORDER BY ?genreLabel
+
+
+Query 4 v2 piu raffinata:
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# We use DISTINCT to ensure that if a game falls into multiple 
+# preferred genres (e.g., Action-RPG), it is not listed twice.
+SELECT DISTINCT ?nameGame ?genreLabel
+WHERE {
+  # 1. INPUT: Define the target user
+  VALUES (?targetUser) { 
+    ("Dev_User") 
+  }
+
+  # 2. MATCH USER: Find the User individual by name
+  ?user rdfs:label ?name .
+  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
+
+  # 3. GET PREFERENCES: Retrieve ALL genres preferred by the user.
+  # If Giulio prefers 3 genres, this variable ?genre will hold 
+  # 3 different values sequentially.
+  ?user onto:preferredGenre ?genre .
+  ?genre rdfs:label ?genreLabel .
+
+  # 4. MATCH GAMES: Find games linked to those specific genre nodes.
+  ?videogame a onto:VideoGame ;
+             rdfs:label ?nameGame ;
+             onto:hasGenre ?genre .
+}
+ORDER BY ?genreLabel
+
+---------------------------------------------------------------------------------------------------
+Query 5:
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame ?modeLabel
+WHERE {
+  # Define the input user
+  VALUES (?targetUser) { 
+    ("Mark") 
+  }
+
+  # Find the specific user
+  ?user rdfs:label ?name .
+  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
+
+  # 1. Get User's Preferred Player Modes
+  ?user onto:preferredPlayerMode ?mode .
+  ?mode rdfs:label ?modeLabel .
+
+  # 2. Find Games that support THAT mode
+  ?videogame a onto:VideoGame ;
+             rdfs:label ?nameGame ;
+             onto:hasPlayerMode ?mode .
+}
+ORDER BY ?nameGame
+
+---------------------------------------------------------------------------------------------------------------
+Query 6:
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?nameGame ?requiredRAM
+WHERE {
+  # Define the input threshold Z (e.g., games requiring MORE than 4 GB)
+  BIND(10.0 AS ?thresholdRAM)
+
+  # Get all videogames
+  ?videogame a onto:VideoGame ;
+             rdfs:label ?nameGame .
+
+  # Navigate to requirements
+  ?videogame onto:hasMinRequirement ?min_req .
+  
+  # Get the numeric RAM requirement value
+  ?min_req onto:requiresMemoryGB ?requiredRAM .
+
+  # Filter logic: Keep games where required RAM > threshold
+  FILTER(?requiredRAM > ?thresholdRAM)
+}
+ORDER BY DESC(?requiredRAM)
