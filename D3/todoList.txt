@@ -35,15 +35,15 @@ Fase 1: Ontologia e Regole
 [ ] Implementare le regole esplicite (Rules) nel grafo.
 
 Fase 2: Popolamento Dati (ABox)
-[ ] Decidere il metodo di estrazione (Automatico/Scraping o Manuale).
-[ ] Generare/Estrarre le istanze reali.
+[x] Decidere il metodo di estrazione (Automatico/Scraping o Manuale).
+[x] Generare/Estrarre le istanze reali.
 [ ] Se Automatico: Salvare gli script Python e i prompt LLM usati.
 [ ] Se Manuale: Scrivere la giustificazione dettagliata del "perché" non è stato possibile automatizzare.
 
 Fase 3: Hosting e Query
-[ ] Caricare il Knowledge Graph finale su TriplyDB.
-[ ] Scrivere le query SPARQL (Minimo 3 per persona) basate sulle Competency Questions.
-[ ] Testare le query direttamente su TriplyDB per assicurarsi che funzionino.
+[x] Caricare il Knowledge Graph finale su TriplyDB.
+[x] Scrivere le query SPARQL (Minimo 3 per persona) basate sulle Competency Questions.
+[x] Testare le query direttamente su TriplyDB per assicurarsi che funzionino.
 
 Fase 4: Preparazione Documenti per la Consegna
 [ ] Ontologia: Esportare il file finale in .owl o .ttl.
