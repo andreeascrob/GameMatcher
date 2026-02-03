@@ -132,35 +132,7 @@ WHERE {
 
 ------------------------------------------------------
 
-Query 4, v1:
-
-PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?nameGame ?genreLabel
-WHERE {
-  #Define the input user
-  VALUES (?targetUser) { 
-    ("Giulio") 
-  }
-
-  # Find the specific user
-  ?user rdfs:label ?name .
-  FILTER(CONTAINS(LCASE(?name), LCASE(?targetUser)))
-
-  #Get User's Preferred Genres
-  ?user onto:preferredGenre ?genre .
-  ?genre rdfs:label ?genreLabel .
-
-  #Find Games that have THAT specific genre
-  ?videogame a onto:VideoGame ;
-             rdfs:label ?nameGame ;
-             onto:hasGenre ?genre .
-}
-ORDER BY ?genreLabel
-
-
-Query 4 v2 piu raffinata:
+Query 4:
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
