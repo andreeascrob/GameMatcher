@@ -70,11 +70,6 @@
     "rank": 1000
   },
   {
-    "name": "ATI",
-    "mark": 9106,
-    "rank": 0
-  },
-  {
     "name": "3600",
     "mark": 180,
     "rank": 2180
@@ -237,7 +232,7 @@
   {
     "name": "AMD Radeon R9 285",
     "mark": 6680,
-    "rank": 0
+    "rank": 200
   },
   {
     "name": "Radeon RX 5700",

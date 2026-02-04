@@ -4,7 +4,8 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xml:base="http://www.semanticweb.org/gamematcher.owl"
-         xmlns="http://www.semanticweb.org/gamematcher.owl#">
+         xmlns="http://www.semanticweb.org/gamematcher.owl#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#">
 
 <owl:Ontology rdf:about="http://www.semanticweb.org/gamematcher.owl">
   <owl:imports rdf:resource="http://www.ease-crc.org/ont/DUL.owl"/>
@@ -146,6 +147,18 @@
   <rdfs:range rdf:resource="#Computer"/>
   <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inferred relation: true if the computer meets all game requirements.</rdfs:comment>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is compatible with</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isPerfectMatchFor">
+  <rdfs:domain rdf:resource="#VideoGame"/>
+  <rdfs:range rdf:resource="#User"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is a perfect match for</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isPerfectHardwareMatch">
+  <rdfs:domain rdf:resource="#MinimumRequirement"/>
+  <rdfs:range rdf:resource="#Computer"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Compatibility Award</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:DatatypeProperty rdf:about="#requiresCPUBenchmarkScore">
@@ -845,12 +858,6 @@
   <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1890</hasBenchmarkScore>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#GPU_ATI">
-  <rdf:type rdf:resource="#GPU"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI</rdfs:label>
-  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</hasBenchmarkScore>
-</owl:NamedIndividual>
-
 <owl:NamedIndividual rdf:about="#GPU_3600">
   <rdf:type rdf:resource="#GPU"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3600</rdfs:label>
@@ -1411,7 +1418,7 @@
   <hasGenre rdf:resource="#Genre_Simulation"/>
   <hasGenre rdf:resource="#Genre_Sports"/>
   <hasMinRequirement rdf:resource="#Req_EA_SPORTS_FC_26"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EA SPORTS FC™ 26</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EA SPORTS FCâ„¢ 26</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.99</hasPrice>
 </owl:NamedIndividual>
 
@@ -1448,7 +1455,7 @@
 
 <owl:NamedIndividual rdf:about="#Req_EA_SPORTS_FC_26">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for EA SPORTS FC™ 26</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for EA SPORTS FCâ„¢ 26</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</requiresStorageSpaceGB>
@@ -1764,7 +1771,7 @@
   <hasGenre rdf:resource="#Genre_Casual"/>
   <hasGenre rdf:resource="#Genre_Simulation"/>
   <hasMinRequirement rdf:resource="#Req_The_Sims_4"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sims™ 4</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Simsâ„¢ 4</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
 </owl:NamedIndividual>
 
@@ -1775,7 +1782,7 @@
 
 <owl:NamedIndividual rdf:about="#Req_The_Sims_4">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Sims™ 4</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Simsâ„¢ 4</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.0</requiresStorageSpaceGB>
@@ -1789,13 +1796,13 @@
   <hasPlayerMode rdf:resource="#Mode_Online_Co_op"/>
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasMinRequirement rdf:resource="#Req_HELLDIVERS_2"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HELLDIVERS™ 2</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HELLDIVERSâ„¢ 2</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_HELLDIVERS_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for HELLDIVERS™ 2</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for HELLDIVERSâ„¢ 2</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135.0</requiresStorageSpaceGB>
@@ -1811,13 +1818,13 @@
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasMinRequirement rdf:resource="#Req_Battlefield_6"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battlefield™ 6</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battlefieldâ„¢ 6</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Battlefield_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Battlefield™ 6</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Battlefieldâ„¢ 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55.0</requiresStorageSpaceGB>
@@ -1858,13 +1865,13 @@
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasGenre rdf:resource="#Genre_Adventure"/>
   <hasMinRequirement rdf:resource="#Req_Apex_Legends"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apex Legends™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apex Legendsâ„¢</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Apex_Legends">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Apex Legends™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Apex Legendsâ„¢</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</requiresStorageSpaceGB>
@@ -2187,7 +2194,6 @@
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</requiresStorageSpaceGB>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Dead_by_Daylight_Stranger_Things_Chapter_2">
@@ -2294,13 +2300,13 @@
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasMinRequirement rdf:resource="#Req_Tom_Clancy_s_Rainbow_Six_Siege_X"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Clancy's Rainbow Six® Siege X</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Clancy's Rainbow SixÂ® Siege X</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Tom_Clancy_s_Rainbow_Six_Siege_X">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tom Clancy's Rainbow Six® Siege X</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Tom Clancy's Rainbow SixÂ® Siege X</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</requiresStorageSpaceGB>
@@ -2381,13 +2387,13 @@
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasGenre rdf:resource="#Genre_Adventure"/>
   <hasMinRequirement rdf:resource="#Req_Avatar_Frontiers_of_Pandora"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avatar: Frontiers of Pandora™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avatar: Frontiers of Pandoraâ„¢</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Avatar_Frontiers_of_Pandora">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Avatar: Frontiers of Pandora™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Avatar: Frontiers of Pandoraâ„¢</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</requiresStorageSpaceGB>
@@ -2429,13 +2435,13 @@
   <hasGenre rdf:resource="#Genre_Massively_Multiplayer"/>
   <hasGenre rdf:resource="#Genre_RPG"/>
   <hasMinRequirement rdf:resource="#Req_The_Elder_Scrolls_Online"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Elder Scrolls® Online</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Elder ScrollsÂ® Online</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_The_Elder_Scrolls_Online">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Elder Scrolls® Online</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for The Elder ScrollsÂ® Online</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150.0</requiresStorageSpaceGB>
@@ -2626,13 +2632,13 @@
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasGenre rdf:resource="#Genre_Adventure"/>
   <hasMinRequirement rdf:resource="#Req_STAR_WARS_Jedi_Survivor"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAR WARS Jedi: Survivor™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAR WARS Jedi: Survivorâ„¢</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_STAR_WARS_Jedi_Survivor">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS Jedi: Survivor™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS Jedi: Survivorâ„¢</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">155.0</requiresStorageSpaceGB>
@@ -2649,17 +2655,16 @@
   <hasGenre rdf:resource="#Genre_Simulation"/>
   <hasGenre rdf:resource="#Genre_Sports"/>
   <hasMinRequirement rdf:resource="#Req_theHunter_Call_of_the_Wild"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theHunter: Call of the Wild™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theHunter: Call of the Wildâ„¢</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.5</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_theHunter_Call_of_the_Wild">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for theHunter: Call of the Wild™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for theHunter: Call of the Wildâ„¢</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</requiresStorageSpaceGB>
-  <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9106</requiresGPUBenchmarkScore>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Game_Hearts_of_Iron_IV">
@@ -2694,13 +2699,13 @@
   <hasGenre rdf:resource="#Genre_Action"/>
   <hasGenre rdf:resource="#Genre_RPG"/>
   <hasMinRequirement rdf:resource="#Req_Diablo_IV"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diablo® IV</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DiabloÂ® IV</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Diablo_IV">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Diablo® IV</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for DiabloÂ® IV</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</requiresStorageSpaceGB>
@@ -2741,13 +2746,13 @@
   <hasGenre rdf:resource="#Genre_Simulation"/>
   <hasGenre rdf:resource="#Genre_Sports"/>
   <hasMinRequirement rdf:resource="#Req_F1_25"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F1® 25</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F1Â® 25</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_F1_25">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for F1® 25</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for F1Â® 25</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</requiresStorageSpaceGB>
@@ -2765,13 +2770,13 @@
   <hasGenre rdf:resource="#Genre_Massively_Multiplayer"/>
   <hasGenre rdf:resource="#Genre_RPG"/>
   <hasMinRequirement rdf:resource="#Req_Guild_Wars_2"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild Wars 2®</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild Wars 2Â®</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Guild_Wars_2">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Guild Wars 2®</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Guild Wars 2Â®</rdfs:label>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</requiresStorageSpaceGB>
   <requiresGPUBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5612</requiresGPUBenchmarkScore>
@@ -3081,13 +3086,13 @@
   <hasPlayerMode rdf:resource="#Mode_Single_player"/>
   <hasGenre rdf:resource="#Genre_Simulation"/>
   <hasMinRequirement rdf:resource="#Req_Train_Sim_World_6"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Train Sim World® 6</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Train Sim WorldÂ® 6</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.99</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_Train_Sim_World_6">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Train Sim World® 6</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for Train Sim WorldÂ® 6</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.0</requiresStorageSpaceGB>
@@ -3102,13 +3107,13 @@
   <hasGenre rdf:resource="#Genre_Massively_Multiplayer"/>
   <hasGenre rdf:resource="#Genre_RPG"/>
   <hasMinRequirement rdf:resource="#Req_STAR_WARS_The_Old_Republic"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAR WARS™: The Old Republic™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STAR WARSâ„¢: The Old Republicâ„¢</rdfs:label>
   <hasPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</hasPrice>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Req_STAR_WARS_The_Old_Republic">
   <rdf:type rdf:resource="#MinimumRequirement"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARS™: The Old Republic™</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum Requirements for STAR WARSâ„¢: The Old Republicâ„¢</rdfs:label>
   <requiresMinOSVersionValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</requiresMinOSVersionValue>
   <requiresMemoryGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</requiresMemoryGB>
   <requiresStorageSpaceGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</requiresStorageSpaceGB>
@@ -3647,6 +3652,33 @@
   <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000.0</hasStorageSizeGB>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#User_Marco">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Marco"/>
+  <preferredGenre rdf:resource="#Genre_Simulation"/>
+  <preferredGenre rdf:resource="#Genre_Indie"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Marco">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Core_i7_6700"/>
+  <hasGPU rdf:resource="#GPU_Arc_A380"/>
+  <hasOS rdf:resource="#OS_Windows_10"/>
+  <hasRAM rdf:resource="#RAM_12GB"/>
+  <hasStorage rdf:resource="#Storage_Marco"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Marco">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#User_Lucas">
   <rdf:type rdf:resource="#User"/>
   <hasComputer rdf:resource="#PC_Lucas"/>
@@ -4044,6 +4076,245 @@
   <rdf:type rdf:resource="#PlayerMode"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VR</rdfs:label>
 </owl:NamedIndividual>
+
+<swrl:Variable rdf:about="urn:swrl#v"/>
+
+<swrl:Variable rdf:about="urn:swrl#u"/>
+
+<swrl:Variable rdf:about="urn:swrl#g"/>
+
+<swrl:Variable rdf:about="urn:swrl#m"/>
+
+<swrl:Variable rdf:about="urn:swrl#req"/>
+
+<swrl:Variable rdf:about="urn:swrl#c"/>
+
+<swrl:Variable rdf:about="urn:swrl#u_cpu"/>
+
+<swrl:Variable rdf:about="urn:swrl#score_cpu"/>
+
+<swrl:Variable rdf:about="urn:swrl#u_gpu"/>
+
+<swrl:Variable rdf:about="urn:swrl#score_gpu"/>
+
+<swrl:Variable rdf:about="urn:swrl#u_os"/>
+
+<swrl:Variable rdf:about="urn:swrl#os_ver"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#MinimumRequirement"/>
+          <swrl:argument1 rdf:resource="urn:swrl#req"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Computer"/>
+              <swrl:argument1 rdf:resource="urn:swrl#c"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasCPU"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#u_cpu"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#hasBenchmarkScore"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#u_cpu"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#score_cpu"/>
+                    </swrl:DatavaluedPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasGPU"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#u_gpu"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="#hasBenchmarkScore"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#u_gpu"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#score_gpu"/>
+                            </swrl:DatavaluedPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:IndividualPropertyAtom>
+                                  <swrl:propertyPredicate rdf:resource="#hasOS"/>
+                                  <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                  <swrl:argument2 rdf:resource="urn:swrl#u_os"/>
+                                </swrl:IndividualPropertyAtom>
+                              </rdf:first>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first>
+                                    <swrl:DatavaluedPropertyAtom>
+                                      <swrl:propertyPredicate rdf:resource="#hasOSVersionValue"/>
+                                      <swrl:argument1 rdf:resource="urn:swrl#u_os"/>
+                                      <swrl:argument2 rdf:resource="urn:swrl#os_ver"/>
+                                    </swrl:DatavaluedPropertyAtom>
+                                  </rdf:first>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:first>
+                                        <swrl:DatavaluedPropertyAtom>
+                                          <swrl:propertyPredicate rdf:resource="#requiresCPUBenchmarkScore"/>
+                                          <swrl:argument1 rdf:resource="urn:swrl#req"/>
+                                          <swrl:argument2 rdf:resource="urn:swrl#score_cpu"/>
+                                        </swrl:DatavaluedPropertyAtom>
+                                      </rdf:first>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:first>
+                                            <swrl:DatavaluedPropertyAtom>
+                                              <swrl:propertyPredicate rdf:resource="#requiresGPUBenchmarkScore"/>
+                                              <swrl:argument1 rdf:resource="urn:swrl#req"/>
+                                              <swrl:argument2 rdf:resource="urn:swrl#score_gpu"/>
+                                            </swrl:DatavaluedPropertyAtom>
+                                          </rdf:first>
+                                          <rdf:rest>
+                                            <rdf:Description>
+                                              <rdf:first>
+                                                <swrl:DatavaluedPropertyAtom>
+                                                  <swrl:propertyPredicate rdf:resource="#requiresMinOSVersionValue"/>
+                                                  <swrl:argument1 rdf:resource="urn:swrl#req"/>
+                                                  <swrl:argument2 rdf:resource="urn:swrl#os_ver"/>
+                                                </swrl:DatavaluedPropertyAtom>
+                                              </rdf:first>
+                                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                          </rdf:rest>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#isPerfectHardwareMatch"/>
+          <swrl:argument1 rdf:resource="urn:swrl#req"/>
+          <swrl:argument2 rdf:resource="urn:swrl#c"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#VideoGame"/>
+          <swrl:argument1 rdf:resource="urn:swrl#v"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#User"/>
+              <swrl:argument1 rdf:resource="urn:swrl#u"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#hasGenre"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#v"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#g"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#preferredGenre"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#u"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#g"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="#hasPlayerMode"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#v"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="#preferredPlayerMode"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#u"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#m"/>
+                            </swrl:IndividualPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#isPerfectMatchFor"/>
+          <swrl:argument1 rdf:resource="urn:swrl#v"/>
+          <swrl:argument2 rdf:resource="urn:swrl#u"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
 
 <owl:AllDisjointClasses>
   <owl:members rdf:parseType="Collection">
