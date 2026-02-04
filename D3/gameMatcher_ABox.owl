@@ -148,20 +148,6 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is compatible with</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="#requiresOS">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#MinimumRequirement"/>
-  <rdfs:range rdf:resource="#OperatingSystem"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires operating system</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="#requiresRAM">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#MinimumRequirement"/>
-  <rdfs:range rdf:resource="#RAM"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requires RAM</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:DatatypeProperty rdf:about="#requiresCPUBenchmarkScore">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#MinimumRequirement"/>
@@ -3659,6 +3645,404 @@
   <rdf:type rdf:resource="#Storage"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000.0 GB Drive</rdfs:label>
   <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Lucas">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Lucas"/>
+  <preferredGenre rdf:resource="#Genre_Action"/>
+  <preferredGenre rdf:resource="#Genre_RPG"/>
+  <preferredGenre rdf:resource="#Genre_FPS"/>
+  <preferredPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
+  <preferredPlayerMode rdf:resource="#Mode_Online_Co_op"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucas</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Lucas">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_AMD_Ryzen_5_3600"/>
+  <hasGPU rdf:resource="#GPU_RTX_2060"/>
+  <hasOS rdf:resource="#OS_Windows_10"/>
+  <hasRAM rdf:resource="#RAM_16GB"/>
+  <hasStorage rdf:resource="#Storage_Lucas"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucas's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Lucas">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_FPS">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FPS</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Sarah">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Sarah"/>
+  <preferredGenre rdf:resource="#Genre_Adventure"/>
+  <preferredGenre rdf:resource="#Genre_Indie"/>
+  <preferredGenre rdf:resource="#Genre_Puzzle"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Sarah">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Intel_Core_i5_10400"/>
+  <hasGPU rdf:resource="#GPU_NVIDIA_GeForce_GTX_1660"/>
+  <hasOS rdf:resource="#OS_Windows_11"/>
+  <hasRAM rdf:resource="#RAM_16GB"/>
+  <hasStorage rdf:resource="#Storage_Sarah"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Sarah">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">512.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">512.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Puzzle">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Puzzle</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Ben">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Ben"/>
+  <preferredGenre rdf:resource="#Genre_Strategy"/>
+  <preferredGenre rdf:resource="#Genre_Simulation"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <preferredPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Ben">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Ben_Local"/>
+  <hasGPU rdf:resource="#GPU_NVIDIA_GeForce_GTX_1060"/>
+  <hasOS rdf:resource="#OS_Windows_10"/>
+  <hasRAM rdf:resource="#RAM_32GB"/>
+  <hasStorage rdf:resource="#Storage_Ben"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Ben_Local">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-7700K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Ben">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Elena">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Elena"/>
+  <preferredGenre rdf:resource="#Genre_Shooter"/>
+  <preferredGenre rdf:resource="#Genre_MOBA"/>
+  <preferredPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elena</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Elena">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_AMD_Ryzen_5_2600"/>
+  <hasGPU rdf:resource="#GPU_AMD_Radeon_RX_580"/>
+  <hasOS rdf:resource="#OS_Windows_10"/>
+  <hasRAM rdf:resource="#RAM_16GB"/>
+  <hasStorage rdf:resource="#Storage_Elena"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elena's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Elena">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">256.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">256.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Shooter">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shooter</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_MOBA">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOBA</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Tom">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Tom"/>
+  <preferredGenre rdf:resource="#Genre_Sports"/>
+  <preferredGenre rdf:resource="#Genre_Racing"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <preferredPlayerMode rdf:resource="#Mode_Local_Co_op"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Tom">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Intel_Core_i3_12100"/>
+  <hasGPU rdf:resource="#GPU_NVIDIA_GeForce_GTX_1050_Ti"/>
+  <hasOS rdf:resource="#OS_Windows_11"/>
+  <hasRAM rdf:resource="#RAM_8GB"/>
+  <hasStorage rdf:resource="#Storage_Tom"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Tom">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mode_Local_Co_op">
+  <rdf:type rdf:resource="#PlayerMode"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local Co-op</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Chloe">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Chloe"/>
+  <preferredGenre rdf:resource="#Genre_Battle_Royale"/>
+  <preferredGenre rdf:resource="#Genre_Horror"/>
+  <preferredGenre rdf:resource="#Genre_Action"/>
+  <preferredPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
+  <preferredPlayerMode rdf:resource="#Mode_Online_Co_op"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chloe</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Chloe">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Chloe_Local"/>
+  <hasGPU rdf:resource="#GPU_Chloe_Local"/>
+  <hasOS rdf:resource="#OS_Windows_11"/>
+  <hasRAM rdf:resource="#RAM_64GB"/>
+  <hasStorage rdf:resource="#Storage_Chloe"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chloe's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Chloe_Local">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i9-13900K</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Chloe_Local">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce RTX 4080</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Chloe">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Battle_Royale">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Royale</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Horror">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horror</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Max">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Max"/>
+  <preferredGenre rdf:resource="#Genre_RPG"/>
+  <preferredGenre rdf:resource="#Genre_MMORPG"/>
+  <preferredPlayerMode rdf:resource="#Mode_Cross_Platform_Multiplayer"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Max">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Max_Local"/>
+  <hasGPU rdf:resource="#GPU_Max_Local"/>
+  <hasOS rdf:resource="#OS_Windows_11"/>
+  <hasRAM rdf:resource="#RAM_16GB"/>
+  <hasStorage rdf:resource="#Storage_Max"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Max's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Max_Local">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i7-11800H</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Max_Local">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce RTX 3060 Laptop GPU</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Max">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_MMORPG">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MMORPG</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Sophie">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Sophie"/>
+  <preferredGenre rdf:resource="#Genre_Simulation"/>
+  <preferredGenre rdf:resource="#Genre_Cozy"/>
+  <preferredGenre rdf:resource="#Genre_Adventure"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sophie</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Sophie">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Sophie_Local"/>
+  <hasGPU rdf:resource="#GPU_Sophie_Local"/>
+  <hasOS rdf:resource="#OS_Windows_10"/>
+  <hasRAM rdf:resource="#RAM_16GB"/>
+  <hasStorage rdf:resource="#Storage_Sophie"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sophie's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Sophie_Local">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 5 5600X</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Sophie_Local">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Radeon RX 6600</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Sophie">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Cozy">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cozy</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Retro_Dave">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Retro_Dave"/>
+  <preferredGenre rdf:resource="#Genre_RTS"/>
+  <preferredGenre rdf:resource="#Genre_Classic_RPG"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retro_Dave</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Retro_Dave">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Intel_Core_i5_2500K"/>
+  <hasGPU rdf:resource="#GPU_NVIDIA_GeForce_GTX_970"/>
+  <hasOS rdf:resource="#OS_Windows_7"/>
+  <hasRAM rdf:resource="#RAM_8GB"/>
+  <hasStorage rdf:resource="#Storage_Retro_Dave"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retro_Dave's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Retro_Dave">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">250.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_RTS">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTS</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Classic_RPG">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classic RPG</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#User_Alex_Pro">
+  <rdf:type rdf:resource="#User"/>
+  <hasComputer rdf:resource="#PC_Alex_Pro"/>
+  <preferredGenre rdf:resource="#Genre_Flight_Simulation"/>
+  <preferredGenre rdf:resource="#Genre_Racing"/>
+  <preferredPlayerMode rdf:resource="#Mode_Single_player"/>
+  <preferredPlayerMode rdf:resource="#Mode_VR"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex_Pro</rdfs:label>
+  <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</hasAge>
+  <hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</hasBudget>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC_Alex_Pro">
+  <rdf:type rdf:resource="#Computer"/>
+  <hasCPU rdf:resource="#CPU_Alex_Pro_Local"/>
+  <hasGPU rdf:resource="#GPU_Alex_Pro_Local"/>
+  <hasOS rdf:resource="#OS_Windows_11"/>
+  <hasRAM rdf:resource="#RAM_128GB"/>
+  <hasStorage rdf:resource="#Storage_Alex_Pro"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex_Pro's Computer</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CPU_Alex_Pro_Local">
+  <rdf:type rdf:resource="#CPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 7 7800X3D</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#GPU_Alex_Pro_Local">
+  <rdf:type rdf:resource="#GPU"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NVIDIA GeForce RTX 4090</rdfs:label>
+  <hasBenchmarkScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</hasBenchmarkScore>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Storage_Alex_Pro">
+  <rdf:type rdf:resource="#Storage"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8000.0 GB Drive</rdfs:label>
+  <hasStorageSizeGB rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8000.0</hasStorageSizeGB>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Genre_Flight_Simulation">
+  <rdf:type rdf:resource="#GameGenre"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight Simulation</rdfs:label>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Mode_VR">
+  <rdf:type rdf:resource="#PlayerMode"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VR</rdfs:label>
 </owl:NamedIndividual>
 
 <owl:AllDisjointClasses>
