@@ -223,7 +223,7 @@ ORDER BY DESC(?requiredRAM)
 
 ------------------------------------------------------
 
-QUERY 1:
+QUERY N1:
 -
 
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
@@ -241,7 +241,7 @@ WHERE {
 
 ------------------------------------------------------
 
-QUERY 2:
+QUERY N2:
 -
 
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
