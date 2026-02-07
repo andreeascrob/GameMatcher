@@ -26,5 +26,5 @@ def csv_to_json(csv_filename, json_filename):
     
     print(f"Successfully converted {csv_filename} to {json_filename}")
 
-# Usage: Now you only need the filenames
+# Usage
 csv_to_json('steam_top_100.csv', 'steam_top_100.json')
