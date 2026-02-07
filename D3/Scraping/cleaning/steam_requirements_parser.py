@@ -4,10 +4,8 @@ import pandas as pd
 from pathlib import Path
 from pathlib import Path
 
-# Get the directory of the CURRENT script (the 'cleaning' folder)
 current_dir = Path(__file__).parent 
 
-# Go up one level to 'Scraping', then down into 'raw data'
 input_filename = current_dir.parent / "raw data" / "steam_top_100.json"
 
 print(f"Targeting path: {input_filename}")
@@ -15,17 +13,15 @@ print(f"Targeting path: {input_filename}")
 try:
     with open(input_filename, 'r', encoding='utf-8') as f:
         data = json.load(f)
-        df = pd.DataFrame(data) # <--- This is the missing link!
+        df = pd.DataFrame(data)
 except FileNotFoundError:
     print(f"Error: Could not find {input_filename}")
     exit()
 
-# --- PARSING FUNCTIONS ---
-
+# PARSING FUNCTIONS 
 def clean_hardware_string(text):
     if not isinstance(text, str) or text == "N/A":
         return ""
-    
     # Remove trademarks and newlines
     text = text.replace("®", "").replace("™", "").replace("\n", " ")
     
@@ -43,9 +39,9 @@ def extract_models(text):
     if not clean_text:
         return []
 
-    # Heuristics to identify generic descriptions (DIFFICULT CASES)
+    # Heuristics to identify generic descriptions 
     if "must be" in clean_text.lower() or "level video" in clean_text.lower():
-        return [] # Return empty to force the game into the "Difficult" file
+        return [] 
 
     # Regex separators: / or | or "or" or comma
     split_pattern = r'\s*(?:/|\||;|\s+or\s+|\s+OR\s+|,\s*|\s+//\s+)\s*'
@@ -67,7 +63,7 @@ def extract_models(text):
             
     return candidates
 
-# --- LOGIC APPLICATION ---
+# LOGIC APPLICATION 
 
 # 1. Extract lists
 df['CPU_List'] = df['CPU'].apply(extract_models)
@@ -81,7 +77,7 @@ def classify_row(row):
 
 df['Complexity'] = df.apply(classify_row, axis=1)
 
-# --- DATASET CREATION ---
+# DATASET CREATION 
 
 # EASY Dataset (Clean)
 df_clean = df[df['Complexity'] == 'Easy'].copy()
@@ -97,8 +93,7 @@ df_clean_final = pd.concat([df_clean.drop(['CPU', 'GPU', 'CPU_List', 'GPU_List',
 # DIFFICULT Dataset (Dirty)
 df_dirty = df[df['Complexity'] == 'Difficult'][['NAME', 'CPU', 'GPU', 'PRICE']].copy()
 
-# --- SAVING ---
-import json
+# SAVING 
 
 def save_clean_json(dataframe, filename):
     dataframe = dataframe.astype(object).where(pd.notnull(dataframe), None)
@@ -109,7 +104,7 @@ def save_clean_json(dataframe, filename):
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-# --- SAVING ---
+#  SAVING 
 # Define the full paths using the current_dir variable
 clean_output_path = current_dir / 'filtered data' /'steam_parsed_CLEAN.json'
 complex_output_path = current_dir / 'filtered data' / 'steam_parsed_COMPLEX.json'

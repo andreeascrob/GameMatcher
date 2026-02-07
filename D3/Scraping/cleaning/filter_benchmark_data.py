@@ -4,24 +4,20 @@ from difflib import SequenceMatcher
 from copy import deepcopy
 from pathlib import Path
 
-# --- UNIVERSAL PATH SETUP ---
-# Path(__file__).parent points to the 'cleaning' folder where this script lives
+# UNIVERSAL PATH SETUP 
 BASE_DIR = Path(__file__).parent 
 
-# Define and create the output directory
 FILTERED_DIR = BASE_DIR / "filtered data"
 FILTERED_DIR.mkdir(parents=True, exist_ok=True)
 
-# Inputs: Going up one level to 'Scraping', then into 'cleaning' or 'raw data'
 STEAM_FILE = BASE_DIR / "steam_parsed_CLEAN.json"
 CPU_DATA_FILE = BASE_DIR.parent / "raw data" / "cpu_data.json"
 GPU_DATA_FILE = BASE_DIR.parent / "raw data" / "gpu_data.json"
 
-# Outputs: Pointing inside the new 'filtered data' folder
 OUT_CPU_FILE = FILTERED_DIR / "cpu_filtered.json"
 OUT_GPU_FILE = FILTERED_DIR / "gpu_filtered.json"
 
-# --- STRING NORMALIZATION ---
+# STRING NORMALIZATION 
 def canonical_name(text):
     """Standardizes names by removing noise to make fuzzy matching more accurate."""
     if not text:
@@ -33,12 +29,12 @@ def canonical_name(text):
     text = re.sub(r"[^a-z0-9 ]", "", text)
     return re.sub(r"\s+", " ", text).strip()
 
-# --- SIMILARITY LOGIC ---
+# SIMILARITY LOGIC 
 def similarity(a, b):
     """Calculates a matching ratio between two strings (0.0 to 1.0)."""
     return SequenceMatcher(None, a, b).ratio()
 
-# --- DATA EXTRACTION ---
+# DATA EXTRACTION 
 def extract_components(steam_data, prefix):
     """Scans Steam data for unique hardware entries based on prefix (CPU_ or GPU_)."""
     canonical = {}
@@ -52,7 +48,7 @@ def extract_components(steam_data, prefix):
                 canonical[key] = v  
     return canonical
 
-# --- MATCHING ENGINE ---
+#  MATCHING ENGINE 
 def best_match(canon_steam, full_data):
     """Finds the most likely hardware match from the reference database."""
     candidates = []
@@ -72,7 +68,7 @@ def best_match(canon_steam, full_data):
     best = [c[1] for c in candidates if c[0] == max_sim]
     return min(best, key=lambda x: x.get("mark", float("inf")))
 
-# --- DATA RECONSTRUCTION ---
+# DATA RECONSTRUCTION 
 def build_filtered(steam_map, full_data):
     """Builds a new list with technical data for every successful match."""
     filtered = {}
@@ -85,7 +81,7 @@ def build_filtered(steam_map, full_data):
         filtered[canon_steam] = unified  
     return list(filtered.values())
 
-# --- EXECUTION FLOW ---
+# EXECUTION FLOW 
 def main():
     """Main execution flow with explicit path handling."""
     print(f"Reading from: {BASE_DIR.parent}")
@@ -93,7 +89,7 @@ def main():
     # Check if files exist before opening
     for p in [STEAM_FILE, CPU_DATA_FILE, GPU_DATA_FILE]:
         if not p.exists():
-            print(f"❌ Error: File not found at {p}")
+            print(f" Error: File not found at {p}")
             return
 
     # Load all datasets
@@ -116,9 +112,9 @@ def main():
     with open(OUT_GPU_FILE, "w", encoding="utf-8") as f:
         json.dump(gpu_filtered, f, indent=2, ensure_ascii=False)
 
-    print(f"✔ Files saved to: {BASE_DIR}")
-    print(f"✔ Final CPU entries: {len(cpu_filtered)}")
-    print(f"✔ Final GPU entries: {len(gpu_filtered)}")
+    print(f" Files saved to: {BASE_DIR}")
+    print(f" Final CPU entries: {len(cpu_filtered)}")
+    print(f" Final GPU entries: {len(gpu_filtered)}")
 
 if __name__ == "__main__":
     main()
