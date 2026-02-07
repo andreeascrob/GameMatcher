@@ -1,6 +1,6 @@
 ------------------------------------------------------
 
-QUERY 1:
+QUERY CQ1:
 -
 
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
@@ -59,7 +59,7 @@ WHERE {
 
 ------------------------------------------------------
 
-Query 2: 
+Query CQ2: 
 -
 
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
@@ -95,7 +95,7 @@ ORDER BY ASC(?price)
 
 ------------------------------------------------------
 
-Query 3: 
+Query CQ3: 
 -
 
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
@@ -132,7 +132,9 @@ WHERE {
 
 ------------------------------------------------------
 
-Query 4:
+Query CQ4:
+-
+
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -163,7 +165,9 @@ WHERE {
 ORDER BY ?genreLabel
 
 ---------------------------------------------------------------------------------------------------
-Query 5:
+Query CQ5:
+-
+
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -190,7 +194,9 @@ WHERE {
 ORDER BY ?nameGame
 
 ---------------------------------------------------------------------------------------------------------------
-Query 6:
+Query CQ6:
+-
+
 PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -214,3 +220,43 @@ WHERE {
   FILTER(?requiredRAM > ?thresholdRAM)
 }
 ORDER BY DESC(?requiredRAM)
+
+------------------------------------------------------
+
+QUERY 1:
+-
+
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame
+WHERE {
+  VALUES ?targetUser { "Giulio" }
+  ?user rdfs:label ?userName .
+  FILTER(CONTAINS(LCASE(?userName), LCASE(?targetUser)))
+
+  ?videogame onto:isPerfectMatchFor ?user .
+  
+  ?videogame rdfs:label ?nameGame .
+
+------------------------------------------------------
+
+QUERY 2:
+-
+
+PREFIX onto: <http://www.semanticweb.org/gamematcher.owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nameGame 
+WHERE {
+  VALUES ?targetUser { "Marco" }
+  ?user rdfs:label ?userName .
+  FILTER(CONTAINS(LCASE(?userName), LCASE(?targetUser)))
+  
+  ?user onto:hasComputer ?pc . 
+
+  ?videogame rdfs:label ?nameGame .
+  ?videogame onto:hasMinRequirement ?min_req .
+
+  ?min_req onto:isPerfectHardwareMatch ?pc .
+
