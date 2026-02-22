@@ -4,7 +4,11 @@ import adapter from '@sveltejs/adapter-cloudflare';
 const config = {
 	kit: {
 		adapter: adapter(),
-		alias: { '@/*': './path/to/lib/*' }
+		alias: { '@/*': './path/to/lib/*' },
+		prerender: {
+			handleHttpError: 'warn',
+			entries: ['*']
+		}
 	}
 };
 
