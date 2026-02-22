@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Matcher | Find Your Perfect Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f0fafa; /* Very light teal-white */
+            --card-bg: #ffffff;
+            --primary-teal: #14b8a6; /* Main Teal */
+            --dark-teal: #0d9488;
+            --light-teal: #ccfbf1;
+            --text-main: #0f172a; /* Dark blue-grey for text */
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow: 0 10px 25px -5px rgba(20, 184, 166, 0.1), 0 8px 10px -6px rgba(20, 184, 166, 0.1);
+        }
+
+        body {
+            font-family: 'Plus+Jakarta+Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            color: var(--dark-teal);
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* --- Form Sections --- */
+        .section-box {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            background: #f8fafc;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 1rem;
+            color: var(--text-main);
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--primary-teal);
+            background: #ffffff;
+            outline: none;
+            box-shadow: 0 0 0 4px var(--light-teal);
+        }
+
+        /* --- Button --- */
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .main-btn {
+            background: var(--primary-teal);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 15px;
+            border: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(20, 184, 166, 0.3);
+        }
+
+        .main-btn:hover {
+            background: var(--dark-teal);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(20, 184, 166, 0.4);
+        }
+
+        /* --- Results Area --- */
+        #results {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            transition: 0.3s;
+        }
+
+        .game-card:hover {
+            border-color: var(--primary-teal);
+            box-shadow: var(--shadow);
+        }
+
+        .game-card h3 {
+            margin-top: 0;
+            color: var(--dark-teal);
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: var(--light-teal);
+            color: var(--dark-teal);
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <h1>Game Matcher</h1>
+        <p>Enter your specs to find games that run smoothly on your PC.</p>
+    </header>
+
+    <div class="section-box">
+        <div class="section-header">Computer Specs</div>
+        <div class="input-grid">
+            <div class="field">
+                <label>CPU</label>
+                <input type="text" id="cpu" placeholder="e.g. AMD Ryzen 5">
+            </div>
+            <div class="field">
+                <label>GPU</label>
+                <input type="text" id="gpu" placeholder="e.g. Nvidia GTX 1660">
+            </div>
+            <div class="field">
+                <label>RAM (GB)</label>
+                <select id="ram">
+                    <option value="4">4 GB</option>
+                    <option value="8">8 GB</option>
+                    <option value="16">16 GB</option>
+                    <option value="32">32 GB</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Available Storage (GB)</label>
+                <input type="number" id="storage" placeholder="e.g. 100">
+            </div>
+            <div class="field">
+                <label>Operating System</label>
+                <select id="os">
+                    <option value="Windows 10">Windows 10</option>
+                    <option value="Windows 11">Windows 11</option>
+                    <option value="macOS">macOS</option>
+                    <option value="Linux">Linux</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Preferences</div>
+        <div class="input-grid">
+            <div class="field">
+                <label>Genre</label>
+                <select id="genre">
+                    <option value="Action">Action</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Simulation">Simulation</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Player Mode</label>
+                <select id="mode">
+                    <option value="Singleplayer">Singleplayer</option>
+                    <option value="Multiplayer">Multiplayer</option>
+                    <option value="Co-op">Co-op</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-box">
+        <div class="section-header">Personal & Budget</div>
+        <div class="input-grid">
+            <div class="field">
+                <label>Age</label>
+                <input type="number" id="age" placeholder="Enter your age">
+            </div>
+            <div class="field">
+                <label>Max Budget (€)</label>
+                <input type="number" id="budget" placeholder="e.g. 50">
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button class="main-btn" onclick="startMatching()">MATCH MY PC</button>
+    </div>
+
+    <div id="results">
+        </div>
+</div>
+
+<script>
+    async function startMatching() {
+    const resultsArea = document.getElementById('results');
+    resultsArea.innerHTML = '<p style="text-align:center; width:100%;">Searching your ontology...</p>';
+
+    // 1. Recuperiamo i valori dal form
+    const ram = document.getElementById('ram').value;
+    const genre = document.getElementById('genre').value;
+    const playMode = document.getElementById('mode').value;
+    const budget = document.getElementById('budget').value;
+
+    // 2. Definiamo l'endpoint e la query SPARQL
+    const endpointUrl = "https://api.triplydb.com/datasets/EdoardoTommasi/GameMatcher/sparql";
+    
+    // NOTA: Cambia i prefissi e le proprietà (es: my:hasGenre) con quelli della tua ontologia!
+    const query = `
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX my: <http://tuo-namespace.org/> 
+        SELECT ?name ?price ?desc WHERE {
+            ?game a my:VideoGame ;
+                  rdfs:label ?name ;
+                  my:hasGenre "${genre}" ;
+                  my:hasMode "${playMode}" ;
+                  my:requiredRAM ?ramReq ;
+                  my:hasPrice ?price .
+            
+            # Filtri basati sull'input dell'utente
+            FILTER(?ramReq <= ${ram})
+            FILTER(?price <= ${budget})
+        } LIMIT 10
+    `;
+
+    // 3. Inviamo la richiesta (metodo POST come nell'esercitazione)
+    try {
+        const response = await fetch(endpointUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/sparql-query",
+                "Accept": "application/json"
+            },
+            body: query
+        });
+
+        if (!response.ok) throw new Error("Network error");
+
+        const data = await response.json();
+        const bindings = data.results.bindings;
+
+        // 4. Mostriamo i risultati
+        displayResults(bindings);
+
+    } catch (error) {
+        resultsArea.innerHTML = `<p style="color:red; text-align:center;">Error: ${error.message}</p>`;
+        console.error("SPARQL Error:", error);
+    }
+}
+
+function displayResults(bindings) {
+    const resultsArea = document.getElementById('results');
+    resultsArea.innerHTML = '';
+
+    if (bindings.length === 0) {
+        resultsArea.innerHTML = '<p style="text-align:center; width:100%;">No games found for your specs.</p>';
+        return;
+    }
+
+    bindings.forEach(res => {
+        const name = res.name.value;
+        const price = res.price.value;
+        
+        const card = document.createElement('div');
+        card.className = 'game-card';
+        card.innerHTML = `
+            <h3>${name}</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">Compatible with your hardware!</p>
+            <div class="price-tag">€${price}</div>
+        `;
+        resultsArea.appendChild(card);
+    });
+}
+</script>
+
+</body>
+</html>

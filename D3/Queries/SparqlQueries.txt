@@ -238,7 +238,7 @@ WHERE {
   ?videogame onto:isPerfectMatchFor ?user .
   
   ?videogame rdfs:label ?nameGame .
-
+}
 ------------------------------------------------------
 
 QUERY N2:
@@ -260,3 +260,4 @@ WHERE {
 
   ?min_req onto:isPerfectHardwareMatch ?pc .
 
+}

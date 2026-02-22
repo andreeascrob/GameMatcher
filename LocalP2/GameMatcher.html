@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Matcher | PC Compatibility Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #080a0f;
+            --panel-color: #12161f;
+            --accent-color: #00f2ff;
+            --accent-glow: rgba(0, 242, 255, 0.2);
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header { text-align: center; margin-bottom: 40px; }
+        
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px var(--accent-glow);
+            margin: 0;
+        }
+
+        /* --- Sections Design --- */
+        .form-section {
+            background: var(--panel-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background: #0a0d14;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: white;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--accent-color);
+            outline: none;
+        }
+
+        .match-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(90deg, #00d4ff, #0055ff);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .match-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px var(--accent-glow);
+        }
+
+        /* --- Results Area --- */
+        #results-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: var(--panel-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .game-card:hover { border-color: var(--accent-color); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>GAME MATCHER</h1>
+        <p style="color: var(--text-dim)">Find games you can actually run</p>
+    </header>
+
+    <div class="form-section">
+        <div class="section-title">COMPUTER SPECS</div>
+        <div class="grid-layout">
+            <div class="form-group">
+                <label>CPU</label>
+                <input type="text" id="cpu" placeholder="e.g. i7-12700K">
+            </div>
+            <div class="form-group">
+                <label>GPU</label>
+                <input type="text" id="gpu" placeholder="e.g. RTX 3070">
+            </div>
+            <div class="form-group">
+                <label>RAM (GB)</label>
+                <select id="ram">
+                    <option value="4">4 GB</option>
+                    <option value="8">8 GB</option>
+                    <option value="16" selected>16 GB</option>
+                    <option value="32">32 GB</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Available Storage (GB)</label>
+                <input type="number" id="storage" placeholder="e.g. 500">
+            </div>
+            <div class="form-group">
+                <label>Operating System</label>
+                <select id="os">
+                    <option value="win10">Windows 10</option>
+                    <option value="win11">Windows 11</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <div class="section-title">PREFERENCES</div>
+        <div class="grid-layout">
+            <div class="form-group">
+                <label>Genre</label>
+                <select id="genre">
+                    <option value="Action">Action</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Strategy">Strategy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Player Mode</label>
+                <select id="playermode">
+                    <option value="Singleplayer">Singleplayer</option>
+                    <option value="Multiplayer">Multiplayer</option>
+                    <option value="Co-op">Co-op</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <div class="section-title">PERSONAL & BUDGET</div>
+        <div class="grid-layout">
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" id="age" placeholder="Your age">
+            </div>
+            <div class="form-group">
+                <label>Budget (Max €)</label>
+                <input type="number" id="budget" placeholder="e.g. 60">
+            </div>
+        </div>
+    </div>
+
+    <button class="match-btn" onclick="runMatcher()">FIND MATCHES</button>
+
+    <div id="results-grid">
+        </div>
+</div>
+
+<script>
+    function runMatcher() {
+        const resultsGrid = document.getElementById('results-grid');
+        resultsGrid.innerHTML = '<p style="text-align:center; width:100%">Searching your ontology...</p>';
+
+        // Get values for your SPARQL query
+        const ram = document.getElementById('ram').value;
+        const genre = document.getElementById('genre').value;
+        const budget = document.getElementById('budget').value;
+
+        // SPARQL Logic (Placeholder)
+        console.log(`Searching for ${genre} games, Budget: ${budget}€, RAM: ${ram}GB`);
+
+        // Simulate results
+        setTimeout(() => {
+            resultsGrid.innerHTML = `
+                <div class="game-card">
+                    <h3 style="color:var(--accent-color); margin:0">Game Alpha</h3>
+                    <p style="font-size:0.9rem">The perfect RPG for your PC.</p>
+                    <span style="color:#4ade80">€49.99</span>
+                </div>
+            `;
+        }, 800);
+    }
+</script>
+
+</body>
+</html>
