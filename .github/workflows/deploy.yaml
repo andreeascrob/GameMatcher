@@ -1,0 +1,36 @@
+name: Deploy P2
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'P2/**'
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy P2 App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+          cache-dependency-path: P2/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: P2
+
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: P2
+          packageManager: npm
