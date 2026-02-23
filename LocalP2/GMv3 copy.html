@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Matcher | Find Your Perfect Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* TEMA GAMER DARK & ORANGE */
+            --bg-color: #0b0f19; 
+            --card-bg: #151c2c; 
+            --primary-orange: #ff6b00; 
+            --dark-orange: #cc5500;
+            --light-orange: rgba(255, 107, 0, 0.15); 
+            --text-main: #e2e8f0; 
+            --text-muted: #94a3b8; 
+            --border-color: #2a3441; 
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            --neon-glow: 0 0 15px rgba(255, 107, 0, 0.4); 
+        }
+
+        body {
+            font-family: 'Plus+Jakarta+Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.2rem;
+            color: var(--text-main);
+            margin: 0;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: var(--primary-orange);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        /* --- LAYOUT A DUE COLONNE --- */
+        .main-layout {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .left-panel {
+            flex: 0 0 380px; 
+            position: sticky; 
+            top: 20px;
+        }
+
+        .right-panel {
+            flex: 1; 
+            min-width: 0;
+        }
+
+        /* --- Form Sections --- */
+        .section-box {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 15px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            background: #0b0f19;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        select option {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+        }
+
+        input:focus, select:focus {
+            border-color: var(--primary-orange);
+            outline: none;
+            box-shadow: var(--neon-glow);
+        }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+
+        /* --- AUTOCOMPLETE STYLES --- */
+        .autocomplete-container {
+            position: relative;
+        }
+
+        .suggestions-box {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-orange);
+            border-radius: 8px;
+            margin-top: 4px;
+            z-index: 1000;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            display: none; 
+        }
+
+        .suggestion-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+            color: var(--text-main);
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background-color: var(--primary-orange);
+            color: #ffffff;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-orange); }
+
+        /* --- Results Area --- */
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer; 
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-orange);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover {
+            border-color: var(--primary-orange);
+            box-shadow: var(--neon-glow), var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .game-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .game-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-size: 1.3rem;
+            line-height: 1.3;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: var(--light-orange);
+            color: var(--primary-orange);
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            align-self: flex-start;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
+
+        /* --- MODAL (POP-UP) STYLES --- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(11, 15, 25, 0.85);
+            display: none; 
+            align-items: center; justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-orange);
+            border-radius: 16px;
+            width: 90%; max-width: 650px;
+            padding: 30px;
+            position: relative;
+            box-shadow: var(--neon-glow), var(--shadow);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
+        }
+
+        .close-btn {
+            position: absolute; top: 15px; right: 20px;
+            background: none; border: none;
+            color: var(--text-muted); font-size: 2rem;
+            cursor: pointer; transition: color 0.2s;
+            line-height: 1;
+        }
+
+        .close-btn:hover { color: var(--primary-orange); }
+
+        .modal-header {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-top: 0; margin-bottom: 20px;
+            padding-right: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .modal-detail {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .modal-detail.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .modal-label {
+            font-size: 0.75rem;
+            color: var(--primary-orange);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .modal-value {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+            .main-layout { flex-direction: column; }
+            .left-panel { flex: auto; width: 100%; position: static; }
+            .modal-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeModal(event)">×</button>
+        <h2 class="modal-header" id="modal-title">Game Title</h2>
+        <div class="modal-grid" id="modal-body"></div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <header>
+        <h1>Game<span>Matcher</span></h1>
+        <p>Enter your specs to find games that run smoothly on your rig.</p>
+    </header>
+
+    <div class="main-layout">
+        
+        <div class="left-panel">
+            <div class="section-box">
+                <div class="section-header">Hardware Specs</div>
+                <div class="input-grid">
+                    <div class="field autocomplete-container">
+                        <label>CPU</label>
+                        <input type="text" id="cpu" placeholder="e.g. Intel Core i7" oninput="fetchSuggestions('CPU', this.value, 'cpu-suggestions', 'cpu')" autocomplete="off">
+                        <div id="cpu-suggestions" class="suggestions-box"></div>
+                    </div>
+                    
+                    <div class="field autocomplete-container">
+                        <label>GPU</label>
+                        <input type="text" id="gpu" placeholder="e.g. GeForce GTX 1060" oninput="fetchSuggestions('GPU', this.value, 'gpu-suggestions', 'gpu')" autocomplete="off">
+                        <div id="gpu-suggestions" class="suggestions-box"></div>
+                    </div>
+
+                    <div class="field">
+                        <label>RAM (GB)</label>
+                        <select id="ram" onchange="startMatching()">
+                            <option value="4">4 GB</option>
+                            <option value="8">8 GB</option>
+                            <option value="16" selected>16 GB</option>
+                            <option value="32">32 GB</option>
+                            <option value="64">64 GB</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Available Storage (GB)</label>
+                        <input type="number" id="storage" placeholder="e.g. 500" oninput="startMatching()">
+                    </div>
+                    <div class="field">
+                        <label>Operating System</label>
+                        <select id="os" onchange="startMatching()">
+                            <option value="">Loading...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <div class="section-header">Game Preferences</div>
+                <div class="input-grid">
+                    <div class="field">
+                        <label>Genre</label>
+                        <select id="genre" onchange="startMatching()">
+                            <option value="">Loading...</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>Player Mode</label>
+                        <select id="mode" onchange="startMatching()">
+                            <option value="">Loading...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <div class="section-header">Personal & Budget</div>
+                <div class="input-grid">
+                    <div class="field">
+                        <label>Age</label>
+                        <input type="number" id="age" placeholder="Enter your age" oninput="startMatching()">
+                    </div>
+                    <div class="field">
+                        <label>Max Budget (€)</label>
+                        <input type="number" id="budget" placeholder="e.g. 50" oninput="startMatching()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div id="results"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="steam_parsed_CLEAN.js"></script>
+
+<script>
+    const endpointUrl = "https://api.triplydb.com/datasets/EdoardoTommasi/GameMatcher/sparql";
+
+    // --- FUNZIONE PER RIPARARE I CARATTERI ROTTI (MOJIBAKE) ---
+    function fixText(str) {
+        if (!str) return str;
+        return str
+            .replace(/â„¢/g, '™')
+            .replace(/Â®/g, '®')
+            .replace(/Ã©/g, 'é')
+            .replace(/Ã³/g, 'ó')
+            .replace(/Ã /g, 'à')
+            .replace(/Ã¨/g, 'è')
+            .replace(/Ã¬/g, 'ì')
+            .replace(/Ã¹/g, 'ù')
+            .replace(/â€“/g, '–')
+            .replace(/â€”/g, '—')
+            .replace(/â€™/g, "'");
+    }
+
+    // --- LOGICA MODAL (POP-UP) ---
+    function openGameModal(gameName, sparqlPrice) {
+        const modal = document.getElementById('game-modal');
+        const titleElement = document.getElementById('modal-title');
+        const bodyElement = document.getElementById('modal-body');
+
+        // Pulisce la stringa dagli spazi extra
+        const cleanGameName = gameName.trim();
+        titleElement.textContent = cleanGameName;
+
+        const gameInfo = localGameData.find(g => 
+            g.NAME && g.NAME.toLowerCase().trim() === cleanGameName.toLowerCase()
+        );
+
+        if (gameInfo) {
+            const cpus = [gameInfo.CPU_0, gameInfo.CPU_1, gameInfo.CPU_2, gameInfo.CPU_3];
+            const cleanCPUs = cpus.filter(item => item !== null && item !== "null" && item !== "").join("<br>• ");
+
+            const gpus = [gameInfo.GPU_0, gameInfo.GPU_1, gameInfo.GPU_2, gameInfo.GPU_3, gameInfo.GPU_4, gameInfo.GPU_5, gameInfo.GPU_6, gameInfo.GPU_7];
+            const cleanGPUs = gpus.filter(item => item !== null && item !== "null" && item !== "").join("<br>• ");
+
+            bodyElement.innerHTML = `
+                <div class="modal-detail">
+                    <div class="modal-label">Price</div>
+                    <div class="modal-value">${gameInfo.PRICE && gameInfo.PRICE !== "null" ? gameInfo.PRICE : '€' + sparqlPrice}</div>
+                </div>
+                <div class="modal-detail">
+                    <div class="modal-label">PEGI Rating</div>
+                    <div class="modal-value">${gameInfo.PEGI && gameInfo.PEGI !== "null" ? gameInfo.PEGI : 'N/A'}</div>
+                </div>
+                <div class="modal-detail full-width">
+                    <div class="modal-label">Genre</div>
+                    <div class="modal-value">${gameInfo.GENRE && gameInfo.GENRE !== "null" ? gameInfo.GENRE : 'N/A'}</div>
+                </div>
+                <div class="modal-detail full-width">
+                    <div class="modal-label">Player Mode</div>
+                    <div class="modal-value">${gameInfo.MODE && gameInfo.MODE !== "null" ? gameInfo.MODE : 'N/A'}</div>
+                </div>
+                <div class="modal-detail full-width">
+                    <div class="modal-label">Operating System</div>
+                    <div class="modal-value">${gameInfo.OS && gameInfo.OS !== "null" ? gameInfo.OS : 'N/A'}</div>
+                </div>
+                <div class="modal-detail">
+                    <div class="modal-label">Memory (RAM)</div>
+                    <div class="modal-value">${gameInfo.RAM && gameInfo.RAM !== "null" ? gameInfo.RAM : 'N/A'}</div>
+                </div>
+                <div class="modal-detail">
+                    <div class="modal-label">Storage Required</div>
+                    <div class="modal-value">${gameInfo.STORAGE && gameInfo.STORAGE !== "null" ? gameInfo.STORAGE : 'N/A'}</div>
+                </div>
+                <div class="modal-detail full-width">
+                    <div class="modal-label">Supported CPUs</div>
+                    <div class="modal-value">${cleanCPUs ? '• ' + cleanCPUs : 'N/A'}</div>
+                </div>
+                <div class="modal-detail full-width">
+                    <div class="modal-label">Supported GPUs</div>
+                    <div class="modal-value">${cleanGPUs ? '• ' + cleanGPUs : 'N/A'}</div>
+                </div>
+            `;
+        } else {
+            bodyElement.innerHTML = `
+                <div class="modal-detail full-width">
+                    <div class="modal-value" style="color: var(--text-muted); text-align: center;">
+                        Additional details not found in the local database file.<br><br>
+                        <strong>Price found in Knowledge Graph:</strong> €${sparqlPrice}
+                    </div>
+                </div>
+            `;
+        }
+
+        modal.classList.add('show');
+    }
+
+    function closeModal(event) {
+        if (!event || event.target.id === 'game-modal' || event.target.classList.contains('close-btn')) {
+            document.getElementById('game-modal').classList.remove('show');
+        }
+    }
+
+    // --- DYNAMIC DROPDOWN LOADING ---
+    async function populateDropdown(className, selectId) {
+        const query = `
+            PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            
+            SELECT DISTINCT ?itemName WHERE {
+                ?item rdf:type :${className} .
+                OPTIONAL { ?item rdfs:label ?lbl }
+                BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(GameGenre_|PlayerMode_|OperatingSystem_|Genre_|Mode_|OS_)?", ""), "_", " ")) AS ?itemName)
+            }
+            ORDER BY ?itemName
+        `;
+
+        try {
+            const response = await fetch(endpointUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/sparql-query",
+                    "Accept": "application/sparql-results+json"
+                },
+                body: query
+            });
+
+            const data = await response.json();
+            const selectElement = document.getElementById(selectId);
+            
+            selectElement.innerHTML = '<option value="">Any</option>';
+            
+            data.results.bindings.forEach(res => {
+                // APPLICA LA FUNZIONE QUI
+                const name = fixText(res.itemName.value);
+                const option = document.createElement('option');
+                option.value = name;
+                option.textContent = name;
+                selectElement.appendChild(option);
+            });
+        } catch (error) {
+            console.error(`Error loading ${className}:`, error);
+            document.getElementById(selectId).innerHTML = '<option value="">Error loading</option>';
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        populateDropdown('OperatingSystem', 'os');
+        populateDropdown('GameGenre', 'genre');
+        populateDropdown('PlayerMode', 'mode');
+        startMatching(); 
+    });
+
+    // --- AUTOCOMPLETE LOGIC ---
+    let debounceTimer;
+
+    async function fetchSuggestions(hardwareClass, searchTerm, boxId, inputId) {
+        const suggestionBox = document.getElementById(boxId);
+        
+        if (searchTerm.length < 2) {
+            suggestionBox.style.display = 'none';
+            return;
+        }
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(async () => {
+            const query = `
+                PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                
+                SELECT DISTINCT ?itemName WHERE {
+                    ?item rdf:type :${hardwareClass} .
+                    OPTIONAL { ?item rdfs:label ?lbl }
+                    BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(CPU_|GPU_)?", ""), "_", " ")) AS ?itemName)
+                    FILTER(CONTAINS(LCASE(?itemName), LCASE("${searchTerm}")))
+                }
+                ORDER BY ?itemName
+                LIMIT 5
+            `;
+
+            try {
+                const response = await fetch(endpointUrl, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/sparql-query",
+                        "Accept": "application/sparql-results+json"
+                    },
+                    body: query
+                });
+
+                if (!response.ok) throw new Error("Network error");
+
+                const data = await response.json();
+                const bindings = data.results.bindings;
+
+                suggestionBox.innerHTML = ''; 
+
+                if (bindings.length > 0) {
+                    bindings.forEach(res => {
+                        // APPLICA LA FUNZIONE QUI
+                        const name = fixText(res.itemName.value);
+                        const div = document.createElement('div');
+                        div.className = 'suggestion-item';
+                        div.textContent = name;
+                        
+                        div.onclick = () => {
+                            document.getElementById(inputId).value = name; 
+                            suggestionBox.style.display = 'none'; 
+                            startMatching();
+                        };
+                        suggestionBox.appendChild(div);
+                    });
+                    suggestionBox.style.display = 'block'; 
+                } else {
+                    suggestionBox.style.display = 'none';
+                }
+            } catch (error) {
+                console.error("Autocomplete Error:", error);
+            }
+        }, 300); 
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.autocomplete-container')) {
+            document.getElementById('cpu-suggestions').style.display = 'none';
+            document.getElementById('gpu-suggestions').style.display = 'none';
+        }
+    });
+
+    // --- MAIN LOGIC (SEARCH GAMES) ---
+    let matchDebounceTimer;
+
+    function startMatching() {
+        clearTimeout(matchDebounceTimer);
+        matchDebounceTimer = setTimeout(runMatchQuery, 500); 
+    }
+
+    async function runMatchQuery() {
+        const resultsArea = document.getElementById('results');
+        resultsArea.innerHTML = '<p style="text-align:center; width:100%; color: var(--primary-orange); font-weight: bold;">Scanning Knowledge Graph...</p>';
+
+        const ram = document.getElementById('ram').value || 999; 
+        const genre = document.getElementById('genre').value;
+        const playMode = document.getElementById('mode').value;
+        const budget = document.getElementById('budget').value || 9999; 
+        
+        const query = `
+            PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            
+            SELECT DISTINCT ?gameName ?price WHERE {
+                ?game rdf:type :VideoGame .
+                
+                OPTIONAL { ?game rdfs:label ?lbl }
+                BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?game), "^.*#(Game_|VideoGame_)?", ""), "_", " ")) AS ?gameName)
+                
+                ?game :hasPrice ?price .
+                FILTER(?price <= ${budget})
+                
+                ?game :hasMinRequirement ?req .
+                ?req :requiresMemoryGB ?ramReq .
+                FILTER(?ramReq <= ${ram})
+                
+                ?game :hasGenre ?gameGenre .
+                BIND(LCASE(STR(?gameGenre)) AS ?genreStr)
+                FILTER(CONTAINS(?genreStr, LCASE("${genre}")))
+                
+                ?game :hasPlayerMode ?mode .
+                BIND(LCASE(STR(?mode)) AS ?modeStr)
+                FILTER(CONTAINS(?modeStr, LCASE("${playMode}")))
+            } 
+            ORDER BY ?price
+            LIMIT 12
+        `;
+
+        try {
+            const response = await fetch(endpointUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/sparql-query",
+                    "Accept": "application/sparql-results+json"
+                },
+                body: query
+            });
+
+            if (!response.ok) throw new Error("Network error");
+
+            const data = await response.json();
+            const bindings = data.results.bindings;
+
+            displayResults(bindings);
+
+        } catch (error) {
+            resultsArea.innerHTML = `<p style="color:#ef4444; text-align:center;">Connection Error: ${error.message}</p>`;
+            console.error("SPARQL Error:", error);
+        }
+    }
+
+    function displayResults(bindings) {
+        const resultsArea = document.getElementById('results');
+        resultsArea.innerHTML = '';
+
+        if (bindings.length === 0) {
+            resultsArea.innerHTML = '<p style="text-align:center; width:100%; color: var(--text-muted);">No games found with these specs. Try upgrading your budget or lowering your requirements.</p>';
+            return;
+        }
+
+        bindings.forEach(res => {
+            // APPLICA LA FUNZIONE QUI! Ripara il nome del gioco!
+            const name = fixText(res.gameName.value);
+            const price = parseFloat(res.price.value).toFixed(2);
+            
+            const card = document.createElement('div');
+            card.className = 'game-card';
+            
+            card.onclick = () => openGameModal(name, price);
+            
+            card.innerHTML = `
+                <div>
+                    <h3>${name}</h3>
+                    <div>
+                        <p style="color:var(--primary-orange); font-size:0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Perfect Match ✨</p>
+                    </div>
+                </div>
+                <div class="price-tag">€${price}</div>
+            `;
+            resultsArea.appendChild(card);
+        });
+    }
+</script>
+
+</body>
+</html>
