@@ -8,12 +8,12 @@
     
     <style>
         :root {
-            --bg-color: #f0fafa; /* Very light teal-white */
+            --bg-color: #f0fafa; 
             --card-bg: #ffffff;
-            --primary-teal: #14b8a6; /* Main Teal */
+            --primary-teal: #14b8a6; 
             --dark-teal: #0d9488;
             --light-teal: #ccfbf1;
-            --text-main: #0f172a; /* Dark blue-grey for text */
+            --text-main: #0f172a; 
             --text-muted: #64748b;
             --border-color: #e2e8f0;
             --shadow: 0 10px 25px -5px rgba(20, 184, 166, 0.1), 0 8px 10px -6px rgba(20, 184, 166, 0.1);
@@ -54,7 +54,6 @@
             margin-top: 10px;
         }
 
-        /* --- Form Sections --- */
         .section-box {
             background: var(--card-bg);
             border-radius: 20px;
@@ -110,6 +109,44 @@
             box-shadow: 0 0 0 4px var(--light-teal);
         }
 
+        /* --- AUTOCOMPLETE STYLES --- */
+        .autocomplete-container {
+            position: relative;
+        }
+
+        .suggestions-box {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid var(--primary-teal);
+            border-radius: 8px;
+            margin-top: 4px;
+            z-index: 1000;
+            max-height: 200px;
+            overflow-y: auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: none; 
+        }
+
+        .suggestion-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.2s;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover {
+            background-color: var(--light-teal);
+            color: var(--dark-teal);
+        }
+
         /* --- Button --- */
         .btn-container {
             text-align: center;
@@ -136,7 +173,6 @@
             box-shadow: 0 15px 30px rgba(20, 184, 166, 0.4);
         }
 
-        /* --- Results Area --- */
         #results {
             margin-top: 50px;
             display: grid;
@@ -184,20 +220,24 @@
     <div class="section-box">
         <div class="section-header">Computer Specs</div>
         <div class="input-grid">
-            <div class="field">
+            <div class="field autocomplete-container">
                 <label>CPU</label>
-                <input type="text" id="cpu" placeholder="e.g. AMD Ryzen 5">
+                <input type="text" id="cpu" placeholder="e.g. Intel Core i7" oninput="fetchSuggestions('CPU', this.value, 'cpu-suggestions', 'cpu')" autocomplete="off">
+                <div id="cpu-suggestions" class="suggestions-box"></div>
             </div>
-            <div class="field">
+            
+            <div class="field autocomplete-container">
                 <label>GPU</label>
-                <input type="text" id="gpu" placeholder="e.g. Nvidia GTX 1660">
+                <input type="text" id="gpu" placeholder="e.g. GeForce GTX 1060" oninput="fetchSuggestions('GPU', this.value, 'gpu-suggestions', 'gpu')" autocomplete="off">
+                <div id="gpu-suggestions" class="suggestions-box"></div>
             </div>
+
             <div class="field">
                 <label>RAM (GB)</label>
                 <select id="ram">
                     <option value="4">4 GB</option>
                     <option value="8">8 GB</option>
-                    <option value="16">16 GB</option>
+                    <option value="16" selected>16 GB</option>
                     <option value="32">32 GB</option>
                 </select>
             </div>
@@ -208,10 +248,7 @@
             <div class="field">
                 <label>Operating System</label>
                 <select id="os">
-                    <option value="Windows 10">Windows 10</option>
-                    <option value="Windows 11">Windows 11</option>
-                    <option value="macOS">macOS</option>
-                    <option value="Linux">Linux</option>
+                    <option value="">Loading...</option>
                 </select>
             </div>
         </div>
@@ -223,18 +260,13 @@
             <div class="field">
                 <label>Genre</label>
                 <select id="genre">
-                    <option value="Action">Action</option>
-                    <option value="RPG">RPG</option>
-                    <option value="Horror">Horror</option>
-                    <option value="Simulation">Simulation</option>
+                    <option value="">Loading...</option>
                 </select>
             </div>
             <div class="field">
                 <label>Player Mode</label>
                 <select id="mode">
-                    <option value="Singleplayer">Singleplayer</option>
-                    <option value="Multiplayer">Multiplayer</option>
-                    <option value="Co-op">Co-op</option>
+                    <option value="">Loading...</option>
                 </select>
             </div>
         </div>
@@ -258,91 +290,231 @@
         <button class="main-btn" onclick="startMatching()">MATCH MY PC</button>
     </div>
 
-    <div id="results">
-        </div>
+    <div id="results"></div>
 </div>
 
 <script>
-    async function startMatching() {
-    const resultsArea = document.getElementById('results');
-    resultsArea.innerHTML = '<p style="text-align:center; width:100%;">Searching your ontology...</p>';
-
-    // 1. Recuperiamo i valori dal form
-    const ram = document.getElementById('ram').value;
-    const genre = document.getElementById('genre').value;
-    const playMode = document.getElementById('mode').value;
-    const budget = document.getElementById('budget').value;
-
-    // 2. Definiamo l'endpoint e la query SPARQL
     const endpointUrl = "https://api.triplydb.com/datasets/EdoardoTommasi/GameMatcher/sparql";
-    
-    // NOTA: Cambia i prefissi e le proprietà (es: my:hasGenre) con quelli della tua ontologia!
-    const query = `
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX my: <http://tuo-namespace.org/> 
-        SELECT ?name ?price ?desc WHERE {
-            ?game a my:VideoGame ;
-                  rdfs:label ?name ;
-                  my:hasGenre "${genre}" ;
-                  my:hasMode "${playMode}" ;
-                  my:requiredRAM ?ramReq ;
-                  my:hasPrice ?price .
+
+    // --- 1. DYNAMIC DROPDOWN LOADING ---
+    async function populateDropdown(className, selectId) {
+        const query = `
+            PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             
-            # Filtri basati sull'input dell'utente
-            FILTER(?ramReq <= ${ram})
-            FILTER(?price <= ${budget})
-        } LIMIT 10
-    `;
-
-    // 3. Inviamo la richiesta (metodo POST come nell'esercitazione)
-    try {
-        const response = await fetch(endpointUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/sparql-query",
-                "Accept": "application/json"
-            },
-            body: query
-        });
-
-        if (!response.ok) throw new Error("Network error");
-
-        const data = await response.json();
-        const bindings = data.results.bindings;
-
-        // 4. Mostriamo i risultati
-        displayResults(bindings);
-
-    } catch (error) {
-        resultsArea.innerHTML = `<p style="color:red; text-align:center;">Error: ${error.message}</p>`;
-        console.error("SPARQL Error:", error);
-    }
-}
-
-function displayResults(bindings) {
-    const resultsArea = document.getElementById('results');
-    resultsArea.innerHTML = '';
-
-    if (bindings.length === 0) {
-        resultsArea.innerHTML = '<p style="text-align:center; width:100%;">No games found for your specs.</p>';
-        return;
-    }
-
-    bindings.forEach(res => {
-        const name = res.name.value;
-        const price = res.price.value;
-        
-        const card = document.createElement('div');
-        card.className = 'game-card';
-        card.innerHTML = `
-            <h3>${name}</h3>
-            <p style="color:var(--text-muted); font-size:0.9rem;">Compatible with your hardware!</p>
-            <div class="price-tag">€${price}</div>
+            SELECT DISTINCT ?itemName WHERE {
+                ?item rdf:type :${className} .
+                
+                # Prova a prendere la label
+                OPTIONAL { ?item rdfs:label ?lbl }
+                
+                # Se c'è la label usa quella, altrimenti taglia via i prefissi (Genre_, OS_, ecc.) dall'URL
+                BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(GameGenre_|PlayerMode_|OperatingSystem_|Genre_|Mode_|OS_)?", ""), "_", " ")) AS ?itemName)
+            }
+            ORDER BY ?itemName
         `;
-        resultsArea.appendChild(card);
-    });
-}
-</script>
 
+        try {
+            const response = await fetch(endpointUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/sparql-query",
+                    "Accept": "application/sparql-results+json"
+                },
+                body: query
+            });
+
+            const data = await response.json();
+            const selectElement = document.getElementById(selectId);
+            
+            selectElement.innerHTML = '<option value="">Any</option>';
+            
+            data.results.bindings.forEach(res => {
+                const name = res.itemName.value;
+                const option = document.createElement('option');
+                option.value = name;
+                option.textContent = name;
+                selectElement.appendChild(option);
+            });
+        } catch (error) {
+            console.error(`Error loading ${className}:`, error);
+            document.getElementById(selectId).innerHTML = '<option value="">Error loading</option>';
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        populateDropdown('OperatingSystem', 'os');
+        populateDropdown('GameGenre', 'genre');
+        populateDropdown('PlayerMode', 'mode');
+    });
+
+    // --- 2. AUTOCOMPLETE LOGIC (CPU/GPU SUGGESTIONS) ---
+    let debounceTimer;
+
+    async function fetchSuggestions(hardwareClass, searchTerm, boxId, inputId) {
+        const suggestionBox = document.getElementById(boxId);
+        
+        if (searchTerm.length < 2) {
+            suggestionBox.style.display = 'none';
+            return;
+        }
+
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(async () => {
+            const query = `
+                PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                
+                SELECT DISTINCT ?itemName WHERE {
+                    ?item rdf:type :${hardwareClass} .
+                    
+                    OPTIONAL { ?item rdfs:label ?lbl }
+                    
+                    # Prende la label, oppure taglia i prefissi CPU_ o GPU_ dall'URL
+                    BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(CPU_|GPU_)?", ""), "_", " ")) AS ?itemName)
+                    
+                    FILTER(CONTAINS(LCASE(?itemName), LCASE("${searchTerm}")))
+                }
+                ORDER BY ?itemName
+                LIMIT 5
+            `;
+
+            try {
+                const response = await fetch(endpointUrl, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/sparql-query",
+                        "Accept": "application/sparql-results+json"
+                    },
+                    body: query
+                });
+
+                if (!response.ok) throw new Error("Network error");
+
+                const data = await response.json();
+                const bindings = data.results.bindings;
+
+                suggestionBox.innerHTML = ''; 
+
+                if (bindings.length > 0) {
+                    bindings.forEach(res => {
+                        const name = res.itemName.value;
+                        const div = document.createElement('div');
+                        div.className = 'suggestion-item';
+                        div.textContent = name;
+                        
+                        div.onclick = () => {
+                            document.getElementById(inputId).value = name; 
+                            suggestionBox.style.display = 'none'; 
+                        };
+                        suggestionBox.appendChild(div);
+                    });
+                    suggestionBox.style.display = 'block'; 
+                } else {
+                    suggestionBox.style.display = 'none';
+                }
+            } catch (error) {
+                console.error("Autocomplete Error:", error);
+            }
+        }, 300); 
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.autocomplete-container')) {
+            document.getElementById('cpu-suggestions').style.display = 'none';
+            document.getElementById('gpu-suggestions').style.display = 'none';
+        }
+    });
+
+    // --- 3. MAIN LOGIC (SEARCH GAMES) ---
+    async function startMatching() {
+        const resultsArea = document.getElementById('results');
+        resultsArea.innerHTML = '<p style="text-align:center; width:100%;">Analyzing your hardware and finding the perfect games...</p>';
+
+        const ram = document.getElementById('ram').value || 999; 
+        const genre = document.getElementById('genre').value;
+        const playMode = document.getElementById('mode').value;
+        const budget = document.getElementById('budget').value || 9999; 
+        
+        const query = `
+            PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            
+            SELECT DISTINCT ?gameName ?price WHERE {
+                ?game rdf:type :VideoGame .
+                
+                # Prende il nome del gioco dalla label, per evitare prefissi come Game_ o VideoGame_
+                OPTIONAL { ?game rdfs:label ?lbl }
+                BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?game), "^.*#(Game_|VideoGame_)?", ""), "_", " ")) AS ?gameName)
+                
+                ?game :hasPrice ?price .
+                FILTER(?price <= ${budget})
+                
+                ?game :hasMinRequirement ?req .
+                ?req :requiresMemoryGB ?ramReq .
+                FILTER(?ramReq <= ${ram})
+                
+                ?game :hasGenre ?gameGenre .
+                BIND(LCASE(STR(?gameGenre)) AS ?genreStr)
+                FILTER(CONTAINS(?genreStr, LCASE("${genre}")))
+                
+                ?game :hasPlayerMode ?mode .
+                BIND(LCASE(STR(?mode)) AS ?modeStr)
+                FILTER(CONTAINS(?modeStr, LCASE("${playMode}")))
+            } 
+            ORDER BY ?price
+            LIMIT 12
+        `;
+
+        try {
+            const response = await fetch(endpointUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/sparql-query",
+                    "Accept": "application/sparql-results+json"
+                },
+                body: query
+            });
+
+            if (!response.ok) throw new Error("Network error");
+
+            const data = await response.json();
+            const bindings = data.results.bindings;
+
+            displayResults(bindings);
+
+        } catch (error) {
+            resultsArea.innerHTML = `<p style="color:red; text-align:center;">Error: ${error.message}</p>`;
+            console.error("SPARQL Error:", error);
+        }
+    }
+
+    function displayResults(bindings) {
+        const resultsArea = document.getElementById('results');
+        resultsArea.innerHTML = '';
+
+        if (bindings.length === 0) {
+            resultsArea.innerHTML = '<p style="text-align:center; width:100%; color: var(--text-muted);">No games found with these filters. Try increasing your budget or changing the genre.</p>';
+            return;
+        }
+
+        bindings.forEach(res => {
+            const name = res.gameName.value;
+            const price = parseFloat(res.price.value).toFixed(2);
+            
+            const card = document.createElement('div');
+            card.className = 'game-card';
+            card.innerHTML = `
+                <h3>${name}</h3>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Perfect Match! ✨</p>
+                <div class="price-tag">€${price}</div>
+            `;
+            resultsArea.appendChild(card);
+        });
+    }
+</script>
 </body>
 </html>
