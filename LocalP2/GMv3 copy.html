@@ -191,6 +191,8 @@
         ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--primary-orange); }
 
+        
+
         /* --- Results Area --- */
         #results {
             display: grid;
@@ -256,6 +258,95 @@
             font-family: 'Space Grotesk', sans-serif;
             letter-spacing: 1px;
             margin-top: auto;
+        }
+
+        /* --- MULTI-SELECT DROPDOWN STYLES --- */
+        .custom-multiselect {
+            position: relative;
+            width: 100%;
+            user-select: none;
+        }
+
+        .custom-multiselect summary {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: #0b0f19; /* Matches your input bg */
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        /* Removes default arrow in Safari */
+        .custom-multiselect summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Custom arrow using your orange theme */
+        .custom-multiselect summary::after {
+            content: '▼';
+            font-size: 0.7rem;
+            color: var(--primary-orange);
+            transition: transform 0.3s ease;
+        }
+
+        /* Rotate arrow when open */
+        .custom-multiselect[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        /* Focus glow when open */
+        .custom-multiselect[open] summary {
+            border-color: var(--primary-orange);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* Floating Options List */
+        .options-list {
+            position: absolute;
+            top: calc(100%);
+            left: 0;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            z-index: 100;
+            max-height: 250px;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+        }
+
+        .options-list label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            padding: 0.5px 8px;
+            color: var(--text-main);
+            font-size: 0.8rem;
+            transition: background 0.2s;
+            
+            text-transform: none; /* Keep text readable */
+            letter-spacing: normal;
+        }
+
+        .options-list label:last-child {
+            border-bottom: none;
+        }
+
+        .options-list label:hover {
+            background: var(--border-color);
+        }
+
+        /* Customizing the Checkbox color */
+        .options-list input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-orange); /* Modern browsers support this */
         }
 
         /* --- MODAL (POP-UP) STYLES --- */
@@ -409,23 +500,34 @@
                 </div>
             </div>
 
-            <div class="section-box">
-                <div class="section-header">Game Preferences</div>
-                <div class="input-grid">
-                    <div class="field">
-                        <label>Genre</label>
-                        <select id="genre" onchange="startMatching()">
-                            <option value="">Loading...</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Player Mode</label>
-                        <select id="mode" onchange="startMatching()">
-                            <option value="">Loading...</option>
-                        </select>
-                    </div>
+            
+
+           <div class="section-box">
+    <div class="section-header">Game Preferences</div>
+    <div class="input-grid">
+        
+        <div class="field">
+            <label>Genre</label>
+            <details class="custom-multiselect">
+                <summary>Select Genres...</summary>
+                <div class="options-list" id="genre-options">
+                    <div class="loading-text">Loading genres...</div>
                 </div>
-            </div>
+            </details>
+        </div>
+
+        <div class="field">
+            <label>Player Mode</label>
+            <details class="custom-multiselect">
+                <summary>Select Modes...</summary>
+                <div class="options-list" id="mode-options">
+                    <div class="loading-text">Loading modes...</div>
+                </div>
+            </details>
+        </div>
+
+    </div>
+</div>
 
             <div class="section-box">
                 <div class="section-header">Personal & Budget</div>
@@ -452,7 +554,7 @@
 <script src="steam_parsed_CLEAN.js"></script>
 
 <script>
-    const endpointUrl = "https://api.triplydb.com/datasets/EdoardoTommasi/GameMatcher/sparql";
+    const endpointUrl = "https://api.triplydb.com/datasets/EdoardoTommasi/GameMatcher-1/sparql";
 
     // --- FUNZIONE PER RIPARARE I CARATTERI ROTTI (MOJIBAKE) ---
     function fixText(str) {
@@ -594,12 +696,82 @@
         }
     }
 
+    async function populateDropdownMulti(className, selectId) {
+    const query = `
+        PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        
+        SELECT DISTINCT ?itemName WHERE {
+            ?item rdf:type :${className} .
+            OPTIONAL { ?item rdfs:label ?lbl }
+            BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(GameGenre_|PlayerMode_|OperatingSystem_|Genre_|Mode_|OS_)?", ""), "_", " ")) AS ?itemName)
+        }
+        ORDER BY ?itemName
+    `;
+
+    try {
+        const response = await fetch(endpointUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/sparql-query",
+                "Accept": "application/sparql-results+json"
+            },
+            body: query
+        });
+
+        const data = await response.json();
+        const container = document.getElementById(selectId);
+        
+        // Clear the "Loading..." text
+        container.innerHTML = '';
+
+        data.results.bindings.forEach(res => {
+            const name = fixText(res.itemName.value);
+            
+            // 1. Create the label wrapper
+            const label = document.createElement('label');
+            
+            // 2. Create the checkbox input
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = name;
+            // This ensures your results update every time you click a checkbox
+            checkbox.onchange = () => startMatching(); 
+
+            // 3. Assemble: [Checkbox] Text
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(" " + name));
+            
+            // 4. Add to the options-list div
+            container.appendChild(label);
+        });
+    } catch (error) {
+        console.error(`Error loading ${className}:`, error);
+        document.getElementById(selectId).innerHTML = '<div style="padding:10px; color:red;">Error loading</div>';
+    }
+}
+
     document.addEventListener("DOMContentLoaded", () => {
         populateDropdown('OperatingSystem', 'os');
-        populateDropdown('GameGenre', 'genre');
-        populateDropdown('PlayerMode', 'mode');
+        populateDropdownMulti('GameGenre', 'genre-options');
+        populateDropdownMulti('PlayerMode', 'mode-options');
         startMatching(); 
     });
+
+    // --- GET MULTICHOICES ---
+    function getSelectedChoices(containerId) {
+    // 1. Find the container (e.g., 'genre-options')
+    const container = document.getElementById(containerId);
+    
+    // 2. Find all checkboxes inside that are currently 'checked'
+    const checkedCheckboxes = container.querySelectorAll('input[type="checkbox"]:checked');
+    
+    // 3. Extract the 'value' from those checkboxes and put them in an array
+    const selectedValues = Array.from(checkedCheckboxes).map(cb => cb.value);
+    
+    return selectedValues; // This returns an array like ["Action", "RPG"]
+}
 
     // --- AUTOCOMPLETE LOGIC ---
     let debounceTimer;
@@ -690,37 +862,119 @@
         const resultsArea = document.getElementById('results');
         resultsArea.innerHTML = '<p style="text-align:center; width:100%; color: var(--primary-orange); font-weight: bold;">Scanning Knowledge Graph...</p>';
 
+
         const ram = document.getElementById('ram').value || 999; 
-        const genre = document.getElementById('genre').value;
-        const playMode = document.getElementById('mode').value;
-        const budget = document.getElementById('budget').value || 9999; 
-        
+        const gpu = document.getElementById('gpu').value || 999; 
+        const cpu = document.getElementById('cpu').value || 999; 
+        const storage = document.getElementById('storage').value || 999; 
+        const os = document.getElementById('os').value || 999; 
+        const budget = document.getElementById('budget').value || 999; 
+        const age = document.getElementById('age').value || 999; 
+
+        // 1. Get the values from the checkboxes
+
+        const selectedGenres = getSelectedChoices('genre-options');
+        const selectedModes = getSelectedChoices('mode-options');
+
+       // 2. Prepare the Genre Filter and Count
+        let genreFilter = "";
+        let genreCountRequirement = "";
+
+        // Build the Genre block
+        let genreLogic = "";
+        if (selectedGenres.length > 0) {
+            selectedGenres.forEach((genre, index) => {
+                genreLogic += `
+                    ?game :hasGenre ?g${index} .
+                    ?g${index} rdfs:label "${genre}" .
+                `;
+            });
+        }
+
+        // Build the Mode block
+        let modeLogic = "";
+        if (selectedModes.length > 0) {
+            selectedModes.forEach((mode, index) => {
+                modeLogic += `
+                    ?game :hasPlayerMode ?m${index} .
+                    ?m${index} rdfs:label "${mode}" .
+                `;
+            });
+        }
         const query = `
             PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             
-            SELECT DISTINCT ?gameName ?price WHERE {
+            SELECT DISTINCT ?gameName ?price 
+                (GROUP_CONCAT(DISTINCT ?allGLabel; separator=", ") AS ?allGenres)
+                (GROUP_CONCAT(DISTINCT ?allMLabel; separator=", ") AS ?allModes)
+            WHERE {
                 ?game rdf:type :VideoGame .
                 
+                # 1. MANDATORY "AND" FILTERS (One join per selection)
+                ${genreLogic}
+                ${modeLogic}
+
+                # 2. DATA FOR DISPLAY (Fetch labels for the card)
+                ?game :hasGenre ?allG . ?allG rdfs:label ?allGLabel .
+                ?game :hasPlayerMode ?allM . ?allM rdfs:label ?allMLabel .
+
+                # Basic Info
                 OPTIONAL { ?game rdfs:label ?lbl }
                 BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?game), "^.*#(Game_|VideoGame_)?", ""), "_", " ")) AS ?gameName)
                 
                 ?game :hasPrice ?price .
                 FILTER(?price <= ${budget})
+
+                # PEGI and Hardware (Keeping your existing logic)
+                ?game :hasPEGI ?pegi .
+                ?pegi :hasPEGIAgeThreshold ?pegi_value .
+                FILTER(?pegi_value <= ${age})
                 
                 ?game :hasMinRequirement ?req .
-                ?req :requiresMemoryGB ?ramReq .
-                FILTER(?ramReq <= ${ram})
-                
-                ?game :hasGenre ?gameGenre .
-                BIND(LCASE(STR(?gameGenre)) AS ?genreStr)
-                FILTER(CONTAINS(?genreStr, LCASE("${genre}")))
-                
-                ?game :hasPlayerMode ?mode .
-                BIND(LCASE(STR(?mode)) AS ?modeStr)
-                FILTER(CONTAINS(?modeStr, LCASE("${playMode}")))
+                ?req :requiresCPUBenchmarkScore ?cpu_scoreG ;
+                    :requiresGPUBenchmarkScore ?gpu_scoreG ;
+                    :requiresMemoryGB ?ram_sizeG ;
+                    :requiresStorageSpaceGB ?rom_sizeG ;
+                    :requiresMinOSVersionValue ?os_versionG .
+
+                # Hardware Optional Matching...
+                # 2. OPTIONALLY MATCH THE USER'S CPU
+                OPTIONAL {
+                    ?cpuU rdfs:label ?cpuLabel .
+                    FILTER(CONTAINS(LCASE(STR(?cpuLabel)), LCASE("${cpu}")))
+                    ?cpuU :hasBenchmarkScore ?cpu_scoreU .
+                }
+
+
+                # 3. OPTIONALLY MATCH THE USER'S GPU
+                OPTIONAL {
+                    ?gpuU rdfs:label ?gpuLabel .
+                    FILTER(CONTAINS(LCASE(STR(?gpuLabel)), LCASE("${gpu}")))
+                    ?gpuU :hasBenchmarkScore ?gpu_scoreU .
+                }
+
+
+                # 4. OPTIONALLY MATCH THE USER'S OS
+                OPTIONAL {
+                    ?osU rdfs:label ?osLabel .
+                    FILTER(CONTAINS(LCASE(STR(?osLabel)), LCASE("${os}")))
+                    ?osU :hasOSVersionValue ?os_versionU .
+
+                }
+
+                BIND(${ram} AS ?ram_sizeU)
+
+                BIND(${storage} AS ?rom_sizeU) 
+
+                FILTER (!BOUND(?cpu_scoreU)  || ?cpu_scoreU  >= ?cpu_scoreG)
+                FILTER (!BOUND(?gpu_scoreU)  || ?gpu_scoreU  >= ?gpu_scoreG)
+                FILTER (!BOUND(?os_versionU) || ?os_versionU >= ?os_versionG)
+                FILTER (!BOUND(?ram_sizeU) || ?ram_sizeU >= ?ram_sizeG)
+                FILTER (!BOUND(?rom_sizeU) || ?rom_sizeU >= ?rom_sizeG)
             } 
+            GROUP BY ?gameName ?price
             ORDER BY ?price
             LIMIT 21
         `;
