@@ -70,14 +70,128 @@
 
         .left-panel {
             flex: 0 0 380px; 
-            position: sticky; 
-            top: 20px;
+            position: relative; 
+            
         }
 
         .right-panel {
             flex: 1; 
             min-width: 0;
         }
+
+        /* --- Award Easter Egg --- */
+        @keyframes award-pop {
+    0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+    70% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .award-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(11, 15, 25, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+        .award-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            border: 3px solid var(--primary-orange);
+            text-align: center;
+            box-shadow: 0 0 50px var(--primary-orange);
+            animation: award-pop 0.6s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+        }
+
+        .award-card h2 {
+            color: var(--primary-orange);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .award-card .game-title {
+            font-size: 1.5rem;
+            color: white;
+            margin: 20px 0;
+        }
+        .award-card .match-btn {
+            margin-top: 30px;
+            padding: 12px 40px;
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: white;
+            background: linear-gradient(135deg, #ff4d00 0%, #ff8c00 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 77, 0, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            outline: none;
+        }
+
+        .award-card .match-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 77, 0, 0.6);
+            filter: brightness(1.1);
+        }
+
+        .award-card .match-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* --- Suggested Section --- */
+
+        .mini-results-list {
+        max-height: 400px;
+        overflow-y: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Smaller, simpler cards for the sidebar */
+    .mini-game-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .mini-game-card:hover {
+        border-color: var(--primary-orange);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .mini-game-card img {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
+    .mini-game-info h4 {
+        font-size: 0.85rem;
+        margin: 0;
+        color: white;
+    }
+
+    .mini-game-info p {
+        font-size: 0.75rem;
+        color: var(--primary-orange);
+        margin: 0;
+    }
 
         /* --- Form Sections --- */
         .section-box {
@@ -194,56 +308,83 @@
         
 
         /* --- Results Area --- */
-        #results {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+/* --- Results Area --- */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* Base height shared by both - NO EXCEPTIONS */
+.card-skeleton, .game-card {
+    width: 100%;
+    height: 180px; /* Your desired smaller height */
+    border-radius: 12px;
+    border: 1px solid var(--border-color); /* Same border for both */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Includes border in the 180px */
+    overflow: hidden;
+    position: relative;
+}
+
+.card-skeleton {
+    background: #151c2c;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.game-card {
+    background: var(--card-bg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the hover effect doesn't add extra width/height */
+.game-card:hover {
+    border-color: var(--primary-orange);
+    transform: translateY(-4px);
+    z-index: 10;
+}
+
+.card-content {
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(11, 15, 25, 0.95) 20%, rgba(11, 15, 25, 0.2) 100%);
+}
+
+
+        .match-badge {
+            color: var(--primary-orange);
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: rgba(0,0,0,0.5);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
         }
 
-        .game-card {
-            background: var(--card-bg);
-            padding: 25px;
+        @keyframes pulse {
+            0% { background-color: #151c2c; }
+            50% { background-color: #1e293b; }
+            100% { background-color: #151c2c; }
+        }
+
+        .card-skeleton {
+            height: 187.38888px;
             border-radius: 16px;
+            background: #151c2c;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer; 
-        }
-
-        .game-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--primary-orange);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        .game-card:hover {
-            border-color: var(--primary-orange);
-            box-shadow: var(--neon-glow), var(--shadow);
-            transform: translateY(-5px);
-        }
-
-        .game-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .game-card h3 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: var(--text-main);
-            font-size: 1.3rem;
-            line-height: 1.3;
-            font-family: 'Space Grotesk', sans-serif;
+            animation: pulse 1.5s infinite ease-in-out;
         }
 
         .price-tag {
@@ -482,6 +623,7 @@
                         <select id="ram" onchange="startMatching()">
                             <option value="4">4 GB</option>
                             <option value="8">8 GB</option>
+                            <option value="12">12 GB</option>
                             <option value="16" selected>16 GB</option>
                             <option value="32">32 GB</option>
                             <option value="64">64 GB</option>
@@ -542,6 +684,17 @@
                     </div>
                 </div>
             </div>
+            <div id="upgrade-section" class="section-box upgrade-suggestions" style="display: none;">
+    <div class="section-header" >
+        Suggested Games ✨
+    </div>
+    
+    <div id="upgrade-results" class="mini-results-list">
+        <p style="font-size: 0.8rem; color: var(--text-muted); padding: 10px;">
+            Loading...
+        </p>
+    </div>
+</div>
         </div>
 
         <div class="right-panel">
@@ -552,6 +705,7 @@
 </div>
 
 <script src="steam_parsed_CLEAN.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 <script>
     const endpointUrl = "https://api.triplydb.com/datasets/EdoardoTommasi/GameMatcher-1/sparql";
@@ -689,6 +843,7 @@
                 option.value = name;
                 option.textContent = name;
                 selectElement.appendChild(option);
+                
             });
         } catch (error) {
             console.error(`Error loading ${className}:`, error);
@@ -751,30 +906,6 @@
         document.getElementById(selectId).innerHTML = '<div style="padding:10px; color:red;">Error loading</div>';
     }
 }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        populateDropdown('OperatingSystem', 'os');
-        populateDropdownMulti('GameGenre', 'genre-options');
-        populateDropdownMulti('PlayerMode', 'mode-options');
-        startMatching(); 
-    });
-
-    // --- GET MULTICHOICES ---
-    function getSelectedChoices(containerId) {
-    // 1. Find the container (e.g., 'genre-options')
-    const container = document.getElementById(containerId);
-    
-    // 2. Find all checkboxes inside that are currently 'checked'
-    const checkedCheckboxes = container.querySelectorAll('input[type="checkbox"]:checked');
-    
-    // 3. Extract the 'value' from those checkboxes and put them in an array
-    const selectedValues = Array.from(checkedCheckboxes).map(cb => cb.value);
-    
-    return selectedValues; // This returns an array like ["Action", "RPG"]
-}
-
-    // --- AUTOCOMPLETE LOGIC ---
-    let debounceTimer;
 
     async function fetchSuggestions(hardwareClass, searchTerm, boxId, inputId) {
         const suggestionBox = document.getElementById(boxId);
@@ -843,6 +974,49 @@
         }, 300); 
     }
 
+    document.addEventListener("DOMContentLoaded", () => {
+        populateDropdown('OperatingSystem', 'os');
+        populateDropdownMulti('GameGenre', 'genre-options');
+        populateDropdownMulti('PlayerMode', 'mode-options');
+        startMatching(); 
+    });
+
+    // --- GET MULTICHOICES ---
+    function getSelectedChoices(containerId) {
+    // 1. Find the container (e.g., 'genre-options')
+    const container = document.getElementById(containerId);
+    
+    // 2. Find all checkboxes inside that are currently 'checked'
+    const checkedCheckboxes = container.querySelectorAll('input[type="checkbox"]:checked');
+    
+    // 3. Extract the 'value' from those checkboxes and put them in an array
+    const selectedValues = Array.from(checkedCheckboxes).map(cb => cb.value);
+    
+    return selectedValues; // This returns an array like ["Action", "RPG"]
+}
+
+    const RAWG_API_KEY = '4dbf5ba1b6d04613991ec1ca00f5ae15'; 
+
+async function getGameImage(title) {
+    try {
+        const response = await fetch(`https://api.rawg.io/api/games?key=${RAWG_API_KEY}&search=${encodeURIComponent(title)}&page_size=1`);
+        const data = await response.json();
+        
+        // If a result is found, return the background image
+        if (data.results && data.results.length > 0) {
+            return data.results[0].background_image;
+        }
+    } catch (error) {
+        console.error("RAWG API Error:", error);
+    }
+    // Fallback image if nothing is found
+    return 'https://via.placeholder.com/400x300/151c2c/ffffff?text=No+Image+Found';
+}
+
+    // --- AUTOCOMPLETE LOGIC ---
+    let debounceTimer;
+
+
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.autocomplete-container')) {
             document.getElementById('cpu-suggestions').style.display = 'none';
@@ -850,12 +1024,63 @@
         }
     });
 
+    function triggerCompatibilityAward(gameName) {
+    // 1. Play Sound (Fanfare)
+    const audio = new Audio('https://www.myinstants.com/media/sounds/tada.mp3');
+    audio.volume = 0.3;
+    audio.play();
+
+    // 2. Create the Overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'award-overlay';
+    
+    overlay.innerHTML = `
+        <div class="award-card">
+            <div class="award-icon" style="font-size: 60px; filter: drop-shadow(0 0 10px rgba(255,215,0,0.5));">🏆</div>
+            <h2 style="letter-spacing: 2px; margin-top: 10px;">SYSTEM MATCH</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Your hardware is the perfect match for</p>
+            <div class="game-title" style="font-size: 1.8rem; font-weight: 800; color: white; margin: 15px 0; text-shadow: 0 0 15px rgba(255,255,255,0.2);">${fixText(gameName)}</div>
+            <button class="match-btn" onclick="this.parentElement.parentElement.remove()">
+                Awesome!
+            </button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    // 3. Continuous Party Confetti (3 seconds)
+    const duration = 3 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 3,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: ['#ff4d00', '#ffffff', '#ff8c00']
+        });
+        confetti({
+            particleCount: 3,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: ['#ff4d00', '#ffffff', '#ff8c00']
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+}
+
     // --- MAIN LOGIC (SEARCH GAMES) ---
     let matchDebounceTimer;
 
     function startMatching() {
         clearTimeout(matchDebounceTimer);
-        matchDebounceTimer = setTimeout(runMatchQuery, 500); 
+        matchDebounceTimer = setTimeout(runMatchQuery, 500);
+       
     }
 
     async function runMatchQuery() {
@@ -876,30 +1101,36 @@
         const selectedGenres = getSelectedChoices('genre-options');
         const selectedModes = getSelectedChoices('mode-options');
 
+        
+
+        fetchUpgradeSuggestions();
+
        // 2. Prepare the Genre Filter and Count
         let genreFilter = "";
         let genreCountRequirement = "";
 
-        // Build the Genre block
+        // Build the Genre block (OR logic)
         let genreLogic = "";
         if (selectedGenres.length > 0) {
-            selectedGenres.forEach((genre, index) => {
-                genreLogic += `
-                    ?game :hasGenre ?g${index} .
-                    ?g${index} rdfs:label "${genre}" .
-                `;
-            });
+            // Format: "Genre1" "Genre2" "Genre3"
+            const genreValues = selectedGenres.map(g => `"${g}"`).join(" ");
+            genreLogic = `
+                ?game :hasGenre ?g .
+                ?g rdfs:label ?gLabel .
+                VALUES ?gLabel { ${genreValues} }
+            `;
         }
 
-        // Build the Mode block
+        // Build the Mode block (OR logic)
         let modeLogic = "";
         if (selectedModes.length > 0) {
-            selectedModes.forEach((mode, index) => {
-                modeLogic += `
-                    ?game :hasPlayerMode ?m${index} .
-                    ?m${index} rdfs:label "${mode}" .
-                `;
-            });
+            // Format: "Mode1" "Mode2"
+            const modeValues = selectedModes.map(m => `"${m}"`).join(" ");
+            modeLogic = `
+                ?game :hasPlayerMode ?m .
+                ?m rdfs:label ?mLabel .
+                VALUES ?mLabel { ${modeValues} }
+            `;
         }
         const query = `
             PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
@@ -907,12 +1138,16 @@
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             
             SELECT DISTINCT ?gameName ?price 
+                (SAMPLE(?cpu_scoreU) AS ?userCPU) (SAMPLE(?cpu_scoreG) AS ?gameCPU)
+                (SAMPLE(?gpu_scoreU) AS ?userGPU) (SAMPLE(?gpu_scoreG) AS ?gameGPU)
+                (SAMPLE(?os_versionU) AS ?userOS) (SAMPLE(?os_versionG) AS ?gameOS)
+                (SAMPLE(?ram_sizeU) AS ?userRAM) (SAMPLE(?ram_sizeG) AS ?gameRAM)
                 (GROUP_CONCAT(DISTINCT ?allGLabel; separator=", ") AS ?allGenres)
                 (GROUP_CONCAT(DISTINCT ?allMLabel; separator=", ") AS ?allModes)
             WHERE {
                 ?game rdf:type :VideoGame .
                 
-                # 1. MANDATORY "AND" FILTERS (One join per selection)
+                # 1. MANDATORY "OR" FILTERS (One join per selection)
                 ${genreLogic}
                 ${modeLogic}
 
@@ -974,10 +1209,12 @@
                 FILTER (!BOUND(?ram_sizeU) || ?ram_sizeU >= ?ram_sizeG)
                 FILTER (!BOUND(?rom_sizeU) || ?rom_sizeU >= ?rom_sizeG)
             } 
-            GROUP BY ?gameName ?price
+            GROUP BY ?gameName ?price 
             ORDER BY ?price
-            LIMIT 21
+            
         `;
+
+        
 
         try {
             const response = await fetch(endpointUrl, {
@@ -1000,39 +1237,207 @@
             resultsArea.innerHTML = `<p style="color:#ef4444; text-align:center;">Connection Error: ${error.message}</p>`;
             console.error("SPARQL Error:", error);
         }
+        
+
     }
 
-    function displayResults(bindings) {
-        const resultsArea = document.getElementById('results');
-        resultsArea.innerHTML = '';
 
-        if (bindings.length === 0) {
-            resultsArea.innerHTML = '<p style="text-align:center; width:100%; color: var(--text-muted);">No games found with these specs. Try upgrading your budget or lowering your requirements.</p>';
-            return;
-        }
+async function fetchUpgradeSuggestions() {
+    const container = document.getElementById('upgrade-results');
+    
+    const selectedGenres = getSelectedChoices('genre-options');
+    const selectedModes = getSelectedChoices('mode-options');
 
-        bindings.forEach(res => {
-            // APPLICA LA FUNZIONE QUI! Ripara il nome del gioco!
-            const name = fixText(res.gameName.value);
-            const price = parseFloat(res.price.value).toFixed(2);
+    // CHANGE: Check if BOTH are empty, or if EITHER is missing.
+    // We want to require at least one Genre AND at least one Mode.
+    if (selectedGenres.length === 0 || selectedModes.length === 0) {
+        // Hide the section if requirements aren't met
+        document.getElementById('upgrade-section').style.display = 'none';
+        return;
+    }
+
+    let genreLogic = "";
+    selectedGenres.forEach((g, i) => {
+        genreLogic += `
+            ?game :hasGenre ?g${i} .
+            ?g${i} rdfs:label "${g}" .
+        `;
+    });
+    
+    let modeLogic = "";
+    selectedModes.forEach((m, i) => {
+        modeLogic += `
+            ?game :hasPlayerMode ?m${i} .
+            ?m${i} rdfs:label "${m}" .
+        `;
+    });
+
+    const upgradeQuery = `
+        PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        
+        SELECT DISTINCT ?gameName WHERE {
+            ?game rdf:type :VideoGame .
+            ${genreLogic}
+            ${modeLogic}
             
-            const card = document.createElement('div');
-            card.className = 'game-card';
-            
-            card.onclick = () => openGameModal(name, price);
-            
-            card.innerHTML = `
-                <div>
-                    <h3>${name}</h3>
-                    <div>
-                        <p style="color:var(--primary-orange); font-size:0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">Perfect Match ✨</p>
-                    </div>
-                </div>
-                <div class="price-tag">€${price}</div>
-            `;
-            resultsArea.appendChild(card);
+            OPTIONAL { ?game rdfs:label ?lbl }
+            BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?game), "^.*#", ""), "_", " ")) AS ?gameName)
+        } LIMIT 5`;
+
+    try {
+        const response = await fetch(endpointUrl, { 
+            method: "POST",
+            headers: { 
+                "Content-Type": "application/sparql-query", 
+                "Accept": "application/sparql-results+json" 
+            },
+            body: upgradeQuery
         });
+        
+        const data = await response.json();
+        const bindings = data.results.bindings;
+        const section = document.getElementById('upgrade-section');
+
+        if (bindings.length > 0) {
+            // Show the section and render cards
+            section.style.display = 'block';
+            renderMiniCards(bindings);
+        } else {
+            // Hide the entire section if no games match
+            section.style.display = 'none';
+        }
+        
+    } catch (e) {
+        console.error("Upgrade logic error:", e);
+        document.getElementById('upgrade-section').style.display = 'none';
     }
+}
+
+async function renderMiniCards(bindings) {
+    const container = document.getElementById('upgrade-results');
+    container.innerHTML = '';
+
+    for (const res of bindings) {
+        const name = fixText(res.gameName.value);
+        const imgUrl = await getGameImage(name); // Reuse your RAWG function
+
+        const miniCard = document.createElement('div');
+        miniCard.className = 'mini-game-card';
+        miniCard.onclick = () => openGameModal(name, "Check Full Specs");
+        
+        miniCard.innerHTML = `
+            <img src="${imgUrl}" alt="${name}">
+            <div class="mini-game-info">
+                <h4>${name}</h4>
+                
+            </div>
+        `;
+        container.appendChild(miniCard);
+    }
+}
+
+    async function displayResults(bindings) {
+    const resultsArea = document.getElementById('results');
+    resultsArea.innerHTML = '';
+
+    if (bindings.length === 0) {
+        resultsArea.innerHTML = '<p style="text-align:center; width:100%; color: var(--text-muted);">No games found.</p>';
+        return;
+    }
+
+    let awardGameName = null;
+    let awardTriggeredLocally = false;
+
+    // 1. Create Skeletons
+    const skeletons = bindings.map(() => {
+        const div = document.createElement('div');
+        div.className = 'card-skeleton';
+        resultsArea.appendChild(div);
+        return div;
+    });
+
+    // 2. Process games
+    for (let i = 0; i < bindings.length; i++) {
+        const res = bindings[i];
+        
+        // --- SAFETY CHECK BLOCK: This prevents the "Stuck" bug ---
+        // Using ?. and ?? 0 ensures that if a value is missing, the code doesn't crash.
+        const name = res.gameName ? fixText(res.gameName.value) : "Unknown Game";
+        const price = res.price ? parseFloat(res.price.value).toFixed(2) : "0.00";
+
+        const uCPU = res.userCPU ? parseInt(res.userCPU.value) : 0;
+        const rCPU = res.gameCPU ? parseInt(res.gameCPU.value) : -1;
+
+        const uGPU = res.userGPU ? parseInt(res.userGPU.value) : 0;
+        const rGPU = res.gameGPU ? parseInt(res.gameGPU.value) : -1;
+
+        const uRAM = res.userRAM ? parseInt(res.userRAM.value) : 0;
+        const rRAM = res.gameRAM ? parseInt(res.gameRAM.value) : -1;
+
+        const uOS = res.userOS ? parseInt(res.userOS.value) : 0;
+        const rOS = res.gameOS ? parseInt(res.gameOS.value) : -1;
+
+                // Add this inside your loop
+        console.log(`Checking match for ${name}:`, {
+            CPU: `${uCPU} vs ${rCPU}`,
+            GPU: `${uGPU} vs ${rGPU}`,
+            RAM: `${uRAM} vs ${rRAM}`,
+            OS:  `${uOS} vs ${rOS}`
+        });
+
+        // Check for award match (Only if we have valid data)
+        if (!awardTriggeredLocally && uCPU === rCPU && uGPU === rGPU && uRAM === rRAM && uOS === rOS) {
+            awardGameName = name; 
+            awardTriggeredLocally = true; 
+        }
+        // -------------------------------------------------------
+
+        const imgUrl = await getGameImage(name);
+        
+        const card = document.createElement('div');
+        card.className = 'game-card';
+        card.onclick = () => openGameModal(name, price);
+        
+        card.style.backgroundImage = `linear-gradient(to bottom, rgba(11, 15, 25, 0.2), rgba(11, 15, 25, 0.9)), url('${imgUrl}')`;
+        card.style.opacity = '0';
+        card.style.transition = 'opacity 0.4s ease-in';
+
+        card.innerHTML = `
+            <div class="card-content" style="padding: 25px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+                <div><h3 style="margin: 0;">${name}</h3></div>
+                <div class="price-tag" style="align-self: flex-start; margin: 0;">€${price}</div>
+            </div>
+        `;
+
+        const img = new Image();
+        img.src = imgUrl;
+        
+        img.onload = () => {
+            if (skeletons[i]) {
+                skeletons[i].replaceWith(card);
+                setTimeout(() => { card.style.opacity = '1'; }, 10);
+            }
+        };
+
+        img.onerror = () => {
+            if (skeletons[i]) {
+                skeletons[i].replaceWith(card);
+                card.style.opacity = '1';
+            }
+        };
+    }
+
+    // 3. Launch Award AFTER the loop
+    // This prevents the party logic from stopping the card rendering
+    if (awardGameName) {
+        console.log("Entrato")
+        setTimeout(() => {
+            triggerCompatibilityAward(awardGameName);
+        }, 1200); // Delay slightly so user sees the cards first
+    }
+}
 </script>
 
 </body>
