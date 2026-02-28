@@ -1142,6 +1142,7 @@ async function getGameImage(title) {
                 (SAMPLE(?gpu_scoreU) AS ?userGPU) (SAMPLE(?gpu_scoreG) AS ?gameGPU)
                 (SAMPLE(?os_versionU) AS ?userOS) (SAMPLE(?os_versionG) AS ?gameOS)
                 (SAMPLE(?ram_sizeU) AS ?userRAM) (SAMPLE(?ram_sizeG) AS ?gameRAM)
+                (SAMPLE(?rom_sizeU) AS ?userROM) (SAMPLE(?rom_sizeG) AS ?gameROM)
                 (GROUP_CONCAT(DISTINCT ?allGLabel; separator=", ") AS ?allGenres)
                 (GROUP_CONCAT(DISTINCT ?allMLabel; separator=", ") AS ?allModes)
             WHERE {
@@ -1376,19 +1377,14 @@ async function renderMiniCards(bindings) {
         const uRAM = res.userRAM ? parseInt(res.userRAM.value) : 0;
         const rRAM = res.gameRAM ? parseInt(res.gameRAM.value) : -1;
 
+        const uROM = res.userROM ? parseInt(res.userROM.value) : 0;
+        const rROM = res.gameROM ? parseInt(res.gameROM.value) : -1;
+
         const uOS = res.userOS ? parseInt(res.userOS.value) : 0;
         const rOS = res.gameOS ? parseInt(res.gameOS.value) : -1;
 
-                // Add this inside your loop
-        console.log(`Checking match for ${name}:`, {
-            CPU: `${uCPU} vs ${rCPU}`,
-            GPU: `${uGPU} vs ${rGPU}`,
-            RAM: `${uRAM} vs ${rRAM}`,
-            OS:  `${uOS} vs ${rOS}`
-        });
-
         // Check for award match (Only if we have valid data)
-        if (!awardTriggeredLocally && uCPU === rCPU && uGPU === rGPU && uRAM === rRAM && uOS === rOS) {
+        if (!awardTriggeredLocally && uCPU === rCPU && uGPU === rGPU && uRAM === rRAM && uROM >= rROM && uOS === rOS) {
             awardGameName = name; 
             awardTriggeredLocally = true; 
         }
