@@ -227,33 +227,98 @@
             font-size: 0.85rem;
             font-weight: 600;
             color: var(--text-muted);
-            margin-bottom: 8px;
+            margin-bottom: 0px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        input, select {
-            width: 100%;
-            padding: 12px 15px;
-            background: #0b0f19;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: var(--text-main);
-            transition: all 0.3s ease;
-            box-sizing: border-box;
-        }
+        /* 1. Update the base input/select styles */
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    background: #0b0f19;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    
+   
+    -webkit-appearance: none; /* Removes default Chrome/Safari arrow */
+    -moz-appearance: none;    /* Removes default Firefox arrow */
+    appearance: none;         /* Removes default standard arrow */
+}
 
-        select option {
-            background-color: var(--card-bg);
-            color: var(--text-main);
-        }
+input[type="number"] {
+    appearance: textfield; /* Keeps number input looking like a box */
+}
 
-        input:focus, select:focus {
-            border-color: var(--primary-orange);
-            outline: none;
-            box-shadow: var(--neon-glow);
-        }
+/* Ensure checkboxes stay as checkboxes */
+input[type="checkbox"] {
+    appearance: checkbox; 
+    width: auto; /* Checkboxes shouldn't be 100% width */
+   
+}
+
+/* Ensure the container is ready */
+.field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+/* Target standard inputs, selects, and the custom summary fields */
+input:focus, 
+select:focus, 
+details[open].custom-multiselect summary {
+    border-color: var(--primary-orange) !important;
+    outline: none;
+    /* This creates the 'Neon' glow effect */
+    box-shadow: 0 0 10px rgba(255, 77, 0, 0.4), 
+                inset 0 0 5px rgba(255, 77, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Specifically for the Genre/Player Mode summary when clicked but not yet open */
+details.custom-multiselect summary:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 10px rgba(255, 77, 0, 0.4);
+}
+
+/* The Arrow - Targeted only to select fields */
+.field:has(select)::after {
+    content: '▼';
+    position: absolute;
+    right: 15px;
+    /* Adjust this 'top' to align perfectly inside your select box */
+    top: 32px; 
+    font-size: 0.7rem;
+    color: var(--text-muted); /* Default Grey */
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.3s ease;
+    z-index: 10;
+}
+
+/* THE TRIGGER: Orange + Rotate when open/focused */
+.field select:focus + .field::after, /* If label is sibling */
+.field:has(select:focus)::after {
+    color: var(--primary-orange) !important;
+    transform: rotate(180deg);
+    text-shadow: 0 0 8px rgba(255, 77, 0, 0.5);
+}
+
+/* Ensure default select appearance is GONE */
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    padding-right: 40px !important;
+}
+
+        
 
         input[type=number]::-webkit-inner-spin-button, 
         input[type=number]::-webkit-outer-spin-button { 
@@ -271,8 +336,8 @@
             top: 100%;
             left: 0;
             right: 0;
-            background: var(--card-bg);
-            border: 1px solid var(--primary-orange);
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             margin-top: 4px;
             z-index: 1000;
@@ -401,6 +466,27 @@
             margin-top: auto;
         }
 
+        /* --- SINGLE-SELECT DROPDOWN STYLES --- */
+
+        /* Styling the individual rows for RAM/OS */
+        .single-select .options-list .option {
+            padding: 12px 15px;
+            cursor: pointer;
+            color: var(--text-main);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        /* THE ORANGE HOVER YOU WANTED */
+        .single-select .options-list .option:hover {
+            background-color: var(--primary-orange) !important;
+            color: white !important;
+        }
+
+        .single-select .options-list .option:last-child {
+            border-bottom: none;
+        }
+
         /* --- MULTI-SELECT DROPDOWN STYLES --- */
         .custom-multiselect {
             position: relative;
@@ -431,13 +517,15 @@
         .custom-multiselect summary::after {
             content: '▼';
             font-size: 0.7rem;
-            color: var(--primary-orange);
+            color: var(--text-muted);
             transition: transform 0.3s ease;
         }
 
         /* Rotate arrow when open */
         .custom-multiselect[open] summary::after {
             transform: rotate(180deg);
+            color: var(--primary-orange);
+            
         }
 
         /* Focus glow when open */
@@ -449,10 +537,10 @@
         /* Floating Options List */
         .options-list {
             position: absolute;
-            top: calc(100%);
+            top: calc(104%);
             left: 0;
             width: 100%;
-            background: var(--card-bg);
+            background: var(--bg-color);
             border: 1px solid var(--border-color);
             border-radius: 8px;
             z-index: 100;
@@ -465,11 +553,12 @@
             display: flex;
             align-items: center;
             gap: 5px;
-            margin-top: 10px;
-            padding: 0.5px 8px;
+            padding-top: 0px;
+            padding: 0px 8px;
             color: var(--text-main);
-            font-size: 0.8rem;
+            font-size: 1rem;
             transition: background 0.2s;
+            border-bottom: 1px solid var(--border-color);
             
             text-transform: none; /* Keep text readable */
             letter-spacing: normal;
@@ -480,7 +569,7 @@
         }
 
         .options-list label:hover {
-            background: var(--border-color);
+            background: var(--primary-orange);
         }
 
         /* Customizing the Checkbox color */
@@ -489,6 +578,8 @@
             height: 18px;
             accent-color: var(--primary-orange); /* Modern browsers support this */
         }
+
+        
 
         /* --- MODAL (POP-UP) STYLES --- */
         .modal-overlay {
@@ -620,25 +711,32 @@
 
                     <div class="field">
                         <label>RAM (GB)</label>
-                        <select id="ram" onchange="startMatching()">
-                            <option value="4">4 GB</option>
-                            <option value="8">8 GB</option>
-                            <option value="12">12 GB</option>
-                            <option value="16" selected>16 GB</option>
-                            <option value="32">32 GB</option>
-                            <option value="64">64 GB</option>
-                        </select>
+                        <details class="custom-multiselect single-select" id="ram-details">
+                            <summary id="ram-summary">Select RAM...</summary>
+                            <div class="options-list">
+                                <div class="option" data-value="4">4 GB</div>
+                                <div class="option" data-value="8">8 GB</div>
+                                <div class="option" data-value="12">12 GB</div>
+                                <div class="option" data-value="16">16 GB</div>
+                                <div class="option" data-value="32">32 GB</div>
+                                <div class="option" data-value="64">64 GB</div>
+                            </div>
+                        </details>
+                        <input type="hidden" id="ram" value="999">
                     </div>
                     <div class="field">
                         <label>Available Storage (GB)</label>
                         <input type="number" id="storage" placeholder="e.g. 500" oninput="startMatching()">
                     </div>
                     <div class="field">
-                        <label>Operating System</label>
-                        <select id="os" onchange="startMatching()">
-                            <option value="">Loading...</option>
-                        </select>
-                    </div>
+                    <label>Operating System</label>
+                    <details class="custom-multiselect single-select" id="os-details">
+                        <summary id="os-summary">Select Operating System...</summary>
+                        <div class="options-list" id="os-options-list">
+                            </div>
+                    </details>
+                    <input type="hidden" id="os" value="">
+                </div>
                 </div>
             </div>
 
@@ -677,10 +775,12 @@
                     <div class="field">
                         <label>Age</label>
                         <input type="number" id="age" placeholder="Enter your age" oninput="startMatching()">
+                        
                     </div>
                     <div class="field">
                         <label>Max Budget (€)</label>
                         <input type="number" id="budget" placeholder="e.g. 50" oninput="startMatching()">
+                        
                     </div>
                 </div>
             </div>
@@ -805,51 +905,95 @@
             document.getElementById('game-modal').classList.remove('show');
         }
     }
+    
+
+    function updateMultiselectSummary(container) {
+    const summary = container.querySelector('summary');
+    const checkboxes = container.querySelectorAll('input[type="checkbox"]:checked');
+    
+    // Get the original placeholder from a data attribute or default text
+    const defaultText = container.dataset.placeholder || "Select options...";
+
+    if (checkboxes.length > 0) {
+        // Create a list of names from the labels associated with checked boxes
+        const selectedNames = Array.from(checkboxes).map(cb => {
+            return cb.closest('div').textContent.trim();
+        });
+        
+        summary.textContent = selectedNames.join(', ');
+        summary.style.color = 'var(--text-main)'; // Highlight when active
+    } else {
+        summary.textContent = defaultText;
+        summary.style.color = 'var(--text-main)';
+    }
+}
 
     // --- DYNAMIC DROPDOWN LOADING ---
     async function populateDropdown(className, selectId) {
-        const query = `
-            PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            
-            SELECT DISTINCT ?itemName WHERE {
-                ?item rdf:type :${className} .
-                OPTIONAL { ?item rdfs:label ?lbl }
-                BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(GameGenre_|PlayerMode_|OperatingSystem_|Genre_|Mode_|OS_)?", ""), "_", " ")) AS ?itemName)
-            }
-            ORDER BY ?itemName
-        `;
+    const query = `
+        PREFIX : <http://www.semanticweb.org/gamematcher.owl#>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        
+        SELECT DISTINCT ?itemName WHERE {
+            ?item rdf:type :${className} .
+            OPTIONAL { ?item rdfs:label ?lbl }
+            BIND(COALESCE(STR(?lbl), REPLACE(REPLACE(STR(?item), "^.*#(GameGenre_|PlayerMode_|OperatingSystem_|Genre_|Mode_|OS_)?", ""), "_", " ")) AS ?itemName)
+        }
+        ORDER BY ?itemName
+    `;
 
-        try {
-            const response = await fetch(endpointUrl, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/sparql-query",
-                    "Accept": "application/sparql-results+json"
-                },
-                body: query
-            });
+    try {
+        const response = await fetch(endpointUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/sparql-query",
+                "Accept": "application/sparql-results+json"
+            },
+            body: query
+        });
 
-            const data = await response.json();
-            const selectElement = document.getElementById(selectId);
+        const data = await response.json();
+        
+        // 1. Get the list container (e.g., "os-options-list")
+        const listContainer = document.getElementById(selectId);
+        
+        // 2. Clear current content (removes "Loading...")
+        listContainer.innerHTML = '';
+        
+        // 3. Add an "Any" or default option if needed
+        const anyOption = document.createElement('div');
+        anyOption.className = 'option';
+        anyOption.setAttribute('data-value', "");
+        anyOption.textContent = "Any";
+        listContainer.appendChild(anyOption);
+
+        data.results.bindings.forEach(res => {
+            const name = fixText(res.itemName.value);
             
-            selectElement.innerHTML = '<option value="">Any</option>';
+            // 4. Create the new DIV structure for the custom dropdown
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'option'; // This matches your Orange Hover CSS
+            itemDiv.setAttribute('data-value', name);
+            itemDiv.textContent = name;
             
-            data.results.bindings.forEach(res => {
-                // APPLICA LA FUNZIONE QUI
-                const name = fixText(res.itemName.value);
-                const option = document.createElement('option');
-                option.value = name;
-                option.textContent = name;
-                selectElement.appendChild(option);
-                
-            });
-        } catch (error) {
-            console.error(`Error loading ${className}:`, error);
-            document.getElementById(selectId).innerHTML = '<option value="">Error loading</option>';
+            listContainer.appendChild(itemDiv);
+        });
+
+        // 5. Update the summary text once loaded
+        const summary = listContainer.closest('details').querySelector('summary');
+        if (summary) {
+            summary.textContent = "Select " + className.replace(/([A-Z])/g, ' $1').trim() + "...";
+        }
+
+    } catch (error) {
+        console.error(`Error loading ${className}:`, error);
+        const listContainer = document.getElementById(selectId);
+        if (listContainer) {
+            listContainer.innerHTML = '<div class="option" style="color: red;">Error loading</div>';
         }
     }
+}
 
     async function populateDropdownMulti(className, selectId) {
     const query = `
@@ -881,26 +1025,40 @@
         // Clear the "Loading..." text
         container.innerHTML = '';
 
-        data.results.bindings.forEach(res => {
-            const name = fixText(res.itemName.value);
-            
-            // 1. Create the label wrapper
-            const label = document.createElement('label');
-            
-            // 2. Create the checkbox input
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.value = name;
-            // This ensures your results update every time you click a checkbox
-            checkbox.onchange = () => startMatching(); 
+       data.results.bindings.forEach(res => {
+    const name = fixText(res.itemName.value);
+    
+    // 1. Create a wrapper div for the row (for the border-bottom and black bg)
+    const rowDiv = document.createElement('div');
+    rowDiv.className = 'option-row'; // Use this class for your CSS styling
 
-            // 3. Assemble: [Checkbox] Text
-            label.appendChild(checkbox);
-            label.appendChild(document.createTextNode(" " + name));
-            
-            // 4. Add to the options-list div
-            container.appendChild(label);
-        });
+    // 2. Create the label wrapper
+    const label = document.createElement('label');
+    label.style.display = 'flex';
+    label.style.alignItems = 'center';
+    label.style.width = '100%';
+    label.style.cursor = 'pointer';
+
+    // 3. Create the checkbox input
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = name;
+
+    // Trigger both the matching logic AND the summary text update
+    checkbox.onchange = () => {
+        updateMultiselectSummary(rowDiv.closest('details'));
+        startMatching();
+    };
+
+    // 4. Assemble: [Checkbox] Text
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + name));
+    
+    rowDiv.appendChild(label);
+    
+    // 5. Add to the options-list container
+    container.appendChild(rowDiv);
+});
     } catch (error) {
         console.error(`Error loading ${className}:`, error);
         document.getElementById(selectId).innerHTML = '<div style="padding:10px; color:red;">Error loading</div>';
@@ -975,9 +1133,10 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        populateDropdown('OperatingSystem', 'os');
+        populateDropdown('OperatingSystem', 'os-options-list');
         populateDropdownMulti('GameGenre', 'genre-options');
         populateDropdownMulti('PlayerMode', 'mode-options');
+        
         startMatching(); 
     });
 
@@ -1022,7 +1181,41 @@ async function getGameImage(title) {
             document.getElementById('cpu-suggestions').style.display = 'none';
             document.getElementById('gpu-suggestions').style.display = 'none';
         }
+        if (e.target.classList.contains('option')) {
+        const container = e.target.closest('.single-select');
+        if (!container) return;
+
+        const value = e.target.getAttribute('data-value');
+        const text = e.target.innerText;
+        const type = container.id.split('-')[0]; // gets 'ram' or 'os'
+
+        // 1. Update the summary text
+        const summary = container.querySelector('summary');
+        summary.innerText = text;
+
+        // 2. Update the hidden input value
+        document.getElementById(type).value = value;
+
+        // 3. Close the dropdown
+        container.removeAttribute('open');
+
+        // 4. Trigger your matching logic!
+        startMatching();
+    }
     });
+
+    document.addEventListener('click', function(event) {
+    // 1. Get all custom-multiselect details elements
+    const allDropdowns = document.querySelectorAll('details.custom-multiselect');
+
+    allDropdowns.forEach(dropdown => {
+        // 2. If the click was NOT inside this specific dropdown
+        // and the dropdown is currently open
+        if (!dropdown.contains(event.target) && dropdown.open) {
+            dropdown.removeAttribute('open');
+        }
+    });
+});
 
     function triggerCompatibilityAward(gameName) {
     // 1. Play Sound (Fanfare)
@@ -1079,7 +1272,11 @@ async function getGameImage(title) {
 
     function startMatching() {
         clearTimeout(matchDebounceTimer);
+        if (event && event.target.tagName === 'SELECT') {
+        event.target.blur(); 
+    }
         matchDebounceTimer = setTimeout(runMatchQuery, 500);
+        
        
     }
 
@@ -1384,7 +1581,7 @@ async function renderMiniCards(bindings) {
         const rOS = res.gameOS ? parseInt(res.gameOS.value) : -1;
 
         // Check for award match (Only if we have valid data)
-        if (!awardTriggeredLocally && uCPU === rCPU && uGPU === rGPU && uRAM === rRAM && uROM >= rROM && uOS === rOS) {
+        if (!awardTriggeredLocally && uCPU != 0 && uGPU != 999 && uCPU === rCPU && uGPU === rGPU && uRAM === rRAM && uROM >= rROM && uOS === rOS) {
             awardGameName = name; 
             awardTriggeredLocally = true; 
         }
